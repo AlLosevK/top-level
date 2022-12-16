@@ -2,14 +2,21 @@ section.qwiz
   .wrapper
     .qwiz__content
       .qwiz__bar
-      h2.qwiz__title Подбор недвижимости в дубаи
-      .qwiz__form
+      h3.qwiz__title Подбор недвижимости в дубаи
+      form.qwiz__form
         .qwiz__q С какой целью вы приобретаете недвижимость в ОАЭ?
-        .qwiz__a Для инвестиций
-        .qwiz__a Для проживания
+        .qwiz__a
+          input(type="checkbox" id="qwiz-a1")
+          label(for="qwiz-a1") Для инвестиций
+        .qwiz__a
+          input(type="checkbox" id="qwiz-a2")
+          label(for="qwiz-a2") Для проживания
       .qwiz__footer
         .qwiz__logo
+          img(src="images/dest/qwiz-logo.png")
         .qwiz__nav
           button.qwiz__prev
           button.qwiz__next Далее
     .qwiz__slider
+      picture
+        img(src="images/dest/qwiz.png" alt="")

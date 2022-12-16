@@ -1,0 +1,67 @@
+.qwiz
+  padding-top: 180px
+  .wrapper
+    display: grid
+    grid-template-columns: 1fr 1fr
+    grid-template-rows: 1fr
+    width: 1380px
+    margin-left: 0
+  &__content
+    width: 100%
+    background-color: $blue
+    color: #fff
+    padding: 54px 64px
+    display: -webkit-flex
+    display: -ms-flex
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    align-items: flex-start
+  &__slider
+    width: 100%
+    max-width: 100%
+  &__bar
+    width: 100%
+    background-color: #fff
+    height: 19px
+  &__title
+    color: $bronze
+  &__q
+    font-size: 28px
+    line-height: 130%
+    font-weight: 300
+    margin-bottom: 24px
+  &__a
+    label
+      font-weight: 300
+  &__footer
+    margin-top: 100px
+    width: 100%
+    display: -webkit-flex
+    display: -ms-flex
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    align-items: center
+  &__logo
+    width: 83px
+    height: 30px
+  &__nav
+    display: -webkit-flex
+    display: -ms-flex
+    display: flex
+    flex-direction: row
+    gap: 12px
+  &__prev
+    background-color: $blue
+    border: 1px solid $gray
+    width: 40px
+    height: 40px
+  &__next
+    background-color: $gray
+    border: none
+    color: $blue
+    padding: 8px 59px 8px 35px
+    font-weight: 400
+    font-size: 16px
+    line-height: 150%
