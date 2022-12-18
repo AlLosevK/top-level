@@ -4,33 +4,58 @@
     display: -webkit-flex
     display: -ms-flex
     display: flex
-    flex-direction: row
+    flex-direction: column
     justify-content: space-between
-    align-items: flex-start
+    align-items: center
   &__title
     color: $bronzeDark
-    width: 598px
+    margin-bottom: 93px
   &__descr
     color: $textDark
   &__items
     display: -webkit-flex
     display: -ms-flex
     display: flex
-    flex-direction: row
-    justify-content: space-between
-    align-items: center
-    width: 644px
-    flex-wrap: wrap
-  &__item
-    display: -webkit-flex
-    display: -ms-flex
-    display: flex
-    flex-direction: row
+    flex-direction: column
     justify-content: flex-start
     align-items: center
-    width: 318px
-    margin-top: 50px
-    &:nth-child(1)
-      margin-top: 0
-    &:nth-child(2)
-      margin-top: 0
+    width: 984px
+  &__item
+    display: grid
+    position: relative
+    grid-template-columns: 55px 700px
+    grid-template-rows: 50px 1fr
+    border-bottom: 1px solid $bronze
+    gap: 18px 94px
+    width: 100%
+    padding: 40px 0 20px
+    &-title
+      font-family: 'Viaoda Libre'
+      font-size: 28px
+      line-height: 150%
+      text-transform: uppercase
+    &.active
+      .benefits__list
+        display: block
+      .benefits__img
+        display: block
+  &__nmbr
+    font-size: 50px
+    line-height: 100%
+    font-family: 'Viaoda Libre'
+  &__list
+    display: none
+    grid-column: 2/3
+    padding-left: 20px
+    margin: 0
+    &-item
+      font-size: 16px
+      font-weight: 300
+      line-height: 150%
+  &__img
+    display: none
+    position: absolute
+    right: -122px
+    bottom: -46px
+    max-width: 330px
+    max-height: 245px
