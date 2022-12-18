@@ -8,6 +8,29 @@
     <link rel="stylesheet" href="css/app.min.css">
   </head>
   <body>
+    <header class="header">
+      <div class="wrapper">
+        <nav class="header__nav">
+          <ul>
+            <li><a class="header__link">Преимущества</a></li>
+            <li><a class="header__link">Проекты</a></li>
+            <li><a class="header__link">О Компании</a></li>
+            <li><a class="header__link">FAQ</a></li>
+          </ul>
+        </nav>
+        <div class="header__logo">
+              <svg class="icon icon-header-logo header__logo-icon">
+                <use xlink:href="images/dest/sprite.svg#header-logo"></use>
+              </svg>
+        </div>
+        <div class="header__contacts">
+          <ul>
+            <li><a class="header__link" href="tel:+123">+9 (715) 858 35 333</a></li>
+            <li><a class="header__link" href="#">Подобрать недвижимость</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
     <main class="main">
       <section class="banner">
         <div class="wrapper">
@@ -18,26 +41,75 @@
       <section class="quiz">
         <div class="wrapper">
           <div class="quiz__content">
-            <div class="quiz__bar"></div>
+            <div class="quiz__bar progress__container">
+              <div class="progress" id="progress"></div>
+              <div class="circle active"></div>
+              <div class="circle"></div>
+              <div class="circle"></div>
+              <div class="circle"></div>
+            </div>
             <h3 class="quiz__title">Подбор недвижимости в дубаи</h3>
             <form class="quiz__form">
-              <div class="quiz__q">С какой целью вы приобретаете недвижимость в ОАЭ?</div>
-              <div class="quiz__a">
-                <input type="checkbox" id="quiz-a1">
-                <label for="quiz-a1">Для инвестиций</label>
+              <div class="quiz__form-item quiz__form-item-active">
+                <div class="quiz__q">С какой целью вы приобретаете недвижимость в ОАЭ?</div>
+                <div class="quiz__a">
+                  <input type="checkbox" id="quiz-a1">
+                  <label for="quiz-a1">Для инвестиций</label>
+                </div>
+                <div class="quiz__a">
+                  <input type="checkbox" id="quiz-a2">
+                  <label for="quiz-a2">Для проживания</label>
+                </div>
               </div>
-              <div class="quiz__a">
-                <input type="checkbox" id="quiz-a2">
-                <label for="quiz-a2">Для проживания</label>
+              <div class="quiz__form-item">
+                <div class="quiz__q">Каким бюджетом вы располагаете (€)?</div>
+                <div class="quiz__a">
+                  <input type="checkbox" id="quiz-b1">
+                  <label for="quiz-b1">100 000</label>
+                </div>
+                <div class="quiz__a">
+                  <input type="checkbox" id="quiz-b2">
+                  <label for="quiz-b2">1 000 000</label>
+                </div>
+                <div class="quiz__a">
+                  <input type="checkbox" id="quiz-b2">
+                  <label for="quiz-b2">100 000 000</label>
+                </div>
+              </div>
+              <div class="quiz__form-item">
+                <div class="quiz__q">Сколько комнат вы хотите приобрести?</div>
+                <div class="quiz__a">
+                  <input type="checkbox" id="quiz-b1">
+                  <label for="quiz-b1">1</label>
+                </div>
+                <div class="quiz__a">
+                  <input type="checkbox" id="quiz-b2">
+                  <label for="quiz-b2">2</label>
+                </div>
+                <div class="quiz__a">
+                  <input type="checkbox" id="quiz-b2">
+                  <label for="quiz-b2">3</label>
+                </div>
+              </div>
+              <div class="quiz__form-item">
+                <div class="quiz__q">Как с вами связаться?</div>
+                <div class="quiz__a">
+                  <input type="checkbox" id="quiz-b1">
+                  <label for="quiz-b1">Viber</label>
+                </div>
+                <div class="quiz__a">
+                  <input type="checkbox" id="quiz-b2">
+                  <label for="quiz-b2">WhatsApp</label>
+                </div>
+              </div>
+              <div class="quiz__footer">
+                <div class="quiz__logo"><img src="images/dest/quiz-logo.webp"></div>
+                <div class="quiz__nav">
+                  <button class="quiz__prev" id="prev" type="button" disabled></button>
+                  <button class="quiz__next" id="next" type="button">Далее</button>
+                </div>
               </div>
             </form>
-            <div class="quiz__footer">
-              <div class="quiz__logo"><img src="images/dest/quiz-logo.webp"></div>
-              <div class="quiz__nav">
-                <button class="quiz__prev"></button>
-                <button class="quiz__next">Далее</button>
-              </div>
-            </div>
           </div>
           <div class="quiz__slider">
             <picture><img src="images/dest/quiz.webp" alt=""></picture>
@@ -135,29 +207,73 @@
         <div class="wrapper">
           <h2 class="faq__title">Ответы на ваши впросы</h2>
           <div class="faq__items">
-            <div class="faq__item">
+            <div class="faq__item active">
               <div class="faq__q"> <a>Из чего состоит процесс покупки недвижимости в Дубае?</a></div>
-              <div class="faq__a"> </div>
+              <div class="faq__a"> 
+                <p>Покупка недвижимости осуществляется в несколько этапов:</p>
+                <ul class="faq__list">
+                  <li class="faq__list-item">
+                    <p>выбор подходящего объекта;</p>
+                  </li>
+                  <li class="faq__list-item">
+                    <p>заключение договора купли-продажи;</p>
+                  </li>
+                  <li class="faq__list-item">
+                    <p>передача продавцу задатка (от 5 до 25% от стоимости);</p>
+                  </li>
+                  <li class="faq__list-item">
+                    <p>заключение контракта на обслуживание дома;</p>
+                  </li>
+                  <li class="faq__list-item">
+                    <p>прохождение процедуры регистрации на имя нового собственника (на этом этапе, как правило, происходит окончательный расчет);</p>
+                  </li>
+                  <li class="faq__list-item">
+                    <p>получение права собственности.</p>
+                  </li>
+                </ul>
+              </div>
             </div>
             <div class="faq__item">
-              <div class="faq__q"> <a href="#">Является ли покупка помещения в Дубае основанием для получения гражданства ОАЭ?</a></div>
-              <div class="faq__a"> </div>
+              <div class="faq__q"> <a>Является ли покупка помещения в Дубае основанием для получения гражданства ОАЭ?</a></div>
+              <div class="faq__a"> 
+                <p>Нет, но если сумма сделки превысила USD 240,000, покупатель недвижимости может получить резидентскую визу. Она дает покупателю жилого, коммерческого или иного объекта определенные привилегии:</p>
+                <ul>
+                  <li>
+                    <p>разрешение на открытие банковских счетов;</p>
+                  </li>
+                  <li>
+                    <p>возможность получить водительские права;</p>
+                  </li>
+                  <li>
+                    <p>право вести бизнес или работать по найму и т. д.</p>
+                  </li>
+                </ul>
+                <p>При покупке в рассрочку резидентскую визу/вид на жительство можно оформить, если объект сдан и покупателем внесено не менее 50% от общей суммы.</p>
+              </div>
             </div>
             <div class="faq__item">
-              <div class="faq__q"> <a href="#">Как покупателю обезопасить свои средства в сделке купли-продажи?</a></div>
-              <div class="faq__a"> </div>
+              <div class="faq__q"> <a>Как покупателю обезопасить свои средства в сделке купли-продажи?</a></div>
+              <div class="faq__a"> 
+                <p>Приобретая недвижимость в Дубае, инвесторы, как правило, используют самый безопасный метод расчета — банковский перевод на эскроу-счет, что означает получение застройщиком денег после сдачи объекта в эксплуатацию. Компетентный посредник сильно упрощает задачу для обеих сторон, выполняя ряд значимых функций, — в том числе юридическое сопровождение сделки.</p>
+              </div>
             </div>
             <div class="faq__item">
-              <div class="faq__q"> <a href="#">Может ли иностранный покупатель оформить приобретение недвижимости в рассрочку?</a></div>
-              <div class="faq__a"> </div>
+              <div class="faq__q"> <a>Может ли иностранный покупатель оформить приобретение недвижимости в рассрочку?</a></div>
+              <div class="faq__a"> 
+                <p>Да, многие девелоперы предоставляют такую возможность. Обычно первый взнос равен 10% стоимости и примерно половина общей суммы выплачивается до завершения строительства.</p>
+              </div>
             </div>
             <div class="faq__item">
-              <div class="faq__q"> <a href="#">Можно ли купить квартиру в Дубае в ипотеку?</a></div>
-              <div class="faq__a"> </div>
+              <div class="faq__q"> <a>Можно ли купить квартиру в Дубае в ипотеку?</a></div>
+              <div class="faq__a">
+                <p>Эта опция доступна как резидентам, так и нерезидентам. Основные требование к заемщику: возраст от 21 до 65 лет, хороший кредитный рейтинг и соответствующий стоимости объекта уровень дохода — достаточный для погашения платежей в установленные сроки. Кроме того, на один и тот же объект могут быть оформлена и рассрочка, и ипотека.</p>
+              </div>
             </div>
             <div class="faq__item">
-              <div class="faq__q"> <a href="#">Обязательно ли пользоваться услугами риелторов или можно самостоятельно провести сделку с застройщиком?</a></div>
-              <div class="faq__a"> </div>
+              <div class="faq__q"> <a>Обязательно ли пользоваться услугами риелторов или можно самостоятельно провести сделку с застройщиком?</a></div>
+              <div class="faq__a">
+                <p>В Дубае агенты по недвижимости сопровождают все сделки, связанные с куплей-продажей помещений. Это гарантирует безопасность сделки, защиту интересов покупателя и соблюдение законов страны.</p>
+              </div>
             </div>
           </div>
         </div>

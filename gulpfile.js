@@ -85,7 +85,7 @@ function styles() {
 
 async function images() {
 	imagecomp(
-		"app/images/src/**/*", // Берём все изображения из папки источника
+		"app/images/src/**/*.svg", // Берём все изображения из папки источника
 		"app/images/dest/", // Выгружаем оптимизированные изображения в папку назначения
 		{ compress_force: false, statistic: true, autoupdate: true }, false, // Настраиваем основные параметры
 		{ jpg: { engine: "mozjpeg", command: ["-quality", "75"] } }, // Сжимаем и оптимизируем изображеня
@@ -213,4 +213,4 @@ exports.cleanimg = cleanimg;
 exports.build = series(cleandist, styles, scripts, webpf, buildcopy);
 
 // Экспортируем дефолтный таск с нужным набором функций
-exports.default = parallel(pugf, svgsprite, webpf, styles, scripts, browsersync, startwatch);
+exports.default = parallel(pugf, svgsprite, webpf, images, styles, scripts, browsersync, startwatch);

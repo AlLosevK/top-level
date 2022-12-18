@@ -1,22 +1,58 @@
 section.quiz
   .wrapper
     .quiz__content
-      .quiz__bar
+      .quiz__bar.progress__container
+        .progress#progress
+        .circle.active
+        .circle
+        .circle
+        .circle
       h3.quiz__title Подбор недвижимости в дубаи
       form.quiz__form
-        .quiz__q С какой целью вы приобретаете недвижимость в ОАЭ?
-        .quiz__a
-          input(type="checkbox" id="quiz-a1")
-          label(for="quiz-a1") Для инвестиций
-        .quiz__a
-          input(type="checkbox" id="quiz-a2")
-          label(for="quiz-a2") Для проживания
-      .quiz__footer
-        .quiz__logo
-          img(src="images/dest/quiz-logo.webp")
-        .quiz__nav
-          button.quiz__prev
-          button.quiz__next Далее
+        .quiz__form-item.quiz__form-item-active
+          .quiz__q С какой целью вы приобретаете недвижимость в ОАЭ?
+          .quiz__a
+            input(type="checkbox" id="quiz-a1")
+            label(for="quiz-a1") Для инвестиций
+          .quiz__a
+            input(type="checkbox" id="quiz-a2")
+            label(for="quiz-a2") Для проживания
+        .quiz__form-item
+          .quiz__q Каким бюджетом вы располагаете (€)?
+          .quiz__a
+            input(type="checkbox" id="quiz-b1")
+            label(for="quiz-b1") 100 000
+          .quiz__a
+            input(type="checkbox" id="quiz-b2")
+            label(for="quiz-b2") 1 000 000
+          .quiz__a
+            input(type="checkbox" id="quiz-b2")
+            label(for="quiz-b2") 100 000 000
+        .quiz__form-item
+          .quiz__q Сколько комнат вы хотите приобрести?
+          .quiz__a
+            input(type="checkbox" id="quiz-b1")
+            label(for="quiz-b1") 1
+          .quiz__a
+            input(type="checkbox" id="quiz-b2")
+            label(for="quiz-b2") 2
+          .quiz__a
+            input(type="checkbox" id="quiz-b2")
+            label(for="quiz-b2") 3
+        .quiz__form-item
+          .quiz__q Как с вами связаться?
+          .quiz__a
+            input(type="checkbox" id="quiz-b1")
+            label(for="quiz-b1") Viber
+          .quiz__a
+            input(type="checkbox" id="quiz-b2")
+            label(for="quiz-b2") WhatsApp
+        .quiz__footer
+          .quiz__logo
+            img(src="images/dest/quiz-logo.webp")
+          .quiz__nav
+            button.quiz__prev#prev(type="button" disabled)
+            button.quiz__next#next(type="button") Далее
     .quiz__slider
       picture
         img(src="images/dest/quiz.webp" alt="")

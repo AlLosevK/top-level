@@ -2,16 +2,22 @@
   padding: 180px 0
   .wrapper
     display: grid
-    grid-template-columns: 1fr 1fr
+    grid-template-columns: 1fr 2fr
+    gap: 50px
   &__title
     color: $bronzeDark
     width: 400px
     // font-family: 'Viaoda Libre', cursive
   &__items
     color: $textDark
+  &__item
+    padding-bottom: 19px
+    border-bottom: 1px solid $bronze
+    &.active
+      .faq__a
+        display: block
   &__q
     position: relative
-    border-bottom: 1px solid $bronze
     a
       position: relative
       font-size: 24px
@@ -23,7 +29,7 @@
       color: $textDark
       text-decoration: none
       z-index: 10
-      width: 80%
+      width: 95%
       &:hover
         color: $textDark
         text-decoration: none
@@ -33,3 +39,5 @@
       right: 0
       bottom: 24px
       z-index: 5
+  &__a
+    display: none
