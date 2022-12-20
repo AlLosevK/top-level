@@ -1,13 +1,24 @@
 $(document).ready(function() {
   // benefits acordeon
+  // $(function() {
+  // 	$(".benefits__item").on("mouseenter", function(e) {
+  // 		e.preventDefault();
+  // 		var $this = $(this);
+  // 		// if (!$this.hasClass("active")) {
+  // 		// 	$(".benefits__item").removeClass("active");
+  // 		// }
+  // 		// $this.addClass("active");
+  //     var content = $(".benefits__content");
+  //     content.fadeIn();
+  // 	});
+  // });
+
   $(function() {
   	$(".benefits__item").on("mouseenter", function(e) {
   		e.preventDefault();
   		var $this = $(this);
-  		if (!$this.hasClass("active")) {
-  			$(".benefits__item").removeClass("active");
-  		}
-  		$this.addClass("active");
+      console.log($this.children()[2]);
+      // $this.children()[2].fadeIn();
   	});
   });
 
