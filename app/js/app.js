@@ -1,26 +1,24 @@
 $(document).ready(function() {
   // benefits acordeon
-  // $(function() {
-  // 	$(".benefits__item").on("mouseenter", function(e) {
-  // 		e.preventDefault();
-  // 		var $this = $(this);
-  // 		// if (!$this.hasClass("active")) {
-  // 		// 	$(".benefits__item").removeClass("active");
-  // 		// }
-  // 		// $this.addClass("active");
-  //     var content = $(".benefits__content");
-  //     content.fadeIn();
-  // 	});
-  // });
-
   $(function() {
   	$(".benefits__item").on("mouseenter", function(e) {
   		e.preventDefault();
   		var $this = $(this);
-      console.log($this.children()[2]);
-      // $this.children()[2].fadeIn();
+  		if (!$this.hasClass("active")) {
+  			$(".benefits__item").removeClass("active");
+  		}
+  		$this.addClass("active");
   	});
   });
+
+  // $(function() {
+  // 	$(".benefits__item").on("mouseenter", function(e) {
+  // 		e.preventDefault();
+  // 		var $this = $(this);
+  //     console.log($this.children()[2]);
+  //     // $this.children()[2].fadeIn();
+  // 	});
+  // });
 
   // project popup
   $(function() {
@@ -31,7 +29,26 @@ $(document).ready(function() {
   			$(this).removeClass("active");
   		}
   		$this.toggleClass("active");
+      document.body.style.overflow = 'hidden';
   	});
+  });
+  // // project popup
+  // $(function() {
+  // 	$(".project__btn").on("click", function(e) {
+  // 		e.preventDefault();
+  // 		var $this = $(this).parent().parent();
+  // 		if (!$this.hasClass("active")) {
+  // 			$(this).removeClass("active");
+  // 		}
+  // 		$this.toggleClass("active");
+  // 	});
+  // });
+
+  //scroll popup show
+  $(window).scroll(function() {
+     if( $(document).scrollTop() > 2000) {
+        $("#popup-promo").addClass('active');
+     }
   });
 
   // project popup close
@@ -43,6 +60,16 @@ $(document).ready(function() {
   			$(this).removeClass("active");
   		}
   		$this.toggleClass("active");
+      document.body.style.overflow = 'visible';
+  	});
+  });
+
+  // project popup close
+  $(function() {
+  	$(".popup-promo").on("click", function(e) {
+  		e.preventDefault();
+  		var $this = $(this);
+  		$this.fadeOut();
   	});
   });
 
