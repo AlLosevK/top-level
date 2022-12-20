@@ -1,11 +1,35 @@
 $(document).ready(function() {
   // benefits acordeon
   $(function() {
-  	$(".benefits__item").on("click", function(e) {
+  	$(".benefits__item").on("mouseenter", function(e) {
   		e.preventDefault();
   		var $this = $(this);
   		if (!$this.hasClass("active")) {
   			$(".benefits__item").removeClass("active");
+  		}
+  		$this.addClass("active");
+  	});
+  });
+
+  // project popup
+  $(function() {
+  	$(".project__btn").on("click", function(e) {
+  		e.preventDefault();
+  		var $this = $(this).parent().parent();
+  		if (!$this.hasClass("active")) {
+  			$(this).removeClass("active");
+  		}
+  		$this.toggleClass("active");
+  	});
+  });
+
+  // project popup close
+  $(function() {
+  	$(".popup__nav-close").on("click", function(e) {
+  		e.preventDefault();
+  		var $this = $(this).parent().parent().parent().parent();
+  		if (!$this.hasClass("active")) {
+  			$(this).removeClass("active");
   		}
   		$this.toggleClass("active");
   	});
@@ -58,7 +82,7 @@ $(document).ready(function() {
               : qItem.classList.remove("quiz__form-item-active");
       });
 
-      $(".quiz__form-item-active").css({display: 'none'});
+      $(".quiz__form-item").css({display: 'none'});
       $(".quiz__form-item-active:last").css({display: 'block'});
       // console.log(qItemActive.length);
   };
@@ -85,5 +109,42 @@ $(document).ready(function() {
   });
 
 
+  var countDownDate = new Date().getTime() + 444800000;
 
-})
+
+  // Update the count down every 1 second
+  var x = setInterval(function() {
+
+    // Get today's date and time
+    var now = new Date().getTime();
+
+    // Find the distance between now and the count down date
+    // var distance = countDownDate - now;
+    var distance = countDownDate - now;
+
+    // Time calculations for days, hours, minutes and seconds
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    // Display the result in the element with id="demo"
+    // document.querySelectorAll("#timer").innerHTML = hours + ":" + minutes + ":" + seconds;
+
+    for (var i = 0; i < document.querySelectorAll("#timer").length; i++) {
+      document.querySelectorAll("#timer")[i].innerHTML = days + "д " + hours + "ч " + minutes + "м ";
+    }
+
+    // If the count down is finished, write some text
+    if (distance < 0) {
+      clearInterval(x);
+      document.getElementById("timer").innerHTML = "EXPIRED";
+    }
+  }, 1000);
+});
+
+
+$(window).scroll(function() {
+  var theta = ($(window).scrollTop() - 2500) / 3;
+  $('.projects__bg').css({ transform: 'translateX(' + theta + 'px)' });
+});

@@ -35,25 +35,41 @@
       line-height: 150%
       text-transform: uppercase
     &.active
+      .benefits__content
+        display: block
       .benefits__list
-        display: block
+        opacity: 1
       .benefits__img
-        display: block
+        opacity: 1
+    &:nth-child(2)
+      .benefits__img
+        bottom: auto
+        top: -25px
+    &:nth-child(3)
+      .benefits__img
+        bottom: -37px
+    &:nth-child(4)
+      .benefits__img
+        bottom: auto
+        top: -170px
+    &:last-child
+      border-bottom: none
   &__nmbr
     font-size: 50px
     line-height: 100%
     font-family: 'Viaoda Libre'
-  &__list
-    display: none
+  &__content
     grid-column: 2/3
+    display: none
+  &__list
     padding-left: 20px
     margin: 0
     &-item
       font-size: 16px
       font-weight: 300
       line-height: 150%
+      margin-bottom: 14px
   &__img
-    display: none
     position: absolute
     right: -122px
     bottom: -46px

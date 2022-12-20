@@ -1,9 +1,16 @@
 .projects
-  background-image: url('../images/dest/projects-bg.webp')
-  background-repeat: no-repeat
-  background-size: 100% auto
-  background-position: 50% 180px
   padding-top: 180px
+  position: relative
+  &__bg
+    position: absolute
+    width: 300%
+    height: 639px
+    top: 180px
+    left: -50%
+    background-image: url('../images/dest/project-bg-2.webp')
+    background-repeat: repeat
+    background-size: auto 100%
+    background-position: 50% 0
   &__banner
     padding: 220px 0 150px
   &__title
@@ -20,3 +27,107 @@
     padding: 12px 51px
     font-size: 16px
     line-height: 150%
+  &__items
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    grid-template-rows: 60px repeat(auto-fill, 606px)
+    gap: 80px 26px
+    padding-top: 200px
+    &-title
+      width: 100%
+      grid-column: 1/4
+
+.project
+  color: $textDark
+  &.active
+    .project-popup
+      display: block
+  &__img
+    width: 100%
+    height: 319px
+    display: block
+    margin-bottom: 24px
+  &__promo
+    display: -webkit-flex
+    display: -ms-flex
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    align-items: center
+    width: 100%
+    margin-bottom: 20px
+    &-descr
+      font-size: 16px
+      line-height: 150%
+      padding: 2px 16px
+      &[data-type="appart"]
+        background-color: #B7D6EB
+      &[data-type="villa"]
+        background-color: #FFBDBD
+      &[data-type="flat"]
+        background-color: #D0E5C0
+    &-price
+      font-weight: 600
+      font-size: 16px
+      line-height: 150%
+  &__content
+    display: grid
+    grid-template-rows: 36px 4px 20px 16px minmax(50px, auto) 14px 24px 26px 27px
+  &__title
+    font-weight: 500
+    font-size: 24px
+    line-height: 150%
+    grid-row: 1/2
+  &__subtitle
+    font-size: 14px
+    line-height: 140%
+    grid-row: 3/4
+    // margin-bottom: 16px
+  &__descr
+    font-size: 16px
+    line-height: 140%
+    grid-row: 5/6
+    // margin-bottom: 36px
+  &__benefits
+    display: -webkit-flex
+    display: -ms-flex
+    display: flex
+    flex-direction: row
+    justify-content: flex-start
+    align-items: center
+    grid-row: 7/8
+    gap: 12px
+    // margin-bottom: 26px
+    &-item
+      display: -webkit-flex
+      display: -ms-flex
+      display: flex
+      flex-direction: row
+      justify-content: flex-start
+      align-items: center
+      img
+        height: 24px
+        margin-right: 6px
+      p
+        font-size: 12px
+        line-height: 18px
+  &__btn
+    border: none
+    width: auto
+    padding: 0
+    margin: 0
+    text-decoration: underline
+    background-color: $main
+    text-align: left
+    grid-row: 9/10
+    position: relative
+    &:before
+      content: url(../images/dest/icons/arrow-gray.svg)
+      position: absolute
+      left: 96px
+      top: 30%
+      transform: translateY(-50%)
+      width: 11px
+      height: 11px
+      z-index: 5
+      color: #fff
