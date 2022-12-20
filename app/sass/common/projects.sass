@@ -1,11 +1,15 @@
 .projects
   padding-top: 180px
   position: relative
+  .wrapper
+    position: relative
+    overflow: hidden
   &__bg
     position: absolute
+    z-index: 50
     width: 300%
     height: 639px
-    top: 180px
+    top: 0px
     left: -50%
     background-image: url('../images/dest/project-bg-2.webp')
     background-repeat: repeat
@@ -13,6 +17,8 @@
     background-position: 50% 0
   &__banner
     padding: 220px 0 150px
+    position: relative
+    z-index: 100
   &__title
     font-size: 178.333px
     line-height: 120%
