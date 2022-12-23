@@ -45,8 +45,12 @@
     font-weight: 300
     margin-bottom: 24px
   &__a
+    margin-bottom: 14px
+    &:last-child
+      margin-bottom: 0
     label
       font-weight: 300
+      margin-bottom: 0
   &__footer
     margin-top: 100px
     width: 100%
@@ -67,14 +71,16 @@
     justify-content: flex-start
     align-items: flex-start
     gap: 12px
+    button
+      height: 41px
   &__prev
     background-color: $blue
-    border: 1px solid $gray
+    border: 1px solid $bronze
     width: 40px
     height: 40px
     position: relative
     &:before
-      content: url('../images/dest/icons/quiz-prev.svg')
+      content: url('../images/dest/icons/quiz-arrow-light.svg')
       position: absolute
       top: 50%
       left: 50%
@@ -83,12 +89,12 @@
       width: 14px
       height: 14px
     &:not(:disabled)
-      background: $gray
+      background: $bronze
       &:before
-        content: url('../images/dest/icons/quiz-next.svg')
+        content: url('../images/dest/icons/quiz-arrow-dark.svg')
         transform: translate(-50%, -80%) rotateY(180deg)
   &__next
-    background-color: $gray
+    background-color: $bronze
     border: none
     color: $blue
     padding: 8px 59px 8px 35px
@@ -96,9 +102,9 @@
     font-size: 16px
     line-height: 150%
     position: relative
-    border: 1px solid $blue
+    border: 1px solid $bronze
     &:before
-      content: url('../images/dest/icons/quiz-next.svg')
+      content: url('../images/dest/icons/quiz-arrow-dark.svg')
       position: absolute
       top: 55%
       left: 63%
@@ -108,15 +114,60 @@
       height: 14px
     &:disabled
       background: $blue
-      color: $gray
-      border: 1px solid $gray
+      color: $bronze
+      border: 1px solid $bronze
       &:before
-        content: url('../images/dest/icons/quiz-prev.svg')
+        content: url('../images/dest/icons/quiz-arrow-light.svg')
         transform: translate(0%, -80%) rotateY(180deg)
 
 
+  @include media-tablet
+    padding-top: 80px
+    .wrapper
+      width: 280px
+      margin: 0 auto
+      left: auto
+      grid-template-columns: 1fr
+    &__content
+      padding: 43px 20px 26px
+      border-bottom-left-radius: 100px
+    &__slider
+      display: none
+    &__logo
+      display: none
+    &__bar
+      height: 12px
+      margin-bottom: 40px
+    &__title
+      margin-bottom: 7px
+    &__q
+      margin-bottom: 28px
+      font-size: 16px
+      line-height: 130%
+      font-weight: 300
+    &__a
+      margin-bottom: 10px
+    &__footer
+      margin-top: 88px
+      justify-content: flex-end
+    &__prev
+      &:before
+        top: 60%
+
+
+
+  @include media-custom(330px)
+    .wrapper
+      width: 320px
+
+  @include media-custom(580px)
+    .wrapper
+      width: 550px
+
+
+
 .progress
-  background-color: $gray
+  background-color: $bronze
   height: 1px
   left: 0
   position: absolute
@@ -143,12 +194,16 @@
     //   transform: translateY(-50%)
     //   width: 100%
     //   z-index: 5
+
+  @include media-tablet
+
+
 .circle
   align-items: center
   background-color: $blue
-  border: 1px solid $gray
+  border: 1px solid $bronze
   border-radius: 50%
-  color: $gray
+  color: $bronze
   display: flex
   height: 12px
   width: 12px
@@ -156,5 +211,10 @@
   transition: 0.4s ease
   z-index: 10
   &.active
-    border-color: $gray
-    background-color: $gray
+    border-color: $bronze
+    background-color: $bronze
+
+
+  @include media-tablet
+    width: 8px
+    height: 8px

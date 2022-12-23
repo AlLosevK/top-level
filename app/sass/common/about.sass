@@ -52,3 +52,39 @@
     border-top: 1px solid $bronze
     border-bottom: 1px solid $bronze
     margin: 80px 0
+
+  @include media-tablet
+    padding: 80px 0 60px
+    .wrapper
+      grid-template-columns: 100%
+    &__row
+      &:nth-child(2)
+        grid-column: 1/2
+        grid-row: 1/2
+        grid-template-columns: 1fr
+        grid-template-rows: 26px 200px
+        gap: 20px
+      &:nth-child(4)
+        .about__descr
+          width: 100%
+        .about__img
+          width: 100%
+          margin: 20px 0
+    &__img
+      width: 100%
+      grid-column: auto
+      grid-row: 2/3
+      margin: 0
+      margin-top: 20px
+    &__title
+      grid-column: auto
+    &__descr
+      font-size: 12px
+      line-height: 150%
+      width: auto
+    &__promo
+      margin: 20px 0
+      padding: 16px 0
+      font-size: 18px
+      line-height: 130%
+      width: 100%

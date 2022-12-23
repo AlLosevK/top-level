@@ -2,3 +2,12 @@
   position: relative
   width: 1312px
   margin: 0 auto
+
+  @include media-tablet
+    width: 280px
+
+  @include media-custom(330px)
+    width: 320px
+
+  @include media-custom(580px)
+    width: 550px

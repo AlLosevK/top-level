@@ -23,7 +23,7 @@
   &__title
     font-size: 63.3333px
     line-height: 120%
-    width: 830px
+    max-width: 830px
     text-align: center
     color: $bronze
   &__input
@@ -59,3 +59,27 @@
     text-transform: uppercase
     margin: 0 auto
     display: block
+
+  @include media-tablet
+    padding: 80px 0
+    &__title
+      font-size: 22px
+      line-height: 120%
+      width: 100%
+    &__input
+      padding: 9px 0
+      margin-bottom: 17px
+      width: 100%
+      font-size: 12px
+      line-height: 150%
+      font-weight: 300
+    &__policy
+      font-size: 10px
+      line-height: 120%
+      margin-bottom: 32px
+    &__submit
+      font-size: 12px
+      line-height: 150%
+      padding: 7.5px 0
+      width: 100%
+      text-align: center

@@ -41,3 +41,46 @@
       z-index: 5
   &__a
     display: none
+
+
+  @include media-tablet
+    padding: 80px 0 55px
+    .wrapper
+      grid-template-columns: 100%
+      gap: 10px
+    &__title
+      width: 60%
+    &__q
+      padding-left: 43px
+      a
+        font-size: 12px
+        line-height: 120%
+        font-weight: 300
+        padding: 0
+        padding: 18px 0
+        width: 90%
+      &:before
+        content: url('../images/dest/icons/arrow-ddown.svg')
+        bottom: auto
+        top: 30px
+      &:after
+        content: '01'
+        font-size: 14px
+        height: 100%
+        font-family: 'Viaoda Libre', cursive
+        position: absolute
+        left: 0
+        top: 18px
+        z-index: 5
+
+    &__list
+      padding-left: 16px
+    &__item
+      padding: 0
+      &:last-child
+        border-bottom: none
+      &.active
+        padding-bottom: 18px
+        .faq__q
+          &::before
+            transform: rotate(180deg)

@@ -4,8 +4,9 @@
   left: 0
   width: 100%
   background-color: transparent
-  padding: 30px 0
-  z-index: 50
+  z-index: 500
+  &.active
+    background-color: $blue
   .wrapper
     display: -webkit-flex
     display: -ms-flex
@@ -13,6 +14,7 @@
     flex-direction: row
     justify-content: space-between
     align-items: center
+    padding: 30px 0
   ul
     list-style: none
     padding: 0
@@ -31,3 +33,14 @@
     font-weight: 400
     font-size: 16px
     line-height: 150%
+
+  @include media-tablet
+    .wrapper
+      padding: 18px 0
+      justify-content: center
+    &__logo
+      display: none
+    &__contacts
+      display: none
+    &__nav
+      margin: 0 auto

@@ -1,24 +1,40 @@
 $(document).ready(function() {
-  // benefits acordeon
-  $(function() {
-  	$(".benefits__item").on("mouseenter", function(e) {
-  		e.preventDefault();
-  		var $this = $(this);
-  		if (!$this.hasClass("active")) {
-  			$(".benefits__item").removeClass("active");
-  		}
-  		$this.addClass("active");
-  	});
-  });
-
+  // // benefits acordeon
   // $(function() {
   // 	$(".benefits__item").on("mouseenter", function(e) {
   // 		e.preventDefault();
   // 		var $this = $(this);
-  //     console.log($this.children()[2]);
-  //     // $this.children()[2].fadeIn();
+  // 		if (!$this.hasClass("active")) {
+  // 			$(".benefits__item").removeClass("active");
+  // 		}
+  // 		$this.addClass("active");
   // 	});
   // });
+
+  const benItems = document.querySelector(".benefits__item");
+
+  $(function() {
+  	$(".benefits__item-bg").on("mouseenter", function(e) {
+
+  		e.preventDefault();
+  		var $this = $(this).parent();
+      $('.benefits__item.active').removeClass('active');
+      $this.addClass('active');
+
+  	});
+
+  	// $(".benefits__item-bg").on("mouseover", function(e) {
+  	// 	e.preventDefault();
+  	// 	var $this = $(this).parent();
+    //   $(".benefits__content").hide();
+    //   $this.children().fadeIn();
+  	// });
+
+  	$(".benefits__item-bg").on("mouseleave", function(e) {
+  		e.preventDefault();
+
+  	});
+  });
 
   // project popup
   $(function() {
@@ -48,6 +64,15 @@ $(document).ready(function() {
   $(window).scroll(function() {
      if( $(document).scrollTop() > 2000) {
         $("#popup-promo").addClass('active');
+        $(".header").addClass('active');
+     }
+  });
+
+  $(window).scroll(function() {
+     if( $(document).scrollTop() > 850) {
+        $(".header").addClass('active');
+     } else {
+       $(".header").removeClass('active');
      }
   });
 

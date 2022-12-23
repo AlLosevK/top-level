@@ -17,9 +17,10 @@ body
     background-color: $main
     color: $textDark
     position: relative
-    // @include media-tablet
-    //   font-size: 13px
-    //   line-height: 150%
+    @include media-tablet
+      font-size: 12px
+      line-height: 150%
+      font-weight: 400
 
 h1,
 h2,
@@ -35,18 +36,24 @@ h6
 h1
   font-size: 107px
   line-height: 108%
+  @include media-tablet
+    font-size: 40px
+    line-height: 108%
 
 h2
   font-size: 50px
   line-height: 120%
   font-weight: 400
-  // @include media-tablet
-  //   font-size: 18px
-  //   line-height: 120%
+  @include media-tablet
+    font-size: 22px
+    line-height: 120%
 
 h3
   font-size: 18px
   line-height: 120%
+  @include media-tablet
+    font-size: 12px
+    line-height: 120%
 
 p
   padding: 0
