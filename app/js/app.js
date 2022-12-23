@@ -1,19 +1,8 @@
 $(document).ready(function() {
-  // // benefits acordeon
-  // $(function() {
-  // 	$(".benefits__item").on("mouseenter", function(e) {
-  // 		e.preventDefault();
-  // 		var $this = $(this);
-  // 		if (!$this.hasClass("active")) {
-  // 			$(".benefits__item").removeClass("active");
-  // 		}
-  // 		$this.addClass("active");
-  // 	});
-  // });
 
-  const benItems = document.querySelector(".benefits__item");
-
+  //benefits acordeon
   $(function() {
+    var benItems = document.querySelector(".benefits__item");
   	$(".benefits__item-bg").on("mouseenter", function(e) {
 
   		e.preventDefault();
@@ -23,18 +12,30 @@ $(document).ready(function() {
 
   	});
 
-  	// $(".benefits__item-bg").on("mouseover", function(e) {
-  	// 	e.preventDefault();
-  	// 	var $this = $(this).parent();
-    //   $(".benefits__content").hide();
-    //   $this.children().fadeIn();
-  	// });
-
   	$(".benefits__item-bg").on("mouseleave", function(e) {
   		e.preventDefault();
 
   	});
   });
+
+  //faq acordeon
+  $(function() {
+    var benItems = document.querySelector(".faq__item");
+  	$(".faq__item-bg").on("mouseenter", function(e) {
+
+  		e.preventDefault();
+  		var $this = $(this).parent();
+      $('.faq__item.active').removeClass('active');
+      $this.addClass('active');
+
+  	});
+
+  	$(".faq__item-bg").on("mouseleave", function(e) {
+  		e.preventDefault();
+
+  	});
+  });
+
 
   // project popup
   $(function() {
@@ -48,17 +49,6 @@ $(document).ready(function() {
       document.body.style.overflow = 'hidden';
   	});
   });
-  // // project popup
-  // $(function() {
-  // 	$(".project__btn").on("click", function(e) {
-  // 		e.preventDefault();
-  // 		var $this = $(this).parent().parent();
-  // 		if (!$this.hasClass("active")) {
-  // 			$(this).removeClass("active");
-  // 		}
-  // 		$this.toggleClass("active");
-  // 	});
-  // });
 
   //scroll popup show
   $(window).scroll(function() {
@@ -98,17 +88,6 @@ $(document).ready(function() {
   	});
   });
 
-  //faq acordeon
-  $(function() {
-  	$(".faq__item").on("click", function(e) {
-  		e.preventDefault();
-  		var $this = $(this);
-  		if (!$this.hasClass("active")) {
-  			$(".faq__item").removeClass("active");
-  		}
-  		$this.toggleClass("active");
-  	});
-  });
 
   const progress = document.querySelector("#progress");
   const prev = document.querySelector("#prev");
@@ -123,10 +102,6 @@ $(document).ready(function() {
               ? circle.classList.add("active")
               : circle.classList.remove("active");
       });
-
-      // const actives = document.querySelectorAll(".active");
-      // const width = ((actives.length - 1) / (circles.length - 1)) * 100;
-      // progress.style.width = `${width}%`;
 
       if (currActive === 1) {
           prev.disabled = true;
@@ -147,7 +122,6 @@ $(document).ready(function() {
 
       $(".quiz__form-item").css({display: 'none'});
       $(".quiz__form-item-active:last").css({display: 'block'});
-      // console.log(qItemActive.length);
   };
 
   let currActive = 1;

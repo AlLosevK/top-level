@@ -13,6 +13,14 @@
   &__item
     padding-bottom: 19px
     border-bottom: 1px solid $bronze
+    position: relative
+    &-bg
+      position: absolute
+      width: 100%
+      height: 100%
+      top: 0
+      left: 0
+      z-index: 300
     &.active
       .faq__a
         display: block
@@ -44,12 +52,17 @@
 
 
   @include media-tablet
+    &__title
+      width: 60%
+
+  @include media-laptop
     padding: 80px 0 55px
     .wrapper
       grid-template-columns: 100%
       gap: 10px
     &__title
-      width: 60%
+      width: 90%
+      text-align: center
     &__q
       padding-left: 43px
       a
@@ -62,7 +75,7 @@
       &:before
         content: url('../images/dest/icons/arrow-ddown.svg')
         bottom: auto
-        top: 30px
+        top: 30%
       &:after
         content: '01'
         font-size: 14px

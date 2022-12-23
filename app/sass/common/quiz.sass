@@ -121,18 +121,20 @@
         transform: translate(0%, -80%) rotateY(180deg)
 
 
-  @include media-tablet
+  @include media-laptop
     padding-top: 80px
     .wrapper
       width: 280px
       margin: 0 auto
       left: auto
       grid-template-columns: 1fr
+      grid-template-rows: auto-fill
     &__content
       padding: 43px 20px 26px
       border-bottom-left-radius: 100px
+      order: 2
     &__slider
-      display: none
+      order: 1
     &__logo
       display: none
     &__bar
@@ -163,6 +165,14 @@
   @include media-custom(580px)
     .wrapper
       width: 550px
+
+  @include media-customMax(580px)
+    &__slider
+      display: none
+
+  @include media-custom(1350px)
+    .wrapper
+      width: 1312px
 
 
 
@@ -195,7 +205,7 @@
     //   width: 100%
     //   z-index: 5
 
-  @include media-tablet
+  @include media-laptop
 
 
 .circle
@@ -215,6 +225,6 @@
     background-color: $bronze
 
 
-  @include media-tablet
+  @include media-laptop
     width: 8px
     height: 8px
