@@ -1,5 +1,59 @@
 $(document).ready(function() {
 
+  // form
+  $(function() {
+    // Получаем данные формы.
+    var form = $('#form');
+
+        // Получаем сообщения из div
+    var formMessages = $('#form-messages');
+
+    // Устанавливаем прослушиватель для контактной формы.
+    $(form).submit(function(event) {
+        // Блокируем отправку данных формы в браузере.
+        event.preventDefault();
+
+        // Сериализуем данные формы.
+        var formData = $(form).serialize();
+
+        // Отправка данных формы с помощью AJAX.
+        $.ajax({
+            type: 'POST',
+            url: $(form).attr('action'),
+            data: formData
+        }).done(function(response) {
+            // Задаем текст сообщения.
+            $(formMessages).text(response);
+
+            // Очищаем форму.
+            $('#name').val('');
+            $('#email').val('');
+            $('#message').val('');
+        }).fail(function(data) {
+            // Устанавливаем текст сообщения.
+            if (data.responseText !== '') {
+              $(formMessages).text(data.responseText);
+            } else {
+              $(formMessages).text('Oops! An error occured and your message could not besent.');
+            }
+        });
+    });
+  });
+
+  //scroll to href
+  $("a[href^='#']").on("click", function () {
+    let href = $(this).attr("href");
+
+    $("html, body").animate({
+        scrollTop: $(href).offset().top
+    }, {
+        duration: 670,   // по умолчанию «400»
+        easing: "linear" // по умолчанию «swing»
+    });
+
+    return false;
+  });
+
   //benefits acordeon
   $(function() {
     var benItems = document.querySelector(".benefits__item");
@@ -50,11 +104,38 @@ $(document).ready(function() {
   	});
   });
 
+
+  // header popup
+  $(function() {
+  	$(".header-mob__menu").on("click", function(e) {
+  		e.preventDefault();
+  		var $this = $(this).parent().parent();
+  		if (!$this.hasClass("active")) {
+  			$(this).removeClass("active");
+  		}
+  		$this.toggleClass("active");
+      document.body.style.overflow = 'hidden';
+  	});
+  });
+
+  // header popup close
+  $(function() {
+  	$(".popup__nav-close").on("click", function(e) {
+  		e.preventDefault();
+  		var $this = $(this).parent().parent().parent();
+  		if (!$this.hasClass("active")) {
+  			$(this).removeClass("active");
+  		}
+  		$this.toggleClass("active");
+      document.body.style.overflow = 'visible';
+  	});
+  });
+
   //scroll popup show
   $(window).scroll(function() {
-     if( $(document).scrollTop() > 2000) {
+     if($(document).scrollTop() > 2000 && !$("#popup-promo").hasClass("active")) {
         $("#popup-promo").addClass('active');
-        $(".header").addClass('active');
+        document.body.style.overflow = 'hidden';
      }
   });
 
@@ -79,12 +160,13 @@ $(document).ready(function() {
   	});
   });
 
-  // project popup close
+  // promo popup close
   $(function() {
   	$(".popup-promo").on("click", function(e) {
   		e.preventDefault();
   		var $this = $(this);
   		$this.fadeOut();
+      document.body.style.overflow = 'visible';
   	});
   });
 
