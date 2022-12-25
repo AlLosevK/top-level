@@ -79,6 +79,8 @@
     width: 40px
     height: 40px
     position: relative
+    &:hover
+      border: 1px solid $bronzeH
     &:before
       content: url('../images/dest/icons/quiz-arrow-light.svg')
       position: absolute
@@ -93,6 +95,8 @@
       &:before
         content: url('../images/dest/icons/quiz-arrow-dark.svg')
         transform: translate(-50%, -80%) rotateY(180deg)
+      &:hover
+        background-color: $bronzeH
   &__next
     background-color: $bronze
     border: none
@@ -112,6 +116,9 @@
       z-index: 5
       width: 14px
       height: 14px
+    &:hover
+      background-color: $bronzeH
+      border: 1px solid $bronzeH
     &:disabled
       background: $blue
       color: $bronze
@@ -119,6 +126,8 @@
       &:before
         content: url('../images/dest/icons/quiz-arrow-light.svg')
         transform: translate(0%, -80%) rotateY(180deg)
+      &:hover
+        border: 1px solid $bronzeH
 
 
   @include media-laptop
@@ -127,14 +136,9 @@
       width: 280px
       margin: 0 auto
       left: auto
-      grid-template-columns: 1fr
-      grid-template-rows: auto-fill
     &__content
-      padding: 43px 20px 26px
+      padding: 43px 20px 75px
       border-bottom-left-radius: 100px
-      order: 2
-    &__slider
-      order: 1
     &__logo
       display: none
     &__bar
@@ -150,11 +154,11 @@
     &__a
       margin-bottom: 10px
     &__footer
-      margin-top: 88px
+      margin-top: 0
       justify-content: flex-end
     &__prev
       &:before
-        top: 60%
+        top: calc(100% - 14px)/2
 
 
 
@@ -169,6 +173,15 @@
   @include media-customMax(580px)
     &__slider
       display: none
+
+  @include media-customMax(1000px)
+    .wrapper
+      grid-template-columns: 1fr
+      grid-template-rows: repeat(2, minmax(auto, 380px))
+    &__content
+      order: 2
+    &__slider
+      order: 1
 
   @include media-custom(1350px)
     .wrapper

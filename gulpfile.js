@@ -64,6 +64,7 @@ function pugf() {
 function scripts() {
 	return src([ // Берём файлы из источников
 		'node_modules/jquery/dist/jquery.min.js', // Пример подключения библиотеки
+		'node_modules/slick-carousel/slick/slick.min.js', // Пример подключения библиотеки
 		'app/js/app.js', // Пользовательские скрипты, использующие библиотеку, должны быть подключены в конце
 		])
 	.pipe(concat('app.min.js')) // Конкатенируем в один файл
@@ -74,6 +75,8 @@ function scripts() {
 
 function styles() {
 	return src(['node_modules/bootstrap/dist/css/bootstrap.min.css',
+		'node_modules/slick-carousel/slick/slick-theme.css',
+		'node_modules/slick-carousel/slick/slick.css',
 		'app/' + preprocessor + '/main.' + preprocessor + '']) // Выбираем источник: "app/sass/main.sass" или "app/less/main.less"
 	.pipe(eval(preprocessor)()) // Преобразуем значение переменной "preprocessor" в функцию
 	.pipe(concat('app.min.css')) // Конкатенируем в файл app.min.js

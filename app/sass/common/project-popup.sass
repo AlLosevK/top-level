@@ -4,7 +4,7 @@
   position: fixed
   top: 0
   left: 0
-  z-index: 100
+  z-index: 1000
   overflow: hidden
   display: -webkit-flex
   display: -ms-flex
@@ -22,7 +22,7 @@
     background-color: $main
 
 .popup
-  z-index: 105
+  z-index: 1050
   position: relative
   width: 1312px
   height: 768px
@@ -37,7 +37,7 @@
     width: 100vw
     height: 100vh
     background-color: $main
-    z-index: 100
+    z-index: 1000
     &.active
       display: block
     .wrapper
@@ -62,6 +62,7 @@
     background-color: #fff
     max-height: 768px
     max-width: 703px
+    overflow: auto
   &__title
     margin-bottom: 40px
   &__descr
@@ -131,6 +132,6 @@
     flex-direction: row
     justify-content: flex-end
     align-items: center
-    z-index: 150
+    z-index: 1500
     &-close
       cursor: pointer

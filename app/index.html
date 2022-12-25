@@ -9,36 +9,80 @@
   </head>
   <body>
     <header class="header">
-      <div class="wrapper">
-        <nav class="header__nav">
-          <ul>
-            <li><a class="header__link">Преимущества</a></li>
-            <li><a class="header__link">Проекты</a></li>
-            <li><a class="header__link">О Компании</a></li>
-            <li><a class="header__link">FAQ</a></li>
-          </ul>
-        </nav>
-        <div class="header__logo">
-              <svg class="icon icon-header-logo header__logo-icon">
-                <use xlink:href="images/dest/sprite.svg#header-logo"></use>
-              </svg>
+      <div class="header-desk">
+        <div class="wrapper">
+          <nav class="header__nav">
+            <ul class="header__list">
+              <li><a class="header__link" href="#">Преимущества</a></li>
+              <li><a class="header__link" href="#">Проекты</a></li>
+              <li><a class="header__link" href="#">О Компании</a></li>
+              <li><a class="header__link" href="#">FAQ</a></li>
+            </ul>
+          </nav>
+          <div class="header__logo">
+                <svg class="icon icon-header-logo header__logo-icon">
+                  <use xlink:href="images/dest/sprite.svg#header-logo"></use>
+                </svg>
+          </div>
+          <div class="header__contacts">
+            <ul class="header__list">
+              <li><a class="header__link" href="tel:+123">+9 (715) 858 35 333</a></li>
+              <li><a class="header__link" href="#quiz">Подобрать недвижимость</a></li>
+            </ul>
+          </div>
         </div>
-        <div class="header__contacts">
-          <ul>
-            <li><a class="header__link" href="tel:+123">+9 (715) 858 35 333</a></li>
-            <li><a class="header__link" href="#">Подобрать недвижимость</a></li>
+      </div>
+      <div class="header-mob">
+        <div class="wrapper"><a class="header-mob__phone" href="#form">
+                <svg class="icon icon-header-mob-phone header-mob__phone-icon">
+                  <use xlink:href="images/dest/sprite.svg#header-mob-phone"></use>
+                </svg></a>
+          <div class="header-mob__logo">
+                <svg class="icon icon-header-logo header-mob__logo-icon">
+                  <use xlink:href="images/dest/sprite.svg#header-logo"></use>
+                </svg>
+          </div>
+          <div class="header-mob__menu">
+                <svg class="icon icon-header-menu header-mob__menu-icon">
+                  <use xlink:href="images/dest/sprite.svg#header-menu"></use>
+                </svg>
+          </div>
+        </div>
+        <div class="header-mob__abs">
+          <div class="header-mob__abs-nav">
+                <svg class="icon icon-project-popup-close popup__nav-close">
+                  <use xlink:href="images/dest/sprite.svg#project-popup-close"></use>
+                </svg>
+          </div>
+          <div class="header-mob__abs-logo">
+                <svg class="icon icon-header-mob-logo header-mob__logo-icon">
+                  <use xlink:href="images/dest/sprite.svg#header-mob-logo"></use>
+                </svg>
+          </div>
+          <ul class="header-mob__abs-list">
+            <li class="header-mob__abs-item"><a href="#">Преимущества</a></li>
+            <li class="header-mob__abs-item"><a href="#">Проекты</a></li>
+            <li class="header-mob__abs-item"><a href="#">О компании</a></li>
+            <li class="header-mob__abs-item"><a href="#">FAQ</a></li>
           </ul>
+          <div class="header-mob__abs-contacts"><a class="header-mob__abs-link" href="tel:+971585835333">
+                  <svg class="icon icon-header-mob-phone header-mob__abs-link-icon">
+                    <use xlink:href="images/dest/sprite.svg#header-mob-phone"></use>
+                  </svg>
+              <p>+9 (715) 858 35 333</p></a>
+            <button class="header-mob__abs-btn" href="#quiz">Подобрать недвижимость</button>
+          </div>
         </div>
       </div>
     </header>
     <main class="main">
       <section class="banner">
+        <div class="banner__slider"><img class="banner__slide" src="images/dest/banner-slide-1.webp"><img class="banner__slide" src="images/dest/banner-slide-2.webp"><img class="banner__slide" src="images/dest/banner-slide-3.webp"></div>
         <div class="wrapper">
-          <h1 class="banner__title"> <span>Весь спектр недвижимости в Дубае</span>квадратные метры<br>под любые цели</h1>
-          <button class="banner__btn" type="button">Бесплатная консультация</button>
+          <h1 class="banner__title"> <span>Весь спектр недвижимости в Дубае</span>квадратные метры<br>под любые цели</h1><a class="banner__btn" href="#form">Бесплатная консультация</a>
         </div>
       </section>
-      <section class="quiz">
+      <section class="quiz" id="quiz">
         <div class="wrapper">
           <div class="quiz__content">
             <div class="quiz__bar progress__container">
@@ -174,8 +218,7 @@
         <div class="projects__bg"></div>
         <div class="wrapper">
           <div class="projects__banner">
-            <h2 class="projects__title">Проекты</h2>
-            <button class="projects__btn">Бесплатная консультация</button>
+            <h2 class="projects__title">Проекты</h2><a class="projects__btn" href="#form">Бесплатная консультация</a>
           </div>
           <div class="projects__items">
             <h2 class="projects__items-title">горячие предложения</h2>
@@ -183,18 +226,24 @@
               <picture class="project__img"><img src="images/dest/project-1.webp" alt=""></picture>
               <div class="project__promo">
                 <p class="project__promo-descr" data-type="appart">апартаменты</p>
-                <p class="project__promo-price">от 1 600 984 ₽</p>
+                <p class="project__promo-price">от 2 000 000 аед</p>
               </div>
               <div class="project__content">
-                <p class="project__title">OPAL GARDENS</p>
-                <p class="project__subtitle">Creek harbour district</p>
-                <p class="project__descr">Opal Gardens в Мохаммед Бин Рашид Сити (MBR City), район 11 — это новый жилой комплекс</p>
+                <p class="project__title">Palm Beach Tower </p>
+                <p class="project__subtitle">Palm Jumeirah</p>
+                <p class="project__descr">Пусто</p>
                 <div class="project__benefits">
-                  <div class="project__benefits-item project__benefits-bath"><img src="images/dest/project-benefits-bath.webp">
-                    <p>1</p>
+                  <div class="project__benefits-item project__benefits-bath">
+                        <svg class="icon icon-bath ">
+                          <use xlink:href="images/dest/sprite.svg#bath"></use>
+                        </svg>
+                    <p>5</p>
                   </div>
-                  <div class="project__benefits-item project__benefits-bad"><img src="images/dest/project-benefits-bad.webp">
-                    <p>2</p>
+                  <div class="project__benefits-item project__benefits-bad">
+                        <svg class="icon icon-bad ">
+                          <use xlink:href="images/dest/sprite.svg#bad"></use>
+                        </svg>
+                    <p>4</p>
                   </div>
                 </div>
                 <button class="project__btn" type="button">Смотреть</button>
@@ -203,45 +252,57 @@
                 <div class="project-popup__bg"></div>
                 <div class="popup">
                   <div class="popup__content">
-                    <h2 class="popup__title">Opal Gardens</h2>
-                    <p class="popup__descr">Opal Gardens в Мохаммед Бин Рашид Сити (MBR City), район 11 — это новый жилой комплекс от Meydan, который предлагает стильные дизайнерские апартаменты к услугам гостей.</p>
-                    <p class="popup__descr">Жители смогут воспользоваться легкостью и удобством, предлагаемыми местоположением,которое находится в очень привлекательной части города и расположено в непосредственной близости от всех наиболее известных достопримечательностей города.</p>
+                    <h2 class="popup__title">Palm Beach Tower</h2>
+                    <p class="popup__descr">Все апартаменты в Palm Beach Towers, будь то с одной, двумя, тремя, четырьмя спальнями или пентхаус, предлагает залитые солнцем пространства, исключительные кухни и потрясающую сантехнику и отделку. Это означает, что каждое мгновение, которое вы проводите дома, просто идеально, будь то развлечения в просторной гостиной и столовой или отдых, погруженный в легкую и воздушную эстетику.</p>
+                    <p class="popup__descr">Palm Beach Towers расположен на въезде в Пальму Джумейра, прямо в центре одного из самых захватывающих и оживленных районов города. Насладитесь свободой солнечной прогулки по некоторым из самых известных ресторанов или проведите день за покупками в магазинах роскошных торговых марок, которые вы любите.</p>
                     <div class="popup__benefits">
                       <div class="popup__benefits-item">
                             <svg class="icon icon-benefits-icon popup__benefits-icon">
                               <use xlink:href="images/dest/sprite.svg#benefits-icon"></use>
                             </svg>
-                        <p class="popup__benefits-descr">Выбор роскошных апартаментов к вашим услугам</p>
+                        <p class="popup__benefits-descr">Зона для занятия йогой</p>
                       </div>
                       <div class="popup__benefits-item">
                             <svg class="icon icon-benefits-icon popup__benefits-icon">
                               <use xlink:href="images/dest/sprite.svg#benefits-icon"></use>
                             </svg>
-                        <p class="popup__benefits-descr">Выбор роскошных апартаментов к вашим услугам</p>
+                        <p class="popup__benefits-descr">Тренажерный зал</p>
                       </div>
                       <div class="popup__benefits-item">
                             <svg class="icon icon-benefits-icon popup__benefits-icon">
                               <use xlink:href="images/dest/sprite.svg#benefits-icon"></use>
                             </svg>
-                        <p class="popup__benefits-descr">Выбор роскошных апартаментов к вашим услугам</p>
+                        <p class="popup__benefits-descr">Детская площадка</p>
                       </div>
                       <div class="popup__benefits-item">
                             <svg class="icon icon-benefits-icon popup__benefits-icon">
                               <use xlink:href="images/dest/sprite.svg#benefits-icon"></use>
                             </svg>
-                        <p class="popup__benefits-descr">Выбор роскошных апартаментов к вашим услугам</p>
+                        <p class="popup__benefits-descr">Открытый пейзажный бассейн</p>
                       </div>
                       <div class="popup__benefits-item">
                             <svg class="icon icon-benefits-icon popup__benefits-icon">
                               <use xlink:href="images/dest/sprite.svg#benefits-icon"></use>
                             </svg>
-                        <p class="popup__benefits-descr">Выбор роскошных апартаментов к вашим услугам</p>
+                        <p class="popup__benefits-descr">СПА</p>
                       </div>
                       <div class="popup__benefits-item">
                             <svg class="icon icon-benefits-icon popup__benefits-icon">
                               <use xlink:href="images/dest/sprite.svg#benefits-icon"></use>
                             </svg>
-                        <p class="popup__benefits-descr">Выбор роскошных апартаментов к вашим услугам</p>
+                        <p class="popup__benefits-descr">Частный пляж</p>
+                      </div>
+                      <div class="popup__benefits-item">
+                            <svg class="icon icon-benefits-icon popup__benefits-icon">
+                              <use xlink:href="images/dest/sprite.svg#benefits-icon"></use>
+                            </svg>
+                        <p class="popup__benefits-descr">Прибрежный парк и набережная</p>
+                      </div>
+                      <div class="popup__benefits-item">
+                            <svg class="icon icon-benefits-icon popup__benefits-icon">
+                              <use xlink:href="images/dest/sprite.svg#benefits-icon"></use>
+                            </svg>
+                        <p class="popup__benefits-descr">Причал для лодки</p>
                       </div>
                     </div>
                     <div class="popup__map"></div>
@@ -249,10 +310,10 @@
                   <div class="popup__promo">
                     <div class="popup__promo-slider">
                       <picture class="popup__promo-slide"><img src="images/dest/popup-promo-slide.webp" alt="#"></picture>
+                      <picture class="popup__promo-slide"><img src="images/dest/banner-slide-3.webp" alt="#"></picture>
                     </div>
                     <p class="popup__promo-title">УСПЕЙТЕ КУПИТЬ</p>
-                    <div class="popup__promo-timer" id="timer"></div>
-                    <button class="popup__promo-btn" type="button">бесплатная консультация</button>
+                    <div class="popup__promo-timer" id="timer">10:00:00</div><a class="popup__promo-btn" href="form">бесплатная консультация</a>
                   </div>
                   <div class="popup__nav">
                         <svg class="icon icon-project-popup-close popup__nav-close">
@@ -266,18 +327,24 @@
               <picture class="project__img"><img src="images/dest/project-2.webp" alt=""></picture>
               <div class="project__promo">
                 <p class="project__promo-descr" data-type="villa">вилла</p>
-                <p class="project__promo-price">от 100 600 984 ₽</p>
+                <p class="project__promo-price">от 21 680 000 аед</p>
               </div>
               <div class="project__content">
-                <p class="project__title">МУДОН АЛЬ РАНИМ</p>
-                <p class="project__subtitle">Creek harbour district</p>
-                <p class="project__descr">Выбор роскошных апартаментов к вашим услугам</p>
+                <p class="project__title">ADDRESS VILLAS – HILLCREST</p>
+                <p class="project__subtitle">Hadaeq Sheikh Mohammed Bin Rashid</p>
+                <p class="project__descr">ADDRESS VILLAS – HILLCREST - это новый жилой комплекс вилл, расположенный в Dubai Hills Estate.</p>
                 <div class="project__benefits">
-                  <div class="project__benefits-item project__benefits-bath"><img src="images/dest/project-benefits-bath.webp">
-                    <p>1</p>
+                  <div class="project__benefits-item project__benefits-bath">
+                        <svg class="icon icon-bath ">
+                          <use xlink:href="images/dest/sprite.svg#bath"></use>
+                        </svg>
+                    <p>4</p>
                   </div>
-                  <div class="project__benefits-item project__benefits-bad"><img src="images/dest/project-benefits-bad.webp">
-                    <p>2</p>
+                  <div class="project__benefits-item project__benefits-bad">
+                        <svg class="icon icon-bad ">
+                          <use xlink:href="images/dest/sprite.svg#bad"></use>
+                        </svg>
+                    <p>5</p>
                   </div>
                 </div>
                 <button class="project__btn" type="button">Смотреть</button>
@@ -286,46 +353,51 @@
                 <div class="project-popup__bg"></div>
                 <div class="popup">
                   <div class="popup__content">
-                    <h2 class="popup__title">Мудон Аль-Раним</h2>
-                    <p class="popup__descr">Мудон Аль-Раним расположен на расстоянии от всего, но в то же время в пределах пешей досягаемости от многих ключевых пунктов назначения.</p>
-                    <p class="popup__descr">Ваша растущая семья нуждается в безопасном и комфортном убежище, где вы могли бы расслабиться в конце каждого дня.</p>
-                    <p class="popup__descr">Выбирайте из прекрасно оборудованных таунхаусов с 3 и 4 спальнями, а также таунхаусов предназначенных для семейной жизни.</p>
+                    <h2 class="popup__title">ADDRESS VILLAS – HILLCREST</h2>
+                    <p class="popup__descr">ADDRESS VILLAS – HILLCREST - это новый жилой комплекс вилл, расположенный в Dubai Hills Estate. Жители смогут отдохнуть вдали от шума и суеты мегаполиса, а также смогут легко добраться до ключевых районов эмирата. Проект разработан Emaar Properties, которая является одной из ведущих девелоперских компаний Эмирата, известной такими проектами, как Creek Edge, Vida Residences Dubai Marina, Burj Crown и многими другими.</p>
+                    <p class="popup__descr">Общее количество домов в Address Hills составляет 51, и будущие жители могут выбрать из вилл с 5 спальнями, спроектированных в двух типах, называемых классическими виллами и современными виллами. Площади участков резиденций варьируются от 6 983 кв. футов до 10 805 кв. футов. Каждый блок спроектирован с учетом роскоши и спокойствия, а также с учетом наличия лифта, чтобы обеспечить жильцам максимальный комфорт. С просторных балконов и окон от пола до потолка открывается захватывающий вид на Бурдж-Халифу и знаменитый горизонт Дубая.</p>
                     <div class="popup__benefits">
                       <div class="popup__benefits-item">
                             <svg class="icon icon-benefits-icon popup__benefits-icon">
                               <use xlink:href="images/dest/sprite.svg#benefits-icon"></use>
                             </svg>
-                        <p class="popup__benefits-descr">Выбор роскошных апартаментов к вашим услугам</p>
+                        <p class="popup__benefits-descr">Зона для занятия йогой </p>
                       </div>
                       <div class="popup__benefits-item">
                             <svg class="icon icon-benefits-icon popup__benefits-icon">
                               <use xlink:href="images/dest/sprite.svg#benefits-icon"></use>
                             </svg>
-                        <p class="popup__benefits-descr">Выбор роскошных апартаментов к вашим услугам</p>
+                        <p class="popup__benefits-descr">Тренажерный зал</p>
                       </div>
                       <div class="popup__benefits-item">
                             <svg class="icon icon-benefits-icon popup__benefits-icon">
                               <use xlink:href="images/dest/sprite.svg#benefits-icon"></use>
                             </svg>
-                        <p class="popup__benefits-descr">Выбор роскошных апартаментов к вашим услугам</p>
+                        <p class="popup__benefits-descr">Детская площадка </p>
                       </div>
                       <div class="popup__benefits-item">
                             <svg class="icon icon-benefits-icon popup__benefits-icon">
                               <use xlink:href="images/dest/sprite.svg#benefits-icon"></use>
                             </svg>
-                        <p class="popup__benefits-descr">Выбор роскошных апартаментов к вашим услугам</p>
+                        <p class="popup__benefits-descr">Бассейн для взрослых и детей</p>
                       </div>
                       <div class="popup__benefits-item">
                             <svg class="icon icon-benefits-icon popup__benefits-icon">
                               <use xlink:href="images/dest/sprite.svg#benefits-icon"></use>
                             </svg>
-                        <p class="popup__benefits-descr">Выбор роскошных апартаментов к вашим услугам</p>
+                        <p class="popup__benefits-descr">Зоны для пикника у озера</p>
                       </div>
                       <div class="popup__benefits-item">
                             <svg class="icon icon-benefits-icon popup__benefits-icon">
                               <use xlink:href="images/dest/sprite.svg#benefits-icon"></use>
                             </svg>
-                        <p class="popup__benefits-descr">Выбор роскошных апартаментов к вашим услугам</p>
+                        <p class="popup__benefits-descr">Открытые зеленые зоны</p>
+                      </div>
+                      <div class="popup__benefits-item">
+                            <svg class="icon icon-benefits-icon popup__benefits-icon">
+                              <use xlink:href="images/dest/sprite.svg#benefits-icon"></use>
+                            </svg>
+                        <p class="popup__benefits-descr">Золотая виза на 10 лет</p>
                       </div>
                     </div>
                     <div class="popup__map"></div>
@@ -333,10 +405,10 @@
                   <div class="popup__promo">
                     <div class="popup__promo-slider">
                       <picture class="popup__promo-slide"><img src="images/dest/popup-promo-slide.webp" alt="#"></picture>
+                      <picture class="popup__promo-slide"><img src="images/dest/banner-slide-3.webp" alt="#"></picture>
                     </div>
                     <p class="popup__promo-title">УСПЕЙТЕ КУПИТЬ</p>
-                    <p class="popup__promo-timer" id="timer"></p>
-                    <button class="popup__promo-btn" type="button">бесплатная консультация</button>
+                    <div class="popup__promo-timer" id="timer">10:00:00</div><a class="popup__promo-btn" href="form">бесплатная консультация</a>
                   </div>
                   <div class="popup__nav">
                         <svg class="icon icon-project-popup-close popup__nav-close">
@@ -349,19 +421,25 @@
             <div class="projects__item project">
               <picture class="project__img"><img src="images/dest/project-3.webp" alt=""></picture>
               <div class="project__promo">
-                <p class="project__promo-descr" data-type="flat">квартира</p>
-                <p class="project__promo-price">от 100 600 984 ₽</p>
+                <p class="project__promo-descr" data-type="appart">Аппартамены</p>
+                <p class="project__promo-price">от 10 000 000 аед</p>
               </div>
               <div class="project__content">
-                <p class="project__title">МУДОН АЛЬ РАНИМ</p>
-                <p class="project__subtitle">Creek harbour district</p>
-                <p class="project__descr">Жители смогут воспользоваться легкостью и удобством, предлагаемыми...</p>
+                <p class="project__title">Burj Binghatti Jacob & Co Residences</p>
+                <p class="project__subtitle">SHEIKH ZAYED ROAD</p>
+                <p class="project__descr">Пусто</p>
                 <div class="project__benefits">
-                  <div class="project__benefits-item project__benefits-bath"><img src="images/dest/project-benefits-bath.webp">
-                    <p>1</p>
+                  <div class="project__benefits-item project__benefits-bath">
+                        <svg class="icon icon-bath ">
+                          <use xlink:href="images/dest/sprite.svg#bath"></use>
+                        </svg>
+                    <p>3</p>
                   </div>
-                  <div class="project__benefits-item project__benefits-bad"><img src="images/dest/project-benefits-bad.webp">
-                    <p>2</p>
+                  <div class="project__benefits-item project__benefits-bad">
+                        <svg class="icon icon-bad ">
+                          <use xlink:href="images/dest/sprite.svg#bad"></use>
+                        </svg>
+                    <p>3</p>
                   </div>
                 </div>
                 <button class="project__btn" type="button">Смотреть</button>
@@ -370,46 +448,56 @@
                 <div class="project-popup__bg"></div>
                 <div class="popup">
                   <div class="popup__content">
-                    <h2 class="popup__title">Мудон Аль-Раним</h2>
-                    <p class="popup__descr">Мудон Аль-Раним расположен на расстоянии от всего, но в то же время в пределах пешей досягаемости от многих ключевых пунктов назначения.</p>
-                    <p class="popup__descr">Ваша растущая семья нуждается в безопасном и комфортном убежище, где вы могли бы расслабиться в конце каждого дня.</p>
-                    <p class="popup__descr">Выбирайте из прекрасно оборудованных таунхаусов с 3 и 4 спальнями, а также таунхаусов предназначенных для семейной жизни.</p>
+                    <h2 class="popup__title">Burj Binghatti Jacob & Co Residences</h2>
+                    <p class="popup__descr">Представьте, что вы живете среди облаков на вершине одной из самых высоких гипербашен в мире. Нарушайте границы и бросайте вызов немыслимому, Резиденции Burj Binghatti Jacob & Co полностью переосмысливают понятие роскошного современного образа жизни в мегаполисе, предлагая безупречную, высококлассную индивидуальную жизнь, созданную исключительно для элиты.</p>
                     <div class="popup__benefits">
                       <div class="popup__benefits-item">
                             <svg class="icon icon-benefits-icon popup__benefits-icon">
                               <use xlink:href="images/dest/sprite.svg#benefits-icon"></use>
                             </svg>
-                        <p class="popup__benefits-descr">Выбор роскошных апартаментов к вашим услугам</p>
+                        <p class="popup__benefits-descr">Рестораны</p>
                       </div>
                       <div class="popup__benefits-item">
                             <svg class="icon icon-benefits-icon popup__benefits-icon">
                               <use xlink:href="images/dest/sprite.svg#benefits-icon"></use>
                             </svg>
-                        <p class="popup__benefits-descr">Выбор роскошных апартаментов к вашим услугам</p>
+                        <p class="popup__benefits-descr">Тренажерный зал</p>
                       </div>
                       <div class="popup__benefits-item">
                             <svg class="icon icon-benefits-icon popup__benefits-icon">
                               <use xlink:href="images/dest/sprite.svg#benefits-icon"></use>
                             </svg>
-                        <p class="popup__benefits-descr">Выбор роскошных апартаментов к вашим услугам</p>
+                        <p class="popup__benefits-descr">Детская игровая площадка</p>
                       </div>
                       <div class="popup__benefits-item">
                             <svg class="icon icon-benefits-icon popup__benefits-icon">
                               <use xlink:href="images/dest/sprite.svg#benefits-icon"></use>
                             </svg>
-                        <p class="popup__benefits-descr">Выбор роскошных апартаментов к вашим услугам</p>
+                        <p class="popup__benefits-descr">Парки и зоны отдыха</p>
                       </div>
                       <div class="popup__benefits-item">
                             <svg class="icon icon-benefits-icon popup__benefits-icon">
                               <use xlink:href="images/dest/sprite.svg#benefits-icon"></use>
                             </svg>
-                        <p class="popup__benefits-descr">Выбор роскошных апартаментов к вашим услугам</p>
+                        <p class="popup__benefits-descr">Рестораны</p>
                       </div>
                       <div class="popup__benefits-item">
                             <svg class="icon icon-benefits-icon popup__benefits-icon">
                               <use xlink:href="images/dest/sprite.svg#benefits-icon"></use>
                             </svg>
-                        <p class="popup__benefits-descr">Выбор роскошных апартаментов к вашим услугам</p>
+                        <p class="popup__benefits-descr">Торговые точки</p>
+                      </div>
+                      <div class="popup__benefits-item">
+                            <svg class="icon icon-benefits-icon popup__benefits-icon">
+                              <use xlink:href="images/dest/sprite.svg#benefits-icon"></use>
+                            </svg>
+                        <p class="popup__benefits-descr">Супермаркет</p>
+                      </div>
+                      <div class="popup__benefits-item">
+                            <svg class="icon icon-benefits-icon popup__benefits-icon">
+                              <use xlink:href="images/dest/sprite.svg#benefits-icon"></use>
+                            </svg>
+                        <p class="popup__benefits-descr">Плавательный бассейн</p>
                       </div>
                     </div>
                     <div class="popup__map"></div>
@@ -417,10 +505,10 @@
                   <div class="popup__promo">
                     <div class="popup__promo-slider">
                       <picture class="popup__promo-slide"><img src="images/dest/popup-promo-slide.webp" alt="#"></picture>
+                      <picture class="popup__promo-slide"><img src="images/dest/banner-slide-3.webp" alt="#"></picture>
                     </div>
                     <p class="popup__promo-title">УСПЕЙТЕ КУПИТЬ</p>
-                    <p class="popup__promo-timer" id="timer"></p>
-                    <button class="popup__promo-btn" type="button">бесплатная консультация</button>
+                    <div class="popup__promo-timer" id="timer">10:00:00</div><a class="popup__promo-btn" href="form">бесплатная консультация</a>
                   </div>
                   <div class="popup__nav">
                         <svg class="icon icon-project-popup-close popup__nav-close">
@@ -433,19 +521,25 @@
             <div class="projects__item project">
               <picture class="project__img"><img src="images/dest/project-1.webp" alt=""></picture>
               <div class="project__promo">
-                <p class="project__promo-descr" data-type="flat">вилла</p>
-                <p class="project__promo-price">от 100 600 984 ₽</p>
+                <p class="project__promo-descr" data-type="flat">Пентхаус</p>
+                <p class="project__promo-price">от 18 000 000 аед</p>
               </div>
               <div class="project__content">
-                <p class="project__title">МУДОН АЛЬ РАНИМ</p>
-                <p class="project__subtitle">Creek harbour district</p>
+                <p class="project__title">ONE CANAL PENTHOUSE AND SKY VILLAS</p>
+                <p class="project__subtitle">Al Safa 1</p>
                 <p class="project__descr">Выбор роскошных апартаментов к вашим услугам</p>
                 <div class="project__benefits">
-                  <div class="project__benefits-item project__benefits-bath"><img src="images/dest/project-benefits-bath.webp">
-                    <p>1</p>
+                  <div class="project__benefits-item project__benefits-bath">
+                        <svg class="icon icon-bath ">
+                          <use xlink:href="images/dest/sprite.svg#bath"></use>
+                        </svg>
+                    <p>4</p>
                   </div>
-                  <div class="project__benefits-item project__benefits-bad"><img src="images/dest/project-benefits-bad.webp">
-                    <p>2</p>
+                  <div class="project__benefits-item project__benefits-bad">
+                        <svg class="icon icon-bad ">
+                          <use xlink:href="images/dest/sprite.svg#bad"></use>
+                        </svg>
+                    <p>4</p>
                   </div>
                 </div>
                 <button class="project__btn" type="button">Смотреть</button>
@@ -454,57 +548,18 @@
                 <div class="project-popup__bg"></div>
                 <div class="popup">
                   <div class="popup__content">
-                    <h2 class="popup__title">Мудон Аль-Раним</h2>
-                    <p class="popup__descr">Мудон Аль-Раним расположен на расстоянии от всего, но в то же время в пределах пешей досягаемости от многих ключевых пунктов назначения.</p>
-                    <p class="popup__descr">Ваша растущая семья нуждается в безопасном и комфортном убежище, где вы могли бы расслабиться в конце каждого дня.</p>
-                    <p class="popup__descr">Выбирайте из прекрасно оборудованных таунхаусов с 3 и 4 спальнями, а также таунхаусов предназначенных для семейной жизни.</p>
-                    <div class="popup__benefits">
-                      <div class="popup__benefits-item">
-                            <svg class="icon icon-benefits-icon popup__benefits-icon">
-                              <use xlink:href="images/dest/sprite.svg#benefits-icon"></use>
-                            </svg>
-                        <p class="popup__benefits-descr">Выбор роскошных апартаментов к вашим услугам</p>
-                      </div>
-                      <div class="popup__benefits-item">
-                            <svg class="icon icon-benefits-icon popup__benefits-icon">
-                              <use xlink:href="images/dest/sprite.svg#benefits-icon"></use>
-                            </svg>
-                        <p class="popup__benefits-descr">Выбор роскошных апартаментов к вашим услугам</p>
-                      </div>
-                      <div class="popup__benefits-item">
-                            <svg class="icon icon-benefits-icon popup__benefits-icon">
-                              <use xlink:href="images/dest/sprite.svg#benefits-icon"></use>
-                            </svg>
-                        <p class="popup__benefits-descr">Выбор роскошных апартаментов к вашим услугам</p>
-                      </div>
-                      <div class="popup__benefits-item">
-                            <svg class="icon icon-benefits-icon popup__benefits-icon">
-                              <use xlink:href="images/dest/sprite.svg#benefits-icon"></use>
-                            </svg>
-                        <p class="popup__benefits-descr">Выбор роскошных апартаментов к вашим услугам</p>
-                      </div>
-                      <div class="popup__benefits-item">
-                            <svg class="icon icon-benefits-icon popup__benefits-icon">
-                              <use xlink:href="images/dest/sprite.svg#benefits-icon"></use>
-                            </svg>
-                        <p class="popup__benefits-descr">Выбор роскошных апартаментов к вашим услугам</p>
-                      </div>
-                      <div class="popup__benefits-item">
-                            <svg class="icon icon-benefits-icon popup__benefits-icon">
-                              <use xlink:href="images/dest/sprite.svg#benefits-icon"></use>
-                            </svg>
-                        <p class="popup__benefits-descr">Выбор роскошных апартаментов к вашим услугам</p>
-                      </div>
-                    </div>
+                    <h2 class="popup__title">ONE CANAL PENTHOUSE AND SKY VILLAS</h2>
+                    <p class="popup__descr">Новая престижная недвижимость в Дубае, предназначенная для избранных. Состоит из 24 эксклюзивных пентхаусов, Sky Villas и Sky Mansion, переосмысливающих удобства, мастерство и несравнимый стиль жизни.</p>
+                    <p class="popup__descr">Являясь идеальным сочетанием уединения и спокойствия, резиденция предлагает захватывающий вид на Дубайский канал, Бурдж-Халифу, парк Сафа и Бурдж-АЛЬ-Араб. Канал, примыкающий к парку Сафа в самом центре города.</p>
                     <div class="popup__map"></div>
                   </div>
                   <div class="popup__promo">
                     <div class="popup__promo-slider">
                       <picture class="popup__promo-slide"><img src="images/dest/popup-promo-slide.webp" alt="#"></picture>
+                      <picture class="popup__promo-slide"><img src="images/dest/banner-slide-3.webp" alt="#"></picture>
                     </div>
                     <p class="popup__promo-title">УСПЕЙТЕ КУПИТЬ</p>
-                    <p class="popup__promo-timer" id="timer"></p>
-                    <button class="popup__promo-btn" type="button">бесплатная консультация</button>
+                    <div class="popup__promo-timer" id="timer">10:00:00</div><a class="popup__promo-btn" href="form">бесплатная консультация</a>
                   </div>
                   <div class="popup__nav">
                         <svg class="icon icon-project-popup-close popup__nav-close">
@@ -517,19 +572,25 @@
             <div class="projects__item project">
               <picture class="project__img"><img src="images/dest/project-3.webp" alt=""></picture>
               <div class="project__promo">
-                <p class="project__promo-descr" data-type="appart">вилла</p>
+                <p class="project__promo-descr" data-type="flat">Таунхаус</p>
                 <p class="project__promo-price">от 100 600 984 ₽</p>
               </div>
               <div class="project__content">
                 <p class="project__title">МУДОН АЛЬ РАНИМ</p>
-                <p class="project__subtitle">Creek harbour district</p>
-                <p class="project__descr">Выбор роскошных апартаментов к вашим услугам</p>
+                <p class="project__subtitle">dubailand</p>
+                <p class="project__descr">Mudon Al Ranim - это коллекция элегантных таунхаусов в Дубай.</p>
                 <div class="project__benefits">
-                  <div class="project__benefits-item project__benefits-bath"><img src="images/dest/project-benefits-bath.webp">
-                    <p>1</p>
+                  <div class="project__benefits-item project__benefits-bath">
+                        <svg class="icon icon-bath ">
+                          <use xlink:href="images/dest/sprite.svg#bath"></use>
+                        </svg>
+                    <p>4</p>
                   </div>
-                  <div class="project__benefits-item project__benefits-bad"><img src="images/dest/project-benefits-bad.webp">
-                    <p>2</p>
+                  <div class="project__benefits-item project__benefits-bad">
+                        <svg class="icon icon-bad ">
+                          <use xlink:href="images/dest/sprite.svg#bad"></use>
+                        </svg>
+                    <p>4</p>
                   </div>
                 </div>
                 <button class="project__btn" type="button">Смотреть</button>
@@ -547,37 +608,37 @@
                             <svg class="icon icon-benefits-icon popup__benefits-icon">
                               <use xlink:href="images/dest/sprite.svg#benefits-icon"></use>
                             </svg>
-                        <p class="popup__benefits-descr">Выбор роскошных апартаментов к вашим услугам</p>
+                        <p class="popup__benefits-descr">2 навеса для автомобилей</p>
                       </div>
                       <div class="popup__benefits-item">
                             <svg class="icon icon-benefits-icon popup__benefits-icon">
                               <use xlink:href="images/dest/sprite.svg#benefits-icon"></use>
                             </svg>
-                        <p class="popup__benefits-descr">Выбор роскошных апартаментов к вашим услугам</p>
+                        <p class="popup__benefits-descr">Закрытое, охраняемое пространоство</p>
                       </div>
                       <div class="popup__benefits-item">
                             <svg class="icon icon-benefits-icon popup__benefits-icon">
                               <use xlink:href="images/dest/sprite.svg#benefits-icon"></use>
                             </svg>
-                        <p class="popup__benefits-descr">Выбор роскошных апартаментов к вашим услугам</p>
+                        <p class="popup__benefits-descr">Беговые и велосипедные дорожки</p>
                       </div>
                       <div class="popup__benefits-item">
                             <svg class="icon icon-benefits-icon popup__benefits-icon">
                               <use xlink:href="images/dest/sprite.svg#benefits-icon"></use>
                             </svg>
-                        <p class="popup__benefits-descr">Выбор роскошных апартаментов к вашим услугам</p>
+                        <p class="popup__benefits-descr">уличные тренажерные станции</p>
                       </div>
                       <div class="popup__benefits-item">
                             <svg class="icon icon-benefits-icon popup__benefits-icon">
                               <use xlink:href="images/dest/sprite.svg#benefits-icon"></use>
                             </svg>
-                        <p class="popup__benefits-descr">Выбор роскошных апартаментов к вашим услугам</p>
+                        <p class="popup__benefits-descr">Водные игровые площадки</p>
                       </div>
                       <div class="popup__benefits-item">
                             <svg class="icon icon-benefits-icon popup__benefits-icon">
                               <use xlink:href="images/dest/sprite.svg#benefits-icon"></use>
                             </svg>
-                        <p class="popup__benefits-descr">Выбор роскошных апартаментов к вашим услугам</p>
+                        <p class="popup__benefits-descr">Пышные зеленые парки</p>
                       </div>
                     </div>
                     <div class="popup__map"></div>
@@ -585,10 +646,10 @@
                   <div class="popup__promo">
                     <div class="popup__promo-slider">
                       <picture class="popup__promo-slide"><img src="images/dest/popup-promo-slide.webp" alt="#"></picture>
+                      <picture class="popup__promo-slide"><img src="images/dest/banner-slide-3.webp" alt="#"></picture>
                     </div>
                     <p class="popup__promo-title">УСПЕЙТЕ КУПИТЬ</p>
-                    <p class="popup__promo-timer" id="timer"></p>
-                    <button class="popup__promo-btn" type="button">бесплатная консультация</button>
+                    <p class="popup__promo-timer" id="timer"></p><a class="popup__promo-btn" href="#form">бесплатная консультация</a>
                   </div>
                   <div class="popup__nav">
                         <svg class="icon icon-project-popup-close popup__nav-close">
@@ -601,19 +662,25 @@
             <div class="projects__item project">
               <picture class="project__img"><img src="images/dest/project-2.webp" alt=""></picture>
               <div class="project__promo">
-                <p class="project__promo-descr" data-type="villa">вилла</p>
-                <p class="project__promo-price">от 100 600 984 ₽</p>
+                <p class="project__promo-descr" data-type="flat">Таунхаус</p>
+                <p class="project__promo-price">от 1 700 000 аед</p>
               </div>
               <div class="project__content">
-                <p class="project__title">МУДОН АЛЬ РАНИМ</p>
-                <p class="project__subtitle">Creek harbour district</p>
-                <p class="project__descr">Выбор роскошных апартаментов к вашим услугам</p>
+                <p class="project__title">La Violeta 2</p>
+                <p class="project__subtitle">пусто</p>
+                <p class="project__descr">La Violeta 2 – кластер жилых резиденций в одном из самых зеленых оазисов Дубая</p>
                 <div class="project__benefits">
-                  <div class="project__benefits-item project__benefits-bath"><img src="images/dest/project-benefits-bath.webp">
-                    <p>1</p>
+                  <div class="project__benefits-item project__benefits-bath">
+                        <svg class="icon icon-bath ">
+                          <use xlink:href="images/dest/sprite.svg#bath"></use>
+                        </svg>
+                    <p>4</p>
                   </div>
-                  <div class="project__benefits-item project__benefits-bad"><img src="images/dest/project-benefits-bad.webp">
-                    <p>2</p>
+                  <div class="project__benefits-item project__benefits-bad">
+                        <svg class="icon icon-bad ">
+                          <use xlink:href="images/dest/sprite.svg#bad"></use>
+                        </svg>
+                    <p>4</p>
                   </div>
                 </div>
                 <button class="project__btn" type="button">Смотреть</button>
@@ -622,46 +689,44 @@
                 <div class="project-popup__bg"></div>
                 <div class="popup">
                   <div class="popup__content">
-                    <h2 class="popup__title">Мудон Аль-Раним</h2>
-                    <p class="popup__descr">Мудон Аль-Раним расположен на расстоянии от всего, но в то же время в пределах пешей досягаемости от многих ключевых пунктов назначения.</p>
-                    <p class="popup__descr">Ваша растущая семья нуждается в безопасном и комфортном убежище, где вы могли бы расслабиться в конце каждого дня.</p>
-                    <p class="popup__descr">Выбирайте из прекрасно оборудованных таунхаусов с 3 и 4 спальнями, а также таунхаусов предназначенных для семейной жизни.</p>
+                    <h2 class="popup__title">La Violeta 2</h2>
+                    <p class="popup__descr">La Violeta 2 – кластер жилых резиденций в одном из самых зеленых оазисов Дубая, поселке Villanova, который находится к юго-востоку от Dubailand. Сеть комьюнити, входящих в состав района Villanova, отличает единый средиземноморский стиль как в архитектуре, так и в ландшафтном дизайне. Виллы, таунхаусы и апартаменты в поселке Villanova относятся к сегменту доступного жилья. Виллы в La Violeta 2 представляют собой завершающий аккорд симфонии жилых комплексов La Violeta at Villanova.</p>
                     <div class="popup__benefits">
                       <div class="popup__benefits-item">
                             <svg class="icon icon-benefits-icon popup__benefits-icon">
                               <use xlink:href="images/dest/sprite.svg#benefits-icon"></use>
                             </svg>
-                        <p class="popup__benefits-descr">Выбор роскошных апартаментов к вашим услугам</p>
+                        <p class="popup__benefits-descr">престижный район</p>
                       </div>
                       <div class="popup__benefits-item">
                             <svg class="icon icon-benefits-icon popup__benefits-icon">
                               <use xlink:href="images/dest/sprite.svg#benefits-icon"></use>
                             </svg>
-                        <p class="popup__benefits-descr">Выбор роскошных апартаментов к вашим услугам</p>
+                        <p class="popup__benefits-descr">близко к школе и садику</p>
                       </div>
                       <div class="popup__benefits-item">
                             <svg class="icon icon-benefits-icon popup__benefits-icon">
                               <use xlink:href="images/dest/sprite.svg#benefits-icon"></use>
                             </svg>
-                        <p class="popup__benefits-descr">Выбор роскошных апартаментов к вашим услугам</p>
+                        <p class="popup__benefits-descr">близко к пляжу</p>
                       </div>
                       <div class="popup__benefits-item">
                             <svg class="icon icon-benefits-icon popup__benefits-icon">
                               <use xlink:href="images/dest/sprite.svg#benefits-icon"></use>
                             </svg>
-                        <p class="popup__benefits-descr">Выбор роскошных апартаментов к вашим услугам</p>
+                        <p class="popup__benefits-descr">фитнес зал</p>
                       </div>
                       <div class="popup__benefits-item">
                             <svg class="icon icon-benefits-icon popup__benefits-icon">
                               <use xlink:href="images/dest/sprite.svg#benefits-icon"></use>
                             </svg>
-                        <p class="popup__benefits-descr">Выбор роскошных апартаментов к вашим услугам</p>
+                        <p class="popup__benefits-descr">спа центр</p>
                       </div>
                       <div class="popup__benefits-item">
                             <svg class="icon icon-benefits-icon popup__benefits-icon">
                               <use xlink:href="images/dest/sprite.svg#benefits-icon"></use>
                             </svg>
-                        <p class="popup__benefits-descr">Выбор роскошных апартаментов к вашим услугам</p>
+                        <p class="popup__benefits-descr">парки и развитая инфраструктура</p>
                       </div>
                     </div>
                     <div class="popup__map"></div>
@@ -669,10 +734,10 @@
                   <div class="popup__promo">
                     <div class="popup__promo-slider">
                       <picture class="popup__promo-slide"><img src="images/dest/popup-promo-slide.webp" alt="#"></picture>
+                      <picture class="popup__promo-slide"><img src="images/dest/banner-slide-3.webp" alt="#"></picture>
                     </div>
                     <p class="popup__promo-title">УСПЕЙТЕ КУПИТЬ</p>
-                    <p class="popup__promo-timer" id="timer"></p>
-                    <button class="popup__promo-btn" type="button">бесплатная консультация</button>
+                    <div class="popup__promo-timer" id="timer">10:00:00</div><a class="popup__promo-btn" href="form">бесплатная консультация</a>
                   </div>
                   <div class="popup__nav">
                         <svg class="icon icon-project-popup-close popup__nav-close">
@@ -705,13 +770,13 @@
       <section class="form">
         <div class="wrapper">
           <h2 class="form__title">заказать обратный звонок</h2>
-          <form class="form__form">
-            <input class="form__input" type="text" name="form__name" placeholder="Имя">
-            <input class="form__input" type="tel" name="form__name" placeholder="Номер">
-            <input class="form__input" type="email" name="form__name" placeholder="Email">
+          <form class="form__form" id="form" method="POST" action="php/res.php">
+            <input class="form__input" type="text" id="name" name="name" placeholder="Имя">
+            <input class="form__input" type="email" id="email" name="email" placeholder="Email">
             <p class="form__policy">Отправляя данные вы соглашаетесь с <a class="form__link" href="#">политикой конфиденциальности</a></p>
             <button class="form__submit" type="submit">Бесплатная консультация</button>
           </form>
+          <div class="form-messages" id="form-messages"></div>
         </div>
       </section>
       <section class="faq">

@@ -1,44 +1,64 @@
 $(document).ready(function() {
 
-  // form
-  $(function() {
-    // Получаем данные формы.
-    var form = $('#form');
+  $('.banner__slider').slick({
+		dots: false,
+		arrows: false,
+    fade: true,
+		autoplay: true,
+		autoplaySpeed: 2000,
+    speed: 770,
+    cssEase: 'linear'
+	});
 
-        // Получаем сообщения из div
-    var formMessages = $('#form-messages');
+  $('.popup__promo-slider').slick({
+		dots: false,
+		arrows: false,
+    fade: true,
+		autoplay: true,
+		autoplaySpeed: 2000,
+    speed: 770,
+    cssEase: 'linear'
+	});
 
-    // Устанавливаем прослушиватель для контактной формы.
-    $(form).submit(function(event) {
-        // Блокируем отправку данных формы в браузере.
-        event.preventDefault();
-
-        // Сериализуем данные формы.
-        var formData = $(form).serialize();
-
-        // Отправка данных формы с помощью AJAX.
-        $.ajax({
-            type: 'POST',
-            url: $(form).attr('action'),
-            data: formData
-        }).done(function(response) {
-            // Задаем текст сообщения.
-            $(formMessages).text(response);
-
-            // Очищаем форму.
-            $('#name').val('');
-            $('#email').val('');
-            $('#message').val('');
-        }).fail(function(data) {
-            // Устанавливаем текст сообщения.
-            if (data.responseText !== '') {
-              $(formMessages).text(data.responseText);
-            } else {
-              $(formMessages).text('Oops! An error occured and your message could not besent.');
-            }
-        });
-    });
-  });
+  // // form
+  // $(function() {
+  //   // Получаем данные формы.
+  //   var form = $('#form');
+  //
+  //       // Получаем сообщения из div
+  //   var formMessages = $('#form-messages');
+  //
+  //   // Устанавливаем прослушиватель для контактной формы.
+  //   $(form).submit(function(event) {
+  //       // Блокируем отправку данных формы в браузере.
+  //       event.preventDefault();
+  //
+  //       // Сериализуем данные формы.
+  //       var formData = $(form).serialize();
+  //
+  //       // Отправка данных формы с помощью AJAX.
+  //       $.ajax({
+  //           type: 'POST',
+  //           url: $(form).attr('action'),
+  //           data: formData
+  //       }).done(function(response) {
+  //           // Задаем текст сообщения.
+  //           $(formMessages).text(response);
+  //
+  //           // Очищаем форму.
+  //           $('#name').val('');
+  //           $('#email').val('');
+  //           $('#message').val('');
+  //       }).fail(function(data) {
+  //           // Устанавливаем текст сообщения.
+  //           if (data.responseText !== '') {
+  //             $(formMessages).text(data.responseText);
+  //           } else {
+  //             $(formMessages).text('Oops! An error occured and your message could not besent.');
+  //           }
+  //       });
+  //   });
+  // });
 
   //scroll to href
   $("a[href^='#']").on("click", function () {

@@ -1,9 +1,10 @@
 .projects
   padding-top: 180px
   position: relative
+  overflow: hidden
   .wrapper
     position: relative
-    overflow: hidden
+    // overflow: hidden
   &__bg
     position: absolute
     z-index: 50
@@ -34,6 +35,12 @@
     padding: 12px 51px
     font-size: 16px
     line-height: 150%
+    width: 306px
+    background-color: #fff
+    &:hover
+      background-color: $bannerBtnH
+      color: $bronzeDark
+      text-decoration: none
   &__items
     display: grid
     grid-template-columns: repeat(3, 1fr)
@@ -43,6 +50,13 @@
     &-title
       width: 100%
       grid-column: 1/4
+
+  @include media-tablet
+    &__items
+      grid-template-columns: 1fr 1fr
+      gap: 30px 15px
+    &-title
+      grid-column: 1/2
 
   @include media-laptop
     padding-top: 80px
@@ -130,6 +144,8 @@
     grid-row: 7/8
     gap: 12px
     // margin-bottom: 26px
+    .icon
+      stroke: #000
     &-item
       display: -webkit-flex
       display: -ms-flex
