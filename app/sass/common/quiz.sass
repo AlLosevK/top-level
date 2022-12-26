@@ -51,7 +51,7 @@
       display: block
       border: none
       border-bottom: 2px solid $blue
-      min-width: 306px
+      min-width: 280px
       margin-top: 40px
     input[type="radio"]:checked,
     input[type="radio"]:not(:checked)
@@ -162,13 +162,10 @@
       z-index: 5
       width: 14px
       height: 14px
-    &:not(:disabled)
-      background: $bronze
-      &:before
-        content: url('../images/dest/icons/quiz-arrow-dark.svg')
-        transform: translate(-50%, -80%) rotateY(180deg)
+    &:disabled
+      border: 1px solid $btnDisabled
       &:hover
-        background-color: $bronzeH
+        border: 1px solid $btnDisabled
   &__next
     background-color: $bronze
     border: none
@@ -192,14 +189,14 @@
       background-color: $bronzeH
       border: 1px solid $bronzeH
     &:disabled
-      background: $blue
-      color: $bronze
-      border: 1px solid $bronze
+      background: $btnDisabled
+      color: $bronzeDark
+      border: 1px solid $btnDisabled
       &:before
         content: url('../images/dest/icons/quiz-arrow-light.svg')
         transform: translate(0%, -80%) rotateY(180deg)
       &:hover
-        border: 1px solid $bronzeH
+        border: 1px solid $btnDisabled
 
 
   @include media-laptop

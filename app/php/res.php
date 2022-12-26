@@ -1,63 +1,58 @@
 <?php
+  if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
-//     // Обработка только запросов POST.
-// if ($_SERVER["REQUEST_METHOD"] == "POST") {
-//         // Получаем данные полей формы и удаляем пробелы.
-//         $name = strip_tags(trim($_POST["name"]));
-// 	      $name = str_replace(array("r","n"),array(" "," "),$name);
-//         $email = filter_var(trim($_POST["email"]), FILTER_SANITIZE_EMAIL);
-//
-//         // Проверяем, были ли почтовому скрипту отправлены данные.
-//         if(empty($name)) {
-//             // Устанавливаем код ответа 400 (bad request) и выходим.
-//             // http_response_code(400);
-//             echo "Oops! There was a problem with your submission. Please complete the form and try again.";
-//             exit;
-//         }
-//
-//         // Устанавливаем email адрес получателя.
-//         // FIXME: Изменяем егона нужный email-адрес.
-//         $recipient = "al.losev.k@gmail.com";
-//
-//         // Задаем тему письма.
-//         $subject = "New contactfrom $name";
-//
-//         // Создаем содержимое письма.
-//         $email_content = "Name: $name";
-//         $email_content .= "Email: $email";
-//
-//         // Создаем заголовок письма.
-//         $email_headers = "From: $name <$email>";
-//
-//         // Отправляем письмо.
-//         if (mail($recipient, $subject, $email_content, $email_headers)) {
-//                     // Устанавливаем код ответа 200 (okay).
-//         // http_response_code(200);
-//         echo "Thank You! Your message has been sent.";
-//                 } else {
-//                     // Устанавливаем код ответа 500 (internal server error).
-//         // http_response_code(500);
-//         echo "Oops! Something went wrong and we couldn't send your message.";
-//                 }
-//
-//             } else {
-//                 // Не POST запрос, устанавливаемкод ответа 403 (forbidden).
-//         // http_response_code(403);
-//         echo "There was a problem with your submission, please try again.";
-//             }
-   if(!empty($_POST['name']) and !empty($_POST['mail']) and !empty($_POST['message'])){
-      $name = trim(strip_tags($_POST['name']));
-  $mail = trim(strip_tags($_POST['mail']));
-      $message = trim(strip_tags($_POST['message']));
-      mail('ваша почта', 'Письмо с адрес_вашего_сайта',
-      'Вам написал: '.$name.'<br />Его почта: '.$mail.'<br />
-      Его сообщение: '.$message,"Content-type:text/html;charset=windows-1251");
-      echo "Ваше сообщение успешно отправлено!<Br> Вы получите ответ в
-      ближайшее время";
-      exit;
-   }
-   else {
-      echo "Для отправки сообщения заполните все поля!";
-      exit;
-   }
+    //check if its an ajax request, exit if not
+    if (!isset($_SERVER['HTTP_X_REQUESTED_WITH']) AND strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) != 'xmlhttprequest') {
+
+        //exit script outputting json data
+        $output = json_encode(
+                array(
+                    'type' => 'error',
+                    'text' => 'Request must come from Ajax'
+        ));
+
+        die($output);
+    }
+
+    //check $_POST vars are set, exit if any missing
+    if (!isset($_POST["username"]) || !isset($_POST["useremail"]) || !isset($_POST["message"])) {
+        $output = json_encode(array('type' => 'error', 'text' => 'Input fields are empty!'));
+        die($output);
+    }
+
+    //Sanitize input data using PHP filter_var().
+    $username = filter_var(trim($_POST["username"]), FILTER_SANITIZE_STRING);
+    $useremail = filter_var(trim($_POST["useremail"]), FILTER_SANITIZE_EMAIL);
+    $message = filter_var(trim($_POST["message"]), FILTER_SANITIZE_STRING);
+
+    //additional php validation
+    if (strlen($username) < 4) { // If length is less than 4 it will throw an HTTP error.
+        $output = json_encode(array('type' => 'error', 'text' => 'Name is too short!'));
+        die($output);
+    }
+    if (!filter_var($useremail, FILTER_VALIDATE_EMAIL)) { //email validation
+        $output = json_encode(array('type' => 'error', 'text' => 'Please enter a valid email!'));
+        die($output);
+    }
+    if (strlen($message) < 5) { //check emtpy message
+        $output = json_encode(array('type' => 'error', 'text' => 'Too short message!'));
+        die($output);
+    }
+
+    $to = "info@wearecoders.net"; //Replace with recipient email address
+    //proceed with PHP email.
+    $headers = 'From: ' . $useremail . '' . "\r\n" .
+            'Reply-To: ' . $useremail . '' . "\r\n" .
+            'X-Mailer: PHP/' . phpversion();
+
+    $sentMail = @mail($to, $subject, $message . '  -' . $username, $headers);
+    //$sentMail = true;
+    if (!$sentMail) {
+        $output = json_encode(array('type' => 'error', 'text' => 'Could not send mail! Please contact administrator.'));
+        die($output);
+    } else {
+        $output = json_encode(array('type' => 'message', 'text' => 'Hi ' . $username . ' Thank you for your email'));
+        die($output);
+    }
+  }
 ?>

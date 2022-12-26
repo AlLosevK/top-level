@@ -316,14 +316,15 @@ $(document).ready(function() {
               ? qItem.classList.add("quiz__form-item-active")
               : qItem.classList.remove("quiz__form-item-active");
 
+          console.log(currActive);
 
           i < 3
-              ? next.disabled = true
-              : next.disabled = false;
+              ? next.disabled = false
+              : next.disabled = true;
       });
 
       // next.disabled = true;
-      console.log(currActive);
+      // console.log(currActive);
 
       $(".quiz__form-item").css({display: 'none'});
       $(".quiz__form-item-active:last").css({display: 'block'});

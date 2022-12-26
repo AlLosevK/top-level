@@ -96,6 +96,7 @@
               <div class="circle"></div>
               <div class="circle"></div>
               <div class="circle"></div>
+              <div class="circle"></div>
             </div>
             <h3 class="quiz__title">Подбор недвижимости в дубаи</h3>
             <form class="quiz__form">
@@ -158,6 +159,11 @@
                   <input type="text" id="quiz-d1" placeholder="Телефон">
                 </div>
               </div>
+              <div class="quiz__form-item">
+                <div class="quiz__a">
+                  <p>Наши менеджеры свяжутся с вами в ближайшее время</p>
+                </div>
+              </div>
               <div class="quiz__footer">
                 <div class="quiz__logo"><img src="images/dest/quiz-logo.webp"></div>
                 <div class="quiz__nav">
@@ -174,7 +180,7 @@
       </section>
       <section class="benefits">
         <div class="wrapper">
-          <h2 class="benefits__title">Преимущества жизни в Дубаях</h2>
+          <h2 class="benefits__title">Преимущества жизни в Дубае</h2>
           <div class="benefits__items">
             <div class="benefits__item active">
               <div class="benefits__item-bg"></div><span class="benefits__nmbr">01</span>
@@ -568,7 +574,7 @@
             <div class="projects__item project">
               <picture class="project__img"><img src="images/dest/project-3.webp" alt=""></picture>
               <div class="project__promo">
-                <p class="project__promo-descr" data-type="flat">таунхаус</p>
+                <p class="project__promo-descr" data-type="townhouse">таунхаус</p>
                 <p class="project__promo-price">от 100 600 984 ₽</p>
               </div>
               <div class="project__content">
@@ -652,7 +658,7 @@
             <div class="projects__item project">
               <picture class="project__img"><img src="images/dest/project-2.webp" alt=""></picture>
               <div class="project__promo">
-                <p class="project__promo-descr" data-type="flat">таунхаус</p>
+                <p class="project__promo-descr" data-type="townhouse">таунхаус</p>
                 <p class="project__promo-price">от 1 700 000 аед</p>
               </div>
               <div class="project__content">
@@ -754,8 +760,10 @@
       <section class="form">
         <div class="wrapper">
           <h2 class="form__title">заказать обратный звонок</h2>
-          <form class="form__form" id="form" method="POST" action="php/res.php">
+          <div class="result" id="result"></div>
+          <form class="form__form" id="form">
             <input class="form__input" type="text" id="name" name="name" placeholder="Имя">
+            <input class="form__input" type="tel" id="phone" name="phone" placeholder="Номер">
             <input class="form__input" type="email" id="email" name="email" placeholder="Email">
             <p class="form__policy">Отправляя данные вы соглашаетесь с <a class="form__link" href="#">политикой конфиденциальности</a></p>
             <button class="form__submit" type="submit">Бесплатная консультация</button>
@@ -767,7 +775,7 @@
         <div class="wrapper">
           <h2 class="faq__title">Ответы на ваши впросы</h2>
           <div class="faq__items">
-            <div class="faq__item active">
+            <div class="faq__item">
               <div class="faq__item-bg"></div>
               <div class="faq__q"> <a>Из чего состоит процесс покупки недвижимости в Дубае?</a></div>
               <div class="faq__a"> 

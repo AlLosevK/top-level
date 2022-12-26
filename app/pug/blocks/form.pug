@@ -1,9 +1,10 @@
 section.form
   .wrapper
     h2.form__title заказать обратный звонок
-    form.form__form#form(method="POST" action="php/res.php")
+    .result#result
+    form.form__form#form
       input.form__input(type="text" id="name" name="name" placeholder="Имя")
-      //- input.form__input(type="tel" name="phone" placeholder="Номер")
+      input.form__input(type="tel" id="phone" name="phone" placeholder="Номер")
       input.form__input(type="email" id="email" name="email" placeholder="Email")
       p.form__policy Отправляя данные вы соглашаетесь с 
         a.form__link(href="#") политикой конфиденциальности
