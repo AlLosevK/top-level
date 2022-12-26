@@ -95,52 +95,68 @@
               <div class="circle"></div>
               <div class="circle"></div>
               <div class="circle"></div>
+              <div class="circle"></div>
             </div>
             <h3 class="quiz__title">Подбор недвижимости в дубаи</h3>
             <form class="quiz__form">
               <div class="quiz__form-item quiz__form-item-active">
                 <div class="quiz__q">С какой целью вы приобретаете недвижимость в ОАЭ?</div>
-                <div class="quiz__a">
-                  <input type="checkbox" id="quiz-a1">
+                <p class="quiz__a">
+                  <input type="radio" id="quiz-a1" name="for" value="invest">
                   <label for="quiz-a1">Для инвестиций</label>
-                </div>
-                <div class="quiz__a">
-                  <input type="checkbox" id="quiz-a2">
+                </p>
+                <p class="quiz__a">
+                  <input type="radio" id="quiz-a2" name="for" value="living">
                   <label for="quiz-a2">Для проживания</label>
-                </div>
+                </p>
               </div>
               <div class="quiz__form-item">
                 <div class="quiz__q">Каким бюджетом вы располагаете (€)?</div>
-                <div class="quiz__a">
-                  <input type="checkbox" id="quiz-b1">
+                <p class="quiz__a">
+                  <input type="radio" id="quiz-b1" name="price" value="100">
                   <label for="quiz-b1">100 000</label>
-                </div>
-                <div class="quiz__a">
-                  <input type="checkbox" id="quiz-b2">
+                </p>
+                <p class="quiz__a">
+                  <input type="radio" id="quiz-b2" name="price" value="1000">
                   <label for="quiz-b2">1 000 000</label>
-                </div>
-                <div class="quiz__a">
-                  <input type="checkbox" id="quiz-b2">
-                  <label for="quiz-b2">100 000 000</label>
-                </div>
+                </p>
+                <p class="quiz__a">
+                  <input type="radio" id="quiz-b3" name="price" value="100 000">
+                  <label for="quiz-b3">100 000 000</label>
+                </p>
               </div>
               <div class="quiz__form-item">
                 <div class="quiz__q">Сколько комнат вы хотите приобрести?</div>
+                <p class="quiz__a">
+                  <input type="radio" id="quiz-с1" name="rooms" value="1">
+                  <label for="quiz-с1">1</label>
+                </p>
+                <p class="quiz__a">
+                  <input type="radio" id="quiz-с2" name="rooms" value="2">
+                  <label for="quiz-с2">2</label>
+                </p>
+                <p class="quiz__a">
+                  <input type="radio" id="quiz-с3" name="rooms" value="3">
+                  <label for="quiz-с3">3</label>
+                </p>
+              </div>
+              <div class="quiz__form-item">
                 <div class="quiz__a">
-                  <input type="checkbox" id="quiz-b1">
-                  <label for="quiz-b1">1</label>
-                </div>
-                <div class="quiz__a">
-                  <input type="checkbox" id="quiz-b2">
-                  <label for="quiz-b2">2</label>
-                </div>
-                <div class="quiz__a">
-                  <input type="checkbox" id="quiz-b2">
-                  <label for="quiz-b2">3</label>
+                  <select name="service">
+                    <option value="viber">Viber</option>
+                    <option value="whats">WhatsApp</option>
+                    <option value="telegram">Telegram</option>
+                    <option value="телефон">Телефон</option>
+                  </select>
                 </div>
               </div>
               <div class="quiz__form-item">
-                <div class="quiz__q">Отлично! Наши менеджеры подберут для вас вариенты и свяжутся с вами.</div>
+                <div class="quiz__a">
+                  <p>Как с вами можно связаться?</p>
+                </div>
+                <div class="quiz__a">
+                  <input type="text" id="quiz-d1" placeholder="Телефон">
+                </div>
               </div>
               <div class="quiz__footer">
                 <div class="quiz__logo"><img src="images/dest/quiz-logo.webp"></div>
@@ -152,7 +168,7 @@
             </form>
           </div>
           <div class="quiz__slider">
-            <picture><img src="images/dest/quiz.webp" alt=""></picture>
+            <div class="quiz__slide"></div>
           </div>
         </div>
       </section>
@@ -303,9 +319,7 @@
                         <p class="popup__benefits-descr">Причал для лодки</p>
                       </div>
                     </div>
-                    <div class="popup__map">
-                      <script type="text/javascript" charset="utf-8" async="" src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aee645fdc801e68e9f8a9095ce1bd59b02ec2f4351a03553e363507d514e8bed6&amp;width=100%25&amp;height=240&amp;lang=ru_RU&amp;scroll=true"></script>
-                    </div>
+                    <div class="popup__map"></div>
                   </div>
                   <div class="popup__promo">
                     <div class="popup__promo-slider">
@@ -313,7 +327,7 @@
                       <picture class="popup__promo-slide"><img src="images/dest/banner-slide-3.webp" alt="#"></picture>
                     </div>
                     <p class="popup__promo-title">УСПЕЙТЕ КУПИТЬ</p>
-                    <div class="popup__promo-timer" id="timer">10:00:00</div><a class="popup__promo-btn" href="form">бесплатная консультация</a>
+                    <div class="popup__promo-timer" id="timer">10:00:00</div><a class="popup__promo-btn" href="#form">бесплатная консультация</a>
                   </div>
                   <div class="popup__nav">
                         <svg class="icon icon-project-popup-close popup__nav-close">
@@ -394,9 +408,7 @@
                         <p class="popup__benefits-descr">Золотая виза на 10 лет</p>
                       </div>
                     </div>
-                    <div class="popup__map">
-                      <script type="text/javascript" charset="utf-8" async="" src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aee645fdc801e68e9f8a9095ce1bd59b02ec2f4351a03553e363507d514e8bed6&amp;width=100%25&amp;height=240&amp;lang=ru_RU&amp;scroll=true"></script>
-                    </div>
+                    <div class="popup__map"></div>
                   </div>
                   <div class="popup__promo">
                     <div class="popup__promo-slider">
@@ -404,7 +416,7 @@
                       <picture class="popup__promo-slide"><img src="images/dest/banner-slide-3.webp" alt="#"></picture>
                     </div>
                     <p class="popup__promo-title">УСПЕЙТЕ КУПИТЬ</p>
-                    <div class="popup__promo-timer" id="timer">10:00:00</div><a class="popup__promo-btn" href="form">бесплатная консультация</a>
+                    <div class="popup__promo-timer" id="timer">10:00:00</div><a class="popup__promo-btn" href="#form">бесплатная консультация</a>
                   </div>
                   <div class="popup__nav">
                         <svg class="icon icon-project-popup-close popup__nav-close">
@@ -490,9 +502,7 @@
                         <p class="popup__benefits-descr">Плавательный бассейн</p>
                       </div>
                     </div>
-                    <div class="popup__map">
-                      <script type="text/javascript" charset="utf-8" async="" src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aee645fdc801e68e9f8a9095ce1bd59b02ec2f4351a03553e363507d514e8bed6&amp;width=100%25&amp;height=240&amp;lang=ru_RU&amp;scroll=true"></script>
-                    </div>
+                    <div class="popup__map"></div>
                   </div>
                   <div class="popup__promo">
                     <div class="popup__promo-slider">
@@ -500,7 +510,7 @@
                       <picture class="popup__promo-slide"><img src="images/dest/banner-slide-3.webp" alt="#"></picture>
                     </div>
                     <p class="popup__promo-title">УСПЕЙТЕ КУПИТЬ</p>
-                    <div class="popup__promo-timer" id="timer">10:00:00</div><a class="popup__promo-btn" href="form">бесплатная консультация</a>
+                    <div class="popup__promo-timer" id="timer">10:00:00</div><a class="popup__promo-btn" href="#form">бесплатная консультация</a>
                   </div>
                   <div class="popup__nav">
                         <svg class="icon icon-project-popup-close popup__nav-close">
@@ -537,9 +547,7 @@
                     <h2 class="popup__title">ONE CANAL PENTHOUSE AND SKY VILLAS</h2>
                     <p class="popup__descr">Новая престижная недвижимость в Дубае, предназначенная для избранных. Состоит из 24 эксклюзивных пентхаусов, Sky Villas и Sky Mansion, переосмысливающих удобства, мастерство и несравнимый стиль жизни.</p>
                     <p class="popup__descr">Являясь идеальным сочетанием уединения и спокойствия, резиденция предлагает захватывающий вид на Дубайский канал, Бурдж-Халифу, парк Сафа и Бурдж-АЛЬ-Араб. Канал, примыкающий к парку Сафа в самом центре города.</p>
-                    <div class="popup__map">
-                      <script type="text/javascript" charset="utf-8" async="" src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A496aa5b6f2652561db13a0c6beb09bb524a002d96e2623eb238e088aef94b052&amp;width=100%25&amp;height=240&amp;lang=ru_RU&amp;scroll=true"></script>
-                    </div>
+                    <div class="popup__map"></div>
                   </div>
                   <div class="popup__promo">
                     <div class="popup__promo-slider">
@@ -547,7 +555,7 @@
                       <picture class="popup__promo-slide"><img src="images/dest/banner-slide-3.webp" alt="#"></picture>
                     </div>
                     <p class="popup__promo-title">УСПЕЙТЕ КУПИТЬ</p>
-                    <div class="popup__promo-timer" id="timer">10:00:00</div><a class="popup__promo-btn" href="form">бесплатная консультация</a>
+                    <div class="popup__promo-timer" id="timer">10:00:00</div><a class="popup__promo-btn" href="#form">бесплатная консультация</a>
                   </div>
                   <div class="popup__nav">
                         <svg class="icon icon-project-popup-close popup__nav-close">
@@ -623,9 +631,7 @@
                         <p class="popup__benefits-descr">Пышные зеленые парки</p>
                       </div>
                     </div>
-                    <div class="popup__map">
-                      <script type="text/javascript" charset="utf-8" async="" src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A496aa5b6f2652561db13a0c6beb09bb524a002d96e2623eb238e088aef94b052&amp;width=100%25&amp;height=240&amp;lang=ru_RU&amp;scroll=true"></script>
-                    </div>
+                    <div class="popup__map"></div>
                   </div>
                   <div class="popup__promo">
                     <div class="popup__promo-slider">
@@ -707,9 +713,7 @@
                         <p class="popup__benefits-descr">парки и развитая инфраструктура</p>
                       </div>
                     </div>
-                    <div class="popup__map">
-                      <script type="text/javascript" charset="utf-8" async="" src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A496aa5b6f2652561db13a0c6beb09bb524a002d96e2623eb238e088aef94b052&amp;width=100%25&amp;height=240&amp;lang=ru_RU&amp;scroll=true"></script>
-                    </div>
+                    <div class="popup__map"></div>
                   </div>
                   <div class="popup__promo">
                     <div class="popup__promo-slider">
@@ -717,7 +721,7 @@
                       <picture class="popup__promo-slide"><img src="images/dest/banner-slide-3.webp" alt="#"></picture>
                     </div>
                     <p class="popup__promo-title">УСПЕЙТЕ КУПИТЬ</p>
-                    <div class="popup__promo-timer" id="timer">10:00:00</div><a class="popup__promo-btn" href="form">бесплатная консультация</a>
+                    <div class="popup__promo-timer" id="timer">10:00:00</div><a class="popup__promo-btn" href="#form">бесплатная консультация</a>
                   </div>
                   <div class="popup__nav">
                         <svg class="icon icon-project-popup-close popup__nav-close">

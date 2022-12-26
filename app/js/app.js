@@ -65,7 +65,7 @@ $(document).ready(function() {
     let href = $(this).attr("href");
 
     $("html, body").animate({
-        scrollTop: $(href).offset().top
+        scrollTop: $(href).offset().top - $('.header').height() * 3
     }, {
         duration: 670,   // по умолчанию «400»
         easing: "linear" // по умолчанию «swing»
@@ -91,6 +91,55 @@ $(document).ready(function() {
 
   	});
   });
+
+
+
+
+
+
+
+
+
+
+
+
+  $(function() {
+    var isChecked = $(".quiz__form-item-active input:checked").length;
+    var inpRadio = $(".quiz__form-item-active input[type='radio']").length;
+
+    if (isChecked == 0 && inpRadio !== 0) {
+      $('.quiz__next').prop('disabled', true)
+      console.log('1');
+    } else {
+      $('.quiz__next').prop('disabled', false)
+      console.log('0');
+    }
+  });
+
+  $(".quiz__a").on("click", function () {
+    var isChecked = $(".quiz__form-item-active input:checked").length;
+    var inpRadio = $(".quiz__form-item-active input[type='radio']").length;
+
+    if (isChecked == 0 && inpRadio !== 0) {
+      $('.quiz__next').prop('disabled', true)
+      console.log('1');
+    } else {
+      $('.quiz__next').prop('disabled', false)
+      console.log('0');
+    }
+  });
+
+
+
+
+
+
+
+
+
+
+
+
 
   //faq acordeon
   $(function() {
@@ -121,6 +170,44 @@ $(document).ready(function() {
   		}
   		$this.toggleClass("active");
       document.body.style.overflow = 'hidden';
+  	});
+  });
+
+
+  // project popup close
+  $(function() {
+  	$(".popup__nav-close").on("click", function(e) {
+  		e.preventDefault();
+  		var $this = $(this).parent().parent().parent().parent();
+  		if (!$this.hasClass("active")) {
+  			$(this).removeClass("active");
+  		}
+  		$this.toggleClass("active");
+      document.body.style.overflow = 'visible';
+  	});
+  });
+
+  $(function() {
+  	$(".project-popup__bg").on("click", function(e) {
+  		e.preventDefault();
+  		var $this = $(this).parent().parent();
+  		if (!$this.hasClass("active")) {
+  			$(this).removeClass("active");
+  		}
+  		$this.toggleClass("active");
+      document.body.style.overflow = 'visible';
+  	});
+  });
+
+  $(function() {
+  	$(".popup__promo-btn").on("click", function(e) {
+  		e.preventDefault();
+  		var $this = $(this).parent().parent().parent().parent();
+  		if (!$this.hasClass("active")) {
+  			$(this).removeClass("active");
+  		}
+  		$this.toggleClass("active");
+      document.body.style.overflow = 'visible';
   	});
   });
 
@@ -167,19 +254,6 @@ $(document).ready(function() {
      }
   });
 
-  // project popup close
-  $(function() {
-  	$(".popup__nav-close").on("click", function(e) {
-  		e.preventDefault();
-  		var $this = $(this).parent().parent().parent().parent();
-  		if (!$this.hasClass("active")) {
-  			$(this).removeClass("active");
-  		}
-  		$this.toggleClass("active");
-      document.body.style.overflow = 'visible';
-  	});
-  });
-
   // promo popup close
   $(function() {
   	$(".popup-promo").on("click", function(e) {
@@ -220,7 +294,15 @@ $(document).ready(function() {
           i < currActive
               ? qItem.classList.add("quiz__form-item-active")
               : qItem.classList.remove("quiz__form-item-active");
+
+
+          i < 3
+              ? next.disabled = true
+              : next.disabled = false;
       });
+
+      // next.disabled = true;
+      console.log(currActive);
 
       $(".quiz__form-item").css({display: 'none'});
       $(".quiz__form-item-active:last").css({display: 'block'});
@@ -237,6 +319,7 @@ $(document).ready(function() {
       update();
       updateSlide();
   });
+
   prev.addEventListener("click", () => {
       currActive--;
 

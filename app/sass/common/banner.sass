@@ -18,11 +18,11 @@
   &__slide
     // min-width: 100%
     min-height: 100vh
+    background-position: 50% 100%
     &:nth-child(1)
       background-image: url("../images/dest/banner-slide-1.webp")
       background-size: cover
       background-repeat: no-repeat
-      background-position: 50% 100%
     &:nth-child(2)
       background-image: url("../images/dest/banner-slide-2.webp")
       background-size: cover
@@ -89,3 +89,18 @@
         margin-bottom: 18px
     &__btn
       width: 280px
+
+  @include media-tablet
+    padding-bottom: 20px
+    min-height: 80vh
+    .wrapper
+      justify-content: space-between
+    &__slider
+    &__slide
+      min-height: 80vh
+      &:nth-child(1)
+        background-position: 40% 100%
+      &:nth-child(2)
+        background-position: 58% 100%
+      &:nth-child(3)
+        background-position: 33% 100%

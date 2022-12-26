@@ -7,46 +7,51 @@ section.quiz#quiz
         .circle
         .circle
         .circle
+        .circle
       h3.quiz__title Подбор недвижимости в дубаи
       form.quiz__form
         .quiz__form-item.quiz__form-item-active
           .quiz__q С какой целью вы приобретаете недвижимость в ОАЭ?
-          .quiz__a
-            input(type="checkbox" id="quiz-a1")
+          p.quiz__a
+            input(type="radio" id="quiz-a1" name='for' value='invest')
             label(for="quiz-a1") Для инвестиций
-          .quiz__a
-            input(type="checkbox" id="quiz-a2")
+          p.quiz__a
+            input(type="radio" id="quiz-a2" name='for' value='living')
             label(for="quiz-a2") Для проживания
         .quiz__form-item
           .quiz__q Каким бюджетом вы располагаете (€)?
-          .quiz__a
-            input(type="checkbox" id="quiz-b1")
+          p.quiz__a
+            input(type="radio" id="quiz-b1" name='price' value='100')
             label(for="quiz-b1") 100 000
-          .quiz__a
-            input(type="checkbox" id="quiz-b2")
+          p.quiz__a
+            input(type="radio" id="quiz-b2" name='price' value='1000')
             label(for="quiz-b2") 1 000 000
-          .quiz__a
-            input(type="checkbox" id="quiz-b2")
-            label(for="quiz-b2") 100 000 000
+          p.quiz__a
+            input(type="radio" id="quiz-b3" name='price' value='100 000')
+            label(for="quiz-b3") 100 000 000
         .quiz__form-item
           .quiz__q Сколько комнат вы хотите приобрести?
-          .quiz__a
-            input(type="checkbox" id="quiz-b1")
-            label(for="quiz-b1") 1
-          .quiz__a
-            input(type="checkbox" id="quiz-b2")
-            label(for="quiz-b2") 2
-          .quiz__a
-            input(type="checkbox" id="quiz-b2")
-            label(for="quiz-b2") 3
+          p.quiz__a
+            input(type="radio" id="quiz-с1" name='rooms' value='1')
+            label(for="quiz-с1") 1
+          p.quiz__a
+            input(type="radio" id="quiz-с2" name='rooms' value='2')
+            label(for="quiz-с2") 2
+          p.quiz__a
+            input(type="radio" id="quiz-с3" name='rooms' value='3')
+            label(for="quiz-с3") 3
         .quiz__form-item
-          .quiz__q Отлично! Наши менеджеры подберут для вас вариенты и свяжутся с вами.
-          //- .quiz__a
-          //-   input(type="checkbox" id="quiz-b1")
-          //-   label(for="quiz-b1") Viber
-          //- .quiz__a
-          //-   input(type="checkbox" id="quiz-b2")
-          //-   label(for="quiz-b2") WhatsApp
+          .quiz__a
+            select(name="service")
+              option(value='viber') Viber
+              option(value='whats') WhatsApp
+              option(value='telegram') Telegram
+              option(value='телефон') Телефон
+        .quiz__form-item
+          .quiz__a
+            p Как с вами можно связаться?
+          .quiz__a
+            input(type="text" id="quiz-d1" placeholder="Телефон")
         .quiz__footer
           .quiz__logo
             img(src="images/dest/quiz-logo.webp")
@@ -54,5 +59,4 @@ section.quiz#quiz
             button.quiz__prev#prev(type="button" disabled)
             button.quiz__next#next(type="button") Далее
     .quiz__slider
-      picture
-        img(src="images/dest/quiz.webp" alt="")
+      .quiz__slide

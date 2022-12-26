@@ -27,7 +27,7 @@
   position: relative
   width: 91%
   max-width: 1312px
-  height: 768px
+  height: 90vh
   margin: 0 auto
   display: grid
   grid-template-columns: auto 46.41%
@@ -96,7 +96,7 @@
       line-height: 21px
   &__map
     width: 100%
-    min-height: 156px
+    min-height: 240px
     background-image: url('../images/dest/popup-map.webp')
     background-size: cover
     background-repeat: no-repeat
@@ -127,6 +127,7 @@
       padding: 16px 0
       background-color: $bronze
       color: $blue
+      max-height: 56px
       &:hover
         background-color: $bronzeDark
         color: $bronze
@@ -187,4 +188,27 @@
         grid-row: 2/3
       &-btn
         grid-column: 2/3
+        grid-row: 3/4
+
+
+  @include media-customMax(630px)
+    &__benefits
+      grid-template-columns: 100%
+    &__map
+      display: none
+    &__promo
+      padding: 20px
+      display: grid
+      grid-template-columns: 100%
+      grid-template-rows: auto-fill
+      &-slider
+        display: none
+      &-title
+        grid-column: 1/2
+        grid-row: 1/2
+      &-timer
+        grid-column: 1/2
+        grid-row: 2/3
+      &-btn
+        grid-column: 1/2
         grid-row: 3/4
