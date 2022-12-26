@@ -42,14 +42,11 @@
       line-height: 150%
       text-transform: uppercase
     &.active
-      .benefits__content
-        height: auto
-        overflow: visible
-        -webkit-transition: all 0.3s
-        -moz-transition: all 0.3s
-        transition: all 0.3s
-      .benefits__img
-        display: block
+      // .benefits__content
+      //   height: auto
+        // overflow: visible
+      // .benefits__img
+      //   display: block
     &:nth-child(2)
       .benefits__img
         bottom: auto
@@ -69,11 +66,9 @@
     font-family: 'Viaoda Libre'
   &__content
     grid-column: 2/3
-    height: 0
-    overflow: hidden
-    -webkit-transition: all 0.3s
-    -moz-transition: all 0.3s
-    transition: all 0.3s
+    // height: 0
+    // overflow: hidden
+    display: none
   &__list
     padding-left: 20px
     margin: 0

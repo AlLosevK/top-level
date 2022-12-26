@@ -74,24 +74,26 @@ $(document).ready(function() {
     return false;
   });
 
-  //benefits acordeon
-  $(function() {
-    var benItems = document.querySelector(".benefits__item");
-  	$(".benefits__item-bg").on("mouseenter", function(e) {
 
-  		e.preventDefault();
-  		var $this = $(this).parent();
-      $('.benefits__item.active').removeClass('active');
-      $this.addClass('active');
+    //benefits acordeon
+    $(function() {
+    	$(".benefits__item-bg").on("mouseenter", function(e) {
 
-  	});
+    		e.preventDefault();
+    		var $this = $(this).parent();
+        $this.find('.benefits__content').fadeIn(400);
 
-  	$(".benefits__item-bg").on("mouseleave", function(e) {
-  		e.preventDefault();
+        // $('.benefits__item.active').removeClass('active');
+        // $this.addClass('active');
+    	});
 
-  	});
-  });
+    	$(".benefits__item-bg").on("mouseleave", function(e) {
+    		e.preventDefault();
+    		var $this = $(this).parent();
+        $('.benefits__content').fadeOut(200);
 
+    	});
+    });
 
 
 
@@ -143,21 +145,40 @@ $(document).ready(function() {
 
   //faq acordeon
   $(function() {
-    var benItems = document.querySelector(".faq__item");
-  	$(".faq__item-bg").on("mouseenter", function(e) {
+    $(".faq__item-bg").on("mouseenter", function(e) {
 
-  		e.preventDefault();
-  		var $this = $(this).parent();
-      $('.faq__item.active').removeClass('active');
-      $this.addClass('active');
+      e.preventDefault();
+      var $this = $(this).parent();
+      $this.find('.faq__a').fadeIn(400);
 
-  	});
+      // $('.benefits__item.active').removeClass('active');
+      // $this.addClass('active');
+    });
 
-  	$(".faq__item-bg").on("mouseleave", function(e) {
-  		e.preventDefault();
+    $(".faq__item-bg").on("mouseleave", function(e) {
+      e.preventDefault();
+      var $this = $(this).parent();
+      $('.faq__a').fadeOut(200);
 
-  	});
+    });
   });
+
+  // $(function() {
+  //   var benItems = document.querySelector(".faq__item");
+  // 	$(".faq__item-bg").on("mouseenter", function(e) {
+  //
+  // 		e.preventDefault();
+  // 		var $this = $(this).parent();
+  //     $('.faq__item.active').removeClass('active');
+  //     $this.addClass('active');
+  //
+  // 	});
+  //
+  // 	$(".faq__item-bg").on("mouseleave", function(e) {
+  // 		e.preventDefault();
+  //
+  // 	});
+  // });
 
 
   // project popup
