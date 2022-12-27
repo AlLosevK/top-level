@@ -143,11 +143,11 @@
               </div>
               <div class="quiz__form-item">
                 <div class="quiz__a">
-                  <select name="service">
+                  <select name="service" id="service">
                     <option value="viber">Viber</option>
                     <option value="whats">WhatsApp</option>
                     <option value="telegram">Telegram</option>
-                    <option value="телефон">Телефон</option>
+                    <option value="phone">Телефон</option>
                   </select>
                 </div>
               </div>
@@ -156,7 +156,7 @@
                   <p>Как с вами можно связаться?</p>
                 </div>
                 <div class="quiz__a">
-                  <input type="text" id="quiz-d1" placeholder="Телефон">
+                  <input type="text" id="quiz-d1" name="phone" placeholder="Телефон">
                 </div>
               </div>
               <div class="quiz__form-item">
@@ -167,8 +167,8 @@
               <div class="quiz__footer">
                 <div class="quiz__logo"><img src="images/dest/quiz-logo.webp"></div>
                 <div class="quiz__nav">
-                  <button class="quiz__prev" id="prev" type="button" disabled></button>
-                  <button class="quiz__next" id="next" type="button">Далее</button>
+                  <button class="quiz__prev" id="prev" type="button" data-quizNav="nav" disabled></button>
+                  <button class="quiz__next" id="next" type="button" data-quizNav="nav">Далее</button>
                 </div>
               </div>
             </form>

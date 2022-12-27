@@ -1,5 +1,47 @@
 $(document).ready(function() {
 
+  $('.quiz__next').prop('disabled', true);
+
+  const sendQuiz = () => {
+    // var form = $(".quiz__form");
+    // form.submit();
+    // var formData = {
+    //   quiz_a1: $("#quiz-a1").val(),
+    //   quiz_a2: $("#quiz-a2").val(),
+    //   quiz_b1: $("#quiz-b1").val(),
+    //   quiz_b2: $("#quiz-b2").val(),
+    //   quiz_b3: $("#quiz-b3").val(),
+    //   quiz_c1: $("#quiz-c1").val(),
+    //   quiz_c2: $("#quiz-c2").val(),
+    //   quiz_c3: $("#quiz-c3").val(),
+    //   service: $("#service").val(),
+    //   quiz_d1: $("#quiz-d1").val(),
+    // };
+    //
+    // $.ajax({
+    //   type: "POST",
+    //   url: "php/res.php",
+    //   data: formData,
+    //   dataType: "json",
+    //   encode: true,
+    // }).done(function (data) {
+    //   console.log(data);
+    // });
+    //
+    // event.preventDefault();
+    var form_data = $(".quiz__form").serialize(); // Собираем все данные из формы
+    $.ajax({
+        type: "POST", // Метод отправки
+        url: "php/res.php", // Путь до php файла отправителя
+        data: form_data,
+        success: function () {
+            // Код в этом блоке выполняется при успешной отправке сообщения
+            alert("Ваше сообщение отправлено!");
+            console.log(form_data);
+        }
+    });
+  };
+
   $('.banner__slider').slick({
 		dots: false,
 		arrows: false,
@@ -105,30 +147,30 @@ $(document).ready(function() {
 
 
 
-  $(function() {
-    var isChecked = $(".quiz__form-item-active input:checked").length;
-    var inpRadio = $(".quiz__form-item-active input[type='radio']").length;
+  // $(function() {
+  //   var isChecked = $(".quiz__form-item-active input:checked").length;
+  //   var inpRadio = $(".quiz__form-item-active input[type='radio']").length;
+  //
+  //   if (isChecked == 0 && inpRadio !== 0) {
+  //     $('.quiz__next').prop('disabled', true)
+  //     console.log('1');
+  //   } else {
+  //     $('.quiz__next').prop('disabled', false)
+  //     console.log('0');
+  //   }
+  // });
 
-    if (isChecked == 0 && inpRadio !== 0) {
+  $(".quiz").on("click", function () {
+    var isChecked = $(".quiz__form-item-active:last input:checked").length;
+    var inpRadio = $(".quiz__form-item-active:last input[type='radio']").length;
+
+    if (isChecked == 0 && inpRadio !== 0 || currActive === circles.length) {
       $('.quiz__next').prop('disabled', true)
       console.log('1');
     } else {
       $('.quiz__next').prop('disabled', false)
       console.log('0');
-    }
-  });
-
-  $(".quiz__a").on("click", function () {
-    var isChecked = $(".quiz__form-item-active input:checked").length;
-    var inpRadio = $(".quiz__form-item-active input[type='radio']").length;
-
-    if (isChecked == 0 && inpRadio !== 0) {
-      $('.quiz__next').prop('disabled', true)
-      console.log('1');
-    } else {
-      $('.quiz__next').prop('disabled', false)
-      console.log('0');
-    }
+    };
   });
 
 
@@ -292,6 +334,10 @@ $(document).ready(function() {
   const circles = document.querySelectorAll(".circle");
   const qItems = document.querySelectorAll(".quiz__form-item");
   const qItemActive = document.querySelectorAll(".quiz__form-item-active");
+  const quizBtn = $(".quiz__nav button[data-quizNav='nav']");
+  const quizSbmt = $(".quiz__nav button[data-quizNav='sbmt']");
+  const isChecked = $(".quiz__form-item-active:last input:checked").length;
+  const inpRadio = $(".quiz__form-item-active:last input[type='radio']").length;
 
   const update = () => {
       circles.forEach((circle, i) => {
@@ -303,11 +349,20 @@ $(document).ready(function() {
       if (currActive === 1) {
           prev.disabled = true;
       } else if (currActive === circles.length) {
-          next.disabled = true;
+        next.disabled = true;
+          sendQuiz();
       } else {
           prev.disabled = false;
           next.disabled = false;
       }
+
+      // if (isChecked == 0 && inpRadio !== 0) {
+      //   $('.quiz__next').prop('disabled', true)
+      //   console.log('1');
+      // } else {
+      //   $('.quiz__next').prop('disabled', false)
+      //   console.log('0');
+      // };
   };
 
   const updateSlide = () => {
@@ -318,9 +373,9 @@ $(document).ready(function() {
 
           console.log(currActive);
 
-          i < 3
-              ? next.disabled = false
-              : next.disabled = true;
+          // i < 3
+          //     ? next.disabled = true
+          //     : next.disabled = false;
       });
 
       // next.disabled = true;

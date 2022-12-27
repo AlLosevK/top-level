@@ -43,16 +43,16 @@ section.quiz#quiz
             label(for="quiz-с3") 3
         .quiz__form-item
           .quiz__a
-            select(name="service")
+            select(name="service" id="service")
               option(value='viber') Viber
               option(value='whats') WhatsApp
               option(value='telegram') Telegram
-              option(value='телефон') Телефон
+              option(value='phone') Телефон
         .quiz__form-item
           .quiz__a
             p Как с вами можно связаться?
           .quiz__a
-            input(type="text" id="quiz-d1" placeholder="Телефон")
+            input(type="text" id="quiz-d1" name="phone" placeholder="Телефон")
         .quiz__form-item
           .quiz__a
             p Наши менеджеры свяжутся с вами в ближайшее время
@@ -60,7 +60,7 @@ section.quiz#quiz
           .quiz__logo
             img(src="images/dest/quiz-logo.webp")
           .quiz__nav
-            button.quiz__prev#prev(type="button" disabled)
-            button.quiz__next#next(type="button") Далее
+            button.quiz__prev#prev(type="button" data-quizNav="nav" disabled)
+            button.quiz__next#next(type="button" data-quizNav="nav") Далее
     .quiz__slider
       .quiz__slide
