@@ -2,6 +2,36 @@ $(document).ready(function() {
 
   $('.quiz__next').prop('disabled', true);
 
+
+  $(".form__form .form__submit").on("click", function () {
+    var form_data = $(".form__form").serialize(); // Собираем все данные из формы
+    $.ajax({
+        type: "POST", // Метод отправки
+        url: "php/promo-form.php", // Путь до php файла отправителя
+        data: form_data,
+        success: function () {
+            // Код в этом блоке выполняется при успешной отправке сообщения
+            alert("Ваше сообщение отправлено!");
+            console.log(form_data);
+        }
+    });
+  });
+
+  $(".popup-promo__submit").on("click", function () {
+    var form_data = $(".popup-promo__form").serialize(); // Собираем все данные из формы
+    $.ajax({
+        type: "POST", // Метод отправки
+        url: "php/form.php", // Путь до php файла отправителя
+        data: form_data,
+        success: function () {
+            // Код в этом блоке выполняется при успешной отправке сообщения
+            alert("Ваше сообщение отправлено!");
+            console.log(form_data);
+        }
+    });
+  });
+
+
   const sendQuiz = () => {
     // var form = $(".quiz__form");
     // form.submit();
@@ -107,7 +137,7 @@ $(document).ready(function() {
     let href = $(this).attr("href");
 
     $("html, body").animate({
-        scrollTop: $(href).offset().top - $('.header').height() * 3
+        scrollTop: $(href).offset().top - $('.header').outerHeight()
     }, {
         duration: 670,   // по умолчанию «400»
         easing: "linear" // по умолчанию «swing»
@@ -290,9 +320,21 @@ $(document).ready(function() {
 
   // header popup close
   $(function() {
-  	$(".popup__nav-close").on("click", function(e) {
+  	$(".header-mob__abs-nav-close").on("click", function(e) {
   		e.preventDefault();
-  		var $this = $(this).parent().parent().parent();
+  		var $this = $(".header-mob");
+  		if (!$this.hasClass("active")) {
+  			$(this).removeClass("active");
+  		}
+  		$this.toggleClass("active");
+      document.body.style.overflow = 'visible';
+  	});
+  });
+
+  $(function() {
+  	$(".header-mob__abs-item a").on("click", function(e) {
+  		e.preventDefault();
+  		var $this = $(".header-mob");
   		if (!$this.hasClass("active")) {
   			$(this).removeClass("active");
   		}
@@ -310,7 +352,8 @@ $(document).ready(function() {
   });
 
   $(window).scroll(function() {
-     if( $(document).scrollTop() > 850) {
+     // if( $(document).scrollTop() > 850) {
+     if( $(document).scrollTop() > $(".banner").outerHeight()) {
         $(".header").addClass('active');
      } else {
        $(".header").removeClass('active');
@@ -319,9 +362,18 @@ $(document).ready(function() {
 
   // promo popup close
   $(function() {
-  	$(".popup-promo").on("click", function(e) {
+  	$(".popup__nav-close").on("click", function(e) {
   		e.preventDefault();
-  		var $this = $(this);
+  		var $this = $(".popup-promo");
+  		$this.fadeOut();
+      document.body.style.overflow = 'visible';
+  	});
+  });
+
+  $(function() {
+  	$(".project-popup__bg").on("click", function(e) {
+  		e.preventDefault();
+  		var $this = $(".popup-promo");
   		$this.fadeOut();
       document.body.style.overflow = 'visible';
   	});
@@ -348,6 +400,8 @@ $(document).ready(function() {
 
       if (currActive === 1) {
           prev.disabled = true;
+      } else if (currActive === 6) {
+        quizBtn.hide();
       } else if (currActive === circles.length) {
         next.disabled = true;
           sendQuiz();

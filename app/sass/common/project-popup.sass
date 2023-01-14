@@ -38,22 +38,65 @@
     left: 0
     width: 100vw
     height: 100vh
-    background-color: $textDark
-    opacity: .3
     z-index: 1000
+    flex-direction: column
+    justify-content: center
+    align-content: center
     &.active
-      display: block
+      display: flex
     .wrapper
-      height: 100vh
-      width: 100vw
+      height: 60vh
+      width: 70vw
+      background-color: #fff
+      max-height: 518px
+      position: relative
+      overflow: hidden
+    &__bg
+      position: absolute
+      z-index: 1050
+      &-left
+        bottom: 0
+        left: 0
+        width: calc(223 / 1012) * 100%
+        height: calc(335 / 518) * 100%
+      &-right
+        top: 15%
+        right: 0
+        width: calc(191 / 1012) * 100%
+        height: calc(345 / 518) * 100%
+    &__content
+      width: 600px
+      margin: 0 auto
+      height: 100%
       display: -webkit-flex
       display: -ms-flex
       display: flex
-      flex-direction: row
+      flex-direction: column
+      justify-content: flex-start
+      align-items: center
+      padding: 76px 0 86px
+      z-index: 1100
+      position: relative
+    &__title
+      font-family: 'Viaoda Libre', cursive
+      font-weight: 400
+      font-size: 45px
+      line-height: 120%
+      text-transform: uppercase
+      text-align: center
+    &__form
+      flex-grow: 3
+      display: -webkit-flex
+      display: -ms-flex
+      display: flex
+      flex-direction: column
       justify-content: center
       align-items: center
-    &-img
-      display: block
+    .popup-promo__input
+      color: $textDark
+      margin-bottom: 10px
+    &__policy
+      margin-bottom: 53px
   &__content
     display: -webkit-flex
     display: -ms-flex
@@ -63,7 +106,7 @@
     align-items: flex-start
     padding: 40px
     background-color: #fff
-    max-height: 768px
+    max-height: 708px
     overflow: auto
     // max-width: 703px
     overflow: auto
@@ -104,17 +147,25 @@
     padding: 94px 40px 40px
     background-color: $blue
     color: $bronze
-    max-height: 768px
+    max-height: 708px
+    display: grid
+    grid-template-rows: minmax(auto, 410px) 24px 86px 56px
+    grid-template-columns: 100%
     &-slider
+      grid-row: 1/2
       margin-bottom: 20px
+      img
+        max-height: 400px
     &-title
       font-size: 16px
       line-height: 24px
       text-transform: uppercase
+      grid-row: 2/3
     &-timer
       font-size: 66.6667px
       line-height: 130%
       font-family: "Viaoda Libre",cursive
+      grid-row: 3/4
     &-btn
       width: 100%
       display: block
@@ -128,6 +179,7 @@
       background-color: $bronze
       color: $blue
       max-height: 56px
+      grid-row: 4/5
       &:hover
         background-color: $bronzeDark
         color: $bronze
@@ -212,3 +264,12 @@
       &-btn
         grid-column: 1/2
         grid-row: 3/4
+    &-promo
+      .wrapper
+        width: 85vw
+      &__title
+        font-size: 25px
+      &__content
+        width: 80%
+        padding: 70px 0 40px
+      .popup-nav

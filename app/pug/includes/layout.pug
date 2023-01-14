@@ -8,6 +8,16 @@ html(lang="ru")
           meta(content="ie=edge" http-equiv="x-ua-compatible")
           link(rel="stylesheet" href="css/app.min.css")
       body
+          script
+            include metrika.js
+          script(src="https://www.googletagmanager.com/gtag/js?id=G-EBX8MEHXB0" async)
+          script
+            include ga.js
+          noscript
+            div
+              img(src='https://mc.yandex.ru/watch/91960127' style='position:absolute; left:-9999px;' alt='')
+
+
       
           include svg.pug
           block header
@@ -15,5 +25,5 @@ html(lang="ru")
 
           block content
           
-          block footer
-            include footer
+          //- block footer
+          //-   include footer

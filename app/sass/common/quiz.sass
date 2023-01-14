@@ -29,6 +29,7 @@
     height: 19px
   &__title
     color: $bronze
+    margin: 0 auto
   &__form
     display: -webkit-flex
     display: -ms-flex
@@ -39,6 +40,7 @@
     width: 100%
     &-item
       display: none
+      min-height: 206px
       &-active
         display: block
     label
@@ -193,8 +195,8 @@
       color: $bronzeDark
       border: 1px solid $btnDisabled
       &:before
-        content: url('../images/dest/icons/quiz-arrow-light.svg')
-        transform: translate(0%, -80%) rotateY(180deg)
+        content: url('../images/dest/icons/quiz-arrow-dark.svg')
+        transform: translate(0%, -80%)
       &:hover
         border: 1px solid $btnDisabled
 
@@ -272,7 +274,7 @@
   height: 1px
   left: 0
   position: absolute
-  top: 30%
+  top: 40%
   transform: translateY(-50%)
   transition: 0.4s ease
   width: 100%

@@ -1,0 +1,66 @@
+section.quiz#quiz
+  .wrapper
+    .quiz__content
+      .quiz__bar.progress__container
+        .progress#progress
+        .circle.active
+        .circle
+        .circle
+        .circle
+        .circle
+        .circle
+      h3.quiz__title Подбор недвижимости в дубаи
+      form.quiz__form
+        .quiz__form-item.quiz__form-item-active
+          .quiz__q What is your purpose of purchasing the property in the UAE ?
+          p.quiz__a
+            input(type="radio" id="quiz-a1" name='for' value='Для инвестици1')
+            label(for="quiz-a1") Investment
+          p.quiz__a
+            input(type="radio" id="quiz-a2" name='for' value='Для жилья')
+            label(for="quiz-a2") Residence
+        .quiz__form-item
+          .quiz__q What budget do you have ?
+          p.quiz__a
+            input(type="radio" id="quiz-b1" name='price' value='1 000 000')
+            label(for="quiz-b1") 1 000 000 AED
+          p.quiz__a
+            input(type="radio" id="quiz-b2" name='price' value='30 000 000')
+            label(for="quiz-b2") 30 000 000 AED
+          p.quiz__a
+            input(type="radio" id="quiz-b3" name='price' value='100 000 000')
+            label(for="quiz-b3") 100 000 000 AED
+        .quiz__form-item
+          .quiz__q How many rooms would you like to buy?
+          p.quiz__a
+            input(type="radio" id="quiz-с1" name='rooms' value='1-2')
+            label(for="quiz-с1") 1-2
+          p.quiz__a
+            input(type="radio" id="quiz-с2" name='rooms' value='2-5')
+            label(for="quiz-с2") 2-5
+          p.quiz__a
+            input(type="radio" id="quiz-с3" name='rooms' value='5+')
+            label(for="quiz-с3") 5+
+        .quiz__form-item
+          .quiz__a
+            select(name="service" id="service")
+              option(value='viber') Viber
+              option(value='whats') WhatsApp
+              option(value='telegram') Telegram
+              option(value='Телефон') Телефон
+        .quiz__form-item
+          .quiz__a
+            p How can we contact you?
+          .quiz__a
+            input(type="text" id="quiz-d1" name="phone" placeholder="Телефон 1234567890" pattern="[0-9]{10}")
+        .quiz__form-item
+          .quiz__a
+            p Наши менеджеры свяжутся с вами в ближайшее время
+        .quiz__footer
+          .quiz__logo
+            img(src="images/dest/quiz-logo.webp" alt="Top Level логотип")
+          .quiz__nav
+            button.quiz__prev#prev(type="button" data-quizNav="nav" disabled)
+            button.quiz__next#next(type="button" data-quizNav="nav") Next
+    .quiz__slider
+      .quiz__slide

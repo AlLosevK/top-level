@@ -55,7 +55,10 @@ function browsersync() {
 }
 
 function pugf() {
-	return src('app/pug/index.pug')
+	return src([
+		'app/pug/index.pug',
+		'app/pug/index-en.pug'
+	])
 	.pipe(pug({pretty: true}))
 	.pipe(dest('app/'))
 	.pipe(browserSync.stream())
@@ -164,6 +167,7 @@ function buildcopy() {
 		'app/css/**/*.min.css',
 		'app/js/**/*.min.js',
 		'app/images/dest/**/*',
+		'app/fonts/**/*',
 		'app/**/*.html',
 		], { base: 'app' }) // Параметр "base" сохраняет структуру проекта при копировании
 	.pipe(dest('dist')) // Выгружаем в папку с финальной сборкой

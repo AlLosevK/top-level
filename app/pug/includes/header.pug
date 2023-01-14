@@ -4,13 +4,13 @@ header.header
       nav.header__nav
         ul.header__list
           li
-            a.header__link(href="#") Преимущества
+            a.header__link(href="#benefits") Преимущества
           li
-            a.header__link(href="#") Проекты
+            a.header__link(href="#projects") Проекты
           li
-            a.header__link(href="#") О Компании
+            a.header__link(href="#about") О Компании
           li
-            a.header__link(href="#") FAQ
+            a.header__link(href="#faq") FAQ
       .header__logo
         +icon("header-logo", "header__logo-icon")
       .header__contacts
@@ -19,6 +19,10 @@ header.header
             a.header__link(href="tel:+123") +9 (715) 858 35 333
           li
             a.header__link(href="#quiz") Подобрать недвижимость
+          li
+            a.header__link(href="/") Рус
+            span /
+            a.header__link(href="index-en.html") Eng
   .header-mob
     .wrapper
       a.header-mob__phone(href="#form")
@@ -29,18 +33,22 @@ header.header
         +icon("header-menu", "header-mob__menu-icon")
     .header-mob__abs
       .header-mob__abs-nav
-        +icon("project-popup-close", "popup__nav-close")
+        .header-mob__abs-lang
+          a.header__link(href="/") Рус
+          span /
+          a.header__link(href="index-en.html") Eng
+        +icon("project-popup-close", "header-mob__abs-nav-close")
       .header-mob__abs-logo
         +icon('header-mob-logo', 'header-mob__logo-icon')
       ul.header-mob__abs-list
         li.header-mob__abs-item
-          a(href="#") Преимущества
+          a(href="#benefits") Преимущества
         li.header-mob__abs-item
-          a(href="#") Проекты
+          a(href="#projects") Проекты
         li.header-mob__abs-item
-          a(href="#") О компании
+          a(href="#about") О компании
         li.header-mob__abs-item
-          a(href="#") FAQ
+          a(href="#faq") FAQ
       .header-mob__abs-contacts
         a.header-mob__abs-link(href="tel:+971585835333")
           +icon('header-mob-phone', 'header-mob__abs-link-icon')
