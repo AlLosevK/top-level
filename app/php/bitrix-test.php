@@ -1,5 +1,5 @@
 <?php
-  $queryUrl = 'https://b24-gmf02g.bitrix24.ru/rest/1/qic82yql28cw549m/crm.lead.add.json';
+  $queryUrl = 'https://b24-gmf02g.bitrix24.ru/rest/1/ca5111v14812ihl1/crm.lead.add.json';
   $queryData = http_build_query(array(
     'fields' => array(
       'TITLE' => 'Закрытая',
