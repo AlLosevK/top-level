@@ -21,7 +21,7 @@ $(document).ready(function() {
     var form_data = $(".popup-promo__form").serialize(); // Собираем все данные из формы
     $.ajax({
         type: "POST", // Метод отправки
-        url: "php/form.php", // Путь до php файла отправителя
+        url: "php/bitrix-test.php", // Путь до php файла отправителя
         data: form_data,
         success: function () {
             // Код в этом блоке выполняется при успешной отправке сообщения
