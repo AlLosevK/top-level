@@ -1,5 +1,5 @@
 <?php
-  $queryUrl = 'https://b24-gmf02g.bitrix24.ru/rest/1/2h0q8h1y3tqp9nez/';
+  $queryUrl = 'https://b24-gmf02g.bitrix24.ru/rest/1/xqkncmh6teg071ct/';
   $queryData = http_build_query(array(
     'fields' => array(
       'TITLE' => 'Закрытая',
