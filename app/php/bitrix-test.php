@@ -1,10 +1,10 @@
 <?php
-  $queryUrl = 'https://b24-gmf02g.bitrix24.ru/rest/1/xqkncmh6teg071ct/';
+  $queryUrl = 'https://b24-gmf02g.bitrix24.ru/rest/1/qic82yql28cw549m/crm.lead.add.json';
   $queryData = http_build_query(array(
     'fields' => array(
       'TITLE' => 'Закрытая',
       'NAME' => $_POST["name"],
-      'PHONE' => array(
+      'EMAIL' => array(
       array(
         "VALUE" => $_POST["email"],
         "VALUE_TYPE" => "WORK"
