@@ -62,6 +62,14 @@
     display: block
     &:hover
       background-color: $bronzeH
+    &:disabled
+      background-color: #fff
+      border: 1px solid $bronze
+      color: $blue
+      &:hover
+        background-color: #fff
+        border: 1px solid $bronze
+        color: $blue
 
   @include media-laptop
     padding: 80px 0

@@ -45,10 +45,10 @@
     &.active
       display: flex
     .wrapper
-      height: 60vh
+      height: auto
       width: 70vw
       background-color: #fff
-      max-height: 518px
+      max-height: 80vh
       position: relative
       overflow: hidden
     &__bg
@@ -65,7 +65,8 @@
         width: calc(191 / 1012) * 100%
         height: calc(345 / 518) * 100%
     &__content
-      width: 600px
+      width: 100%
+      max-width: 600px
       margin: 0 auto
       height: 100%
       display: -webkit-flex
@@ -77,6 +78,7 @@
       padding: 76px 0 86px
       z-index: 1100
       position: relative
+      overflow: auto
     &__title
       font-family: 'Viaoda Libre', cursive
       font-weight: 400

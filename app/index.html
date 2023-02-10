@@ -6,39 +6,41 @@
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <meta content="ie=edge" http-equiv="x-ua-compatible">
     <link rel="stylesheet" href="css/app.min.css">
+    <link rel="icon" href="images/dest/favicon.ico">
+    <link rel="icon" href="images/dest/icons/header-logo.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/dest/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/dest/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/dest/favicon-16x16.png">
+    <link rel="manifest" href="images/dest/site.webmanifest">
   </head>
   <body>
-    <script>(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-m[i].l=1*new Date();
-for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
-
-ym(91960127, "init", {
-    clickmap:true,
-    trackLinks:true,
-    accurateTrackBounce:true,
-    webvisor:true
-});
-
-
-Битрикс
-Логин: MarketingRU@top-level.ae
-Пароль: RUmarketing123!
-
-    </script>
     <script src="https://www.googletagmanager.com/gtag/js?id=G-EBX8MEHXB0" async></script>
     <script>window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-gtag('config', 'G-EBX8MEHXB0');
+  gtag('config', 'G-EBX8MEHXB0');
+
+    </script>
+    <script>  (function(m,e,t,r,i,k,a){m[i]=m[i]function(){(m[i].a=m[i].a[]).push(arguments)};
+  m[i].l=1*new Date();
+  for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+  k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+  (window, document, "script", "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/tag.js", "ym");
+
+  ym(92170622, "init", {
+      clickmap:true,
+      trackLinks:true,
+      accurateTrackBounce:true,
+      webvisor:true
+  });
 
     </script>
     <noscript>
-      <div><img src="https://mc.yandex.ru/watch/91960127" style="position:absolute; left:-9999px;" alt=""></div>
+      <div><img src="https://mc.yandex.ru/watch/92170622" style="position:absolute; left:-9999px;" alt=""></div>
     </noscript>
-    <header class="header">
+
+<header class="header">
       <div class="header-desk">
         <div class="wrapper">
           <nav class="header__nav">
@@ -56,7 +58,7 @@ gtag('config', 'G-EBX8MEHXB0');
           </div>
           <div class="header__contacts">
             <ul class="header__list">
-              <li><a class="header__link" href="tel:+123">+9 (715) 858 35 333</a></li>
+              <li><a class="header__link" href="tel:+971585835333">+9 (715) 858 35 333</a></li>
               <li><a class="header__link" href="#quiz">Подобрать недвижимость</a></li>
               <li><a class="header__link" href="/">Рус</a><span>/</span><a class="header__link" href="index-en.html">Eng</a></li>
             </ul>
@@ -115,7 +117,7 @@ gtag('config', 'G-EBX8MEHXB0');
           <div class="banner__slide"></div>
         </div>
         <div class="wrapper">
-          <h1 class="banner__title"> <span>Весь спектр недвижимости в Дубай:</span>квадратные метры <br>для новой жизни</h1><a class="banner__btn" href="#form">Бесплатная консультация</a>
+          <h1 class="banner__title"> <span>Весь спектр недвижимости в Дубае:</span>квадратные метры <br>для новой жизни</h1><a class="banner__btn" href="#form">Бесплатная консультация</a>
         </div>
       </section>
       <section class="quiz" id="quiz">
@@ -129,9 +131,10 @@ gtag('config', 'G-EBX8MEHXB0');
               <div class="circle"></div>
               <div class="circle"></div>
               <div class="circle"></div>
+              <div class="circle"></div>
             </div>
-            <h3 class="quiz__title">Подбор недвижимости в дубаи</h3>
-            <form class="quiz__form">
+            <h3 class="quiz__title">Подбор недвижимости в Дубае</h3>
+            <form class="quiz__form" action="php/bitrix-quiz.php" method="post">
               <div class="quiz__form-item quiz__form-item-active">
                 <div class="quiz__q">С какой целью вы приобретаете недвижимость в ОАЭ?</div>
                 <p class="quiz__a">
@@ -174,21 +177,37 @@ gtag('config', 'G-EBX8MEHXB0');
                 </p>
               </div>
               <div class="quiz__form-item">
+                <div class="quiz__q">Как вас зовут?</div>
                 <div class="quiz__a">
-                  <select name="service" id="service">
-                    <option value="viber">Viber</option>
-                    <option value="whats">WhatsApp</option>
-                    <option value="telegram">Telegram</option>
-                    <option value="Телефон">Телефон</option>
+                  <input class="form__input" type="text" id="name-quiz" name="name" placeholder="Name">
+                </div>
+              </div>
+              <div class="quiz__form-item">
+                <div class="quiz__q"></div>
+                <div class="quiz__a">
+                  <select class="form__input" name="propName">
+                    <option value="default">Выберите Комплекс </option>
+                    <option value="Cavalli Couture">Cavalli Couture</option>
+                    <option value="Burj Binghatti">Burj Binghatti</option>
+                    <option value="Zuha Island">Zuha Island</option>
+                    <option value="Elegance Tower">Elegance Tower</option>
+                    <option value="Safa One">Safa One</option>
+                    <option value="Chic Tower">Chic Tower</option>
+                    <option value="The Cove">The Cove</option>
+                    <option value="Seascape">Seascape</option>
+                    <option value="Orla Dorchester">Orla Dorchester</option>
+                    <option value="Bluewaters Bay">Bluewaters Bay</option>
+                    <option value="Six Senses">Six Senses</option>
+                    <option value="Sobha SeaHaven">Sobha SeaHaven</option>
                   </select>
                 </div>
               </div>
               <div class="quiz__form-item">
+                <div class="quiz__q">Как с вами связаться?</div>
                 <div class="quiz__a">
-                  <p>Как с вами связаться?</p>
-                </div>
-                <div class="quiz__a">
-                  <input type="text" id="quiz-d1" name="phone" placeholder="Телефон 1234567890" pattern="[0-9]{10}">
+                  <input class="form__input" type="email" id="email-quiz" name="email" placeholder="Email">
+                  <input class="form__input quiz__input iti__phone" type="tel" name="phone" id="phone-quiz" placeholder="(000) 000-00-00">
+                  <input class="form__input quiz__input iti__hide hide" type="tel" name="hiden" id="hiden-quiz">
                 </div>
               </div>
               <div class="quiz__form-item">
@@ -199,8 +218,9 @@ gtag('config', 'G-EBX8MEHXB0');
               <div class="quiz__footer">
                 <div class="quiz__logo"><img src="images/dest/quiz-logo.webp" alt="Top Level логотип"></div>
                 <div class="quiz__nav">
-                  <button class="quiz__prev" id="prev" type="button" data-quizNav="nav" disabled></button>
+                  <button class="quiz__prev" id="prev" type="button" data-quizNav="sbmt" disabled></button>
                   <button class="quiz__next" id="next" type="button" data-quizNav="nav">Далее</button>
+                  <button class="quiz__next" id="submit-quiz" type="submit" data-quizNav="sbmt" disabled>Отправить</button>
                 </div>
               </div>
             </form>
@@ -227,7 +247,7 @@ gtag('config', 'G-EBX8MEHXB0');
                 <picture class="benefits__img"><img src="images/dest/benefits-1.webp" alt="Консультирование"></picture>
               </div>
             </div>
-            <div class="benefits__item"> 
+            <div class="benefits__item">
               <div class="benefits__item-bg"></div><span class="benefits__nmbr">02</span>
               <p class="benefits__item-title">Поиск, выбор, покупка</p>
               <div class="benefits__content">
@@ -243,7 +263,7 @@ gtag('config', 'G-EBX8MEHXB0');
                 <picture class="benefits__img"><img src="images/dest/benefits-2.webp" alt="Ключи"></picture>
               </div>
             </div>
-            <div class="benefits__item"> 
+            <div class="benefits__item">
               <div class="benefits__item-bg"></div><span class="benefits__nmbr">03</span>
               <p class="benefits__item-title">Обслуживание после покупки</p>
               <div class="benefits__content">
@@ -397,88 +417,6 @@ gtag('config', 'G-EBX8MEHXB0');
                 </div>
                 <button class="project__btn" type="button">Смотреть</button>
               </div>
-              <div class="project-popup">
-                <div class="project-popup__bg"></div>
-                <div class="popup">
-                  <div class="popup__content">
-                    <h2 class="popup__title">ADDRESS VILLAS – HILLCREST</h2>
-                    <p class="popup__descr">ADDRESS VILLAS – HILLCREST - это новый жилой комплекс вилл, расположенный в Dubai Hills Estate. Жители смогут отдохнуть вдали от шума и суеты мегаполиса, а также смогут легко добраться до ключевых районов эмирата. Проект разработан Emaar Properties, которая является одной из ведущих девелоперских компаний Эмирата, известной такими проектами, как Creek Edge, Vida Residences Dubai Marina, Burj Crown и многими другими.</p>
-                    <p class="popup__descr">Общее количество домов в Address Hills составляет 51, и будущие жители могут выбрать из вилл с 5 спальнями, спроектированных в двух типах, называемых классическими виллами и современными виллами. Площади участков резиденций варьируются от 6 983 кв. футов до 10 805 кв. футов. Каждый блок спроектирован с учетом роскоши и спокойствия, а также с учетом наличия лифта, чтобы обеспечить жильцам максимальный комфорт. С просторных балконов и окон от пола до потолка открывается захватывающий вид на Бурдж-Халифу и знаменитый горизонт Дубая.</p>
-                    <div class="popup__benefits">
-                      <div class="popup__benefits-item">
-                            <svg class="icon icon-benefits-icon popup__benefits-icon">
-                              <use xlink:href="images/dest/sprite.svg#benefits-icon"></use>
-                            </svg>
-                        <p class="popup__benefits-descr">Yoga spot </p>
-                      </div>
-                      <div class="popup__benefits-item">
-                            <svg class="icon icon-benefits-icon popup__benefits-icon">
-                              <use xlink:href="images/dest/sprite.svg#benefits-icon"></use>
-                            </svg>
-                        <p class="popup__benefits-descr">Тренажерный зал</p>
-                      </div>
-                      <div class="popup__benefits-item">
-                            <svg class="icon icon-benefits-icon popup__benefits-icon">
-                              <use xlink:href="images/dest/sprite.svg#benefits-icon"></use>
-                            </svg>
-                        <p class="popup__benefits-descr">Детская площадка </p>
-                      </div>
-                      <div class="popup__benefits-item">
-                            <svg class="icon icon-benefits-icon popup__benefits-icon">
-                              <use xlink:href="images/dest/sprite.svg#benefits-icon"></use>
-                            </svg>
-                        <p class="popup__benefits-descr">Бассейн для взрослых и детей</p>
-                      </div>
-                      <div class="popup__benefits-item">
-                            <svg class="icon icon-benefits-icon popup__benefits-icon">
-                              <use xlink:href="images/dest/sprite.svg#benefits-icon"></use>
-                            </svg>
-                        <p class="popup__benefits-descr">Зоны для пикника у озера</p>
-                      </div>
-                      <div class="popup__benefits-item">
-                            <svg class="icon icon-benefits-icon popup__benefits-icon">
-                              <use xlink:href="images/dest/sprite.svg#benefits-icon"></use>
-                            </svg>
-                        <p class="popup__benefits-descr">Открытые зеленые зоны</p>
-                      </div>
-                      <div class="popup__benefits-item">
-                            <svg class="icon icon-benefits-icon popup__benefits-icon">
-                              <use xlink:href="images/dest/sprite.svg#benefits-icon"></use>
-                            </svg>
-                        <p class="popup__benefits-descr">Золотая виза на 10 лет</p>
-                      </div>
-                    </div>
-                    <div class="popup__map">
-                      <script type="text/javascript" charset="utf-8" async="" src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aee645fdc801e68e9f8a9095ce1bd59b02ec2f4351a03553e363507d514e8bed6&amp;width=100%25&amp;height=240&amp;lang=ru_RU&amp;scroll=true"></script>
-                    </div>
-                  </div>
-                  <div class="popup__promo">
-                    <div class="popup__promo-slider">
-                      <picture class="popup__promo-slide"><img src="images/dest/project-popup/hillcrest/slide-1.webp" alt="ADDRESS VILLAS – HILLCREST слайд-1"></picture>
-                      <picture class="popup__promo-slide"><img src="images/dest/project-popup/hillcrest/slide-2.webp" alt="ADDRESS VILLAS – HILLCREST слайд-2"></picture>
-                      <picture class="popup__promo-slide"><img src="images/dest/project-popup/hillcrest/slide-3.webp" alt="ADDRESS VILLAS – HILLCREST слайд-3"></picture>
-                      <picture class="popup__promo-slide"><img src="images/dest/project-popup/hillcrest/slide-4.webp" alt="ADDRESS VILLAS – HILLCREST слайд-4"></picture>
-                      <picture class="popup__promo-slide"><img src="images/dest/project-popup/hillcrest/slide-5.webp" alt="ADDRESS VILLAS – HILLCREST слайд-5"></picture>
-                      <picture class="popup__promo-slide"><img src="images/dest/project-popup/hillcrest/slide-6.webp" alt="ADDRESS VILLAS – HILLCREST слайд-6"></picture>
-                      <picture class="popup__promo-slide"><img src="images/dest/project-popup/hillcrest/slide-7.webp" alt="ADDRESS VILLAS – HILLCREST слайд-7"></picture>
-                      <picture class="popup__promo-slide"><img src="images/dest/project-popup/hillcrest/slide-8.webp" alt="ADDRESS VILLAS – HILLCREST слайд-8"></picture>
-                      <picture class="popup__promo-slide"><img src="images/dest/project-popup/hillcrest/slide-9.webp" alt="ADDRESS VILLAS – HILLCREST слайд-9"></picture>
-                      <picture class="popup__promo-slide"><img src="images/dest/project-popup/hillcrest/slide-10.webp" alt="ADDRESS VILLAS – HILLCREST слайд-10"></picture>
-                      <picture class="popup__promo-slide"><img src="images/dest/project-popup/hillcrest/slide-11.webp" alt="ADDRESS VILLAS – HILLCREST слайд-11"></picture>
-                      <picture class="popup__promo-slide"><img src="images/dest/project-popup/hillcrest/slide-12.webp" alt="ADDRESS VILLAS – HILLCREST слайд-12"></picture>
-                      <picture class="popup__promo-slide"><img src="images/dest/project-popup/hillcrest/slide-13.webp" alt="ADDRESS VILLAS – HILLCREST слайд-13"></picture>
-                      <picture class="popup__promo-slide"><img src="images/dest/project-popup/hillcrest/slide-14.webp" alt="ADDRESS VILLAS – HILLCREST слайд-14"></picture>
-                    </div>
-                    <p class="popup__promo-title">УСПЕЙТЕ КУПИТЬ</p>
-                    <div class="popup__promo-timer" id="timer">10:00:00</div><a class="popup__promo-btn" href="#form">бесплатная консультация</a>
-                  </div>
-                  <div class="popup__nav">
-                        <svg class="icon icon-project-popup-close popup__nav-close">
-                          <use xlink:href="images/dest/sprite.svg#project-popup-close"></use>
-                        </svg>
-                  </div>
-                </div>
-              </div>
             </div>
             <div class="projects__item project">
               <picture class="project__img"><img src="images/dest/project-3.webp" alt="Burj Binghatti Jacob &amp; Co Residences Best"></picture>
@@ -511,49 +449,49 @@ gtag('config', 'G-EBX8MEHXB0');
                             <svg class="icon icon-benefits-icon popup__benefits-icon">
                               <use xlink:href="images/dest/sprite.svg#benefits-icon"></use>
                             </svg>
-                        <p class="popup__benefits-descr">Restaurants</p>
+                        <p class="popup__benefits-descr">Рестораны</p>
                       </div>
                       <div class="popup__benefits-item">
                             <svg class="icon icon-benefits-icon popup__benefits-icon">
                               <use xlink:href="images/dest/sprite.svg#benefits-icon"></use>
                             </svg>
-                        <p class="popup__benefits-descr">training stations</p>
+                        <p class="popup__benefits-descr">Тренажерный зал</p>
                       </div>
                       <div class="popup__benefits-item">
                             <svg class="icon icon-benefits-icon popup__benefits-icon">
                               <use xlink:href="images/dest/sprite.svg#benefits-icon"></use>
                             </svg>
-                        <p class="popup__benefits-descr">Children’s playground</p>
+                        <p class="popup__benefits-descr">Детская игровая площадка</p>
                       </div>
                       <div class="popup__benefits-item">
                             <svg class="icon icon-benefits-icon popup__benefits-icon">
                               <use xlink:href="images/dest/sprite.svg#benefits-icon"></use>
                             </svg>
-                        <p class="popup__benefits-descr">Parks and recreation</p>
+                        <p class="popup__benefits-descr">Парки и зоны отдыха</p>
                       </div>
                       <div class="popup__benefits-item">
                             <svg class="icon icon-benefits-icon popup__benefits-icon">
                               <use xlink:href="images/dest/sprite.svg#benefits-icon"></use>
                             </svg>
-                        <p class="popup__benefits-descr">Restaurants</p>
+                        <p class="popup__benefits-descr">Рестораны</p>
                       </div>
                       <div class="popup__benefits-item">
                             <svg class="icon icon-benefits-icon popup__benefits-icon">
                               <use xlink:href="images/dest/sprite.svg#benefits-icon"></use>
                             </svg>
-                        <p class="popup__benefits-descr">Retail outlets</p>
+                        <p class="popup__benefits-descr">Торговые точки</p>
                       </div>
                       <div class="popup__benefits-item">
                             <svg class="icon icon-benefits-icon popup__benefits-icon">
                               <use xlink:href="images/dest/sprite.svg#benefits-icon"></use>
                             </svg>
-                        <p class="popup__benefits-descr">Supermarket</p>
+                        <p class="popup__benefits-descr">Супермаркет</p>
                       </div>
                       <div class="popup__benefits-item">
                             <svg class="icon icon-benefits-icon popup__benefits-icon">
                               <use xlink:href="images/dest/sprite.svg#benefits-icon"></use>
                             </svg>
-                        <p class="popup__benefits-descr">Swimming Pool</p>
+                        <p class="popup__benefits-descr">Плавательный бассейн</p>
                       </div>
                     </div>
                     <div class="popup__map">
@@ -565,7 +503,6 @@ gtag('config', 'G-EBX8MEHXB0');
                       <picture class="popup__promo-slide"><img src="images/dest/project-popup/burj-binghatti/slide-1.webp" alt="Burj Binghatti слайд-1"></picture>
                       <picture class="popup__promo-slide"><img src="images/dest/project-popup/burj-binghatti/slide-3.webp" alt="Burj Binghatti слайд-3"></picture>
                       <picture class="popup__promo-slide"><img src="images/dest/project-popup/burj-binghatti/slide-4.webp" alt="Burj Binghatti слайд-4"></picture>
-                      <picture class="popup__promo-slide"><img src="images/dest/project-popup/burj-binghatti/slide-5.webp" alt="Burj Binghatti слайд-5"></picture>
                     </div>
                     <p class="popup__promo-title">УСПЕЙТЕ КУПИТЬ</p>
                     <div class="popup__promo-timer" id="timer">10:00:00</div><a class="popup__promo-btn" href="#form">бесплатная консультация</a>
@@ -632,7 +569,7 @@ gtag('config', 'G-EBX8MEHXB0');
                 <p class="project__promo-price">от 5 160 000 </p>
               </div>
               <div class="project__content">
-                <p class="project__title">МУДОН АЛЬ РАНИМ</p>
+                <p class="project__title">Mudon Al Ranim</p>
                 <p class="project__subtitle">Dubailand</p>
                 <p class="project__descr">Mudon Al Ranim - это коллекция элегантных таунхаусов в Дубай.</p>
                 <div class="project__benefits">
@@ -649,46 +586,46 @@ gtag('config', 'G-EBX8MEHXB0');
                 <div class="project-popup__bg"></div>
                 <div class="popup">
                   <div class="popup__content">
-                    <h2 class="popup__title">Mudon Al Ranim</h2>
-                    <p class="popup__descr">Mudon Al Ranim is located some distance from everything, still it’s within a walking distance from many key destinations.</p>
-                    <p class="popup__descr">Your growing family requires a safe and comfortable home to relax at the end of each day.</p>
-                    <p class="popup__descr">Choose from a wide range of seamlessly equipped 3- and 4-bedroom townhouses including those that have been specifically designed for a family living.</p>
+                    <h2 class="popup__title">Мудон Аль-Раним</h2>
+                    <p class="popup__descr">Мудон Аль-Раним расположен на расстоянии от всего, но в то же время в пределах пешей досягаемости от многих ключевых пунктов назначения.</p>
+                    <p class="popup__descr">Ваша растущая семья нуждается в безопасном и комфортном убежище, где вы могли бы расслабиться в конце каждого дня.</p>
+                    <p class="popup__descr">Выбирайте из прекрасно оборудованных таунхаусов с 3 и 4 спальнями, а также таунхаусов предназначенных для семейной жизни.</p>
                     <div class="popup__benefits">
                       <div class="popup__benefits-item">
                             <svg class="icon icon-benefits-icon popup__benefits-icon">
                               <use xlink:href="images/dest/sprite.svg#benefits-icon"></use>
                             </svg>
-                        <p class="popup__benefits-descr">Two covered parking spots</p>
+                        <p class="popup__benefits-descr">2 навеса для автомобилей</p>
                       </div>
                       <div class="popup__benefits-item">
                             <svg class="icon icon-benefits-icon popup__benefits-icon">
                               <use xlink:href="images/dest/sprite.svg#benefits-icon"></use>
                             </svg>
-                        <p class="popup__benefits-descr">Closed, protected community with excellent facilities</p>
+                        <p class="popup__benefits-descr">Закрытое, охраняемое пространоство</p>
                       </div>
                       <div class="popup__benefits-item">
                             <svg class="icon icon-benefits-icon popup__benefits-icon">
                               <use xlink:href="images/dest/sprite.svg#benefits-icon"></use>
                             </svg>
-                        <p class="popup__benefits-descr">Jogging track, bicycle track and sports fields</p>
+                        <p class="popup__benefits-descr">Беговые и велосипедные дорожки</p>
                       </div>
                       <div class="popup__benefits-item">
                             <svg class="icon icon-benefits-icon popup__benefits-icon">
                               <use xlink:href="images/dest/sprite.svg#benefits-icon"></use>
                             </svg>
-                        <p class="popup__benefits-descr">open air training stations</p>
+                        <p class="popup__benefits-descr">уличные тренажерные станции</p>
                       </div>
                       <div class="popup__benefits-item">
                             <svg class="icon icon-benefits-icon popup__benefits-icon">
                               <use xlink:href="images/dest/sprite.svg#benefits-icon"></use>
                             </svg>
-                        <p class="popup__benefits-descr">water playgrounds</p>
+                        <p class="popup__benefits-descr">Водные игровые площадки</p>
                       </div>
                       <div class="popup__benefits-item">
                             <svg class="icon icon-benefits-icon popup__benefits-icon">
                               <use xlink:href="images/dest/sprite.svg#benefits-icon"></use>
                             </svg>
-                        <p class="popup__benefits-descr">Lush green parks</p>
+                        <p class="popup__benefits-descr">Пышные зеленые парки</p>
                       </div>
                     </div>
                     <div class="popup__map">
@@ -825,12 +762,28 @@ gtag('config', 'G-EBX8MEHXB0');
         <div class="wrapper">
           <h2 class="form__title">заказать обратный звонок</h2>
           <div class="result" id="result"></div>
-          <form class="form__form" id="form">
-            <input class="form__input" type="text" id="name" name="name" placeholder="Имя">
-            <input class="form__input" type="tel" id="phone" name="phone" placeholder="Номер">
-            <input class="form__input" type="email" id="email" name="email" placeholder="Email">
+          <form class="form__form" id="form" action="php/bitrix-main.php" method="post">
+            <input class="form__input" type="text" id="name-form" name="name" placeholder="Имя">
+            <input class="form__input iti__phone" type="tel" name="phone" id="phone-form" placeholder="(000) 000-00-00">
+            <input class="form__input iti__hide hide" type="tel" name="hiden" id="hiden-form">
+            <input class="form__input" type="email" id="email-form" name="email" placeholder="Email">
+            <select class="form__input" name="propName">
+              <option value="default">Выберите Комплекс</option>
+              <option value="Cavalli Couture">Cavalli Couture</option>
+              <option value="Burj Binghatti">Burj Binghatti</option>
+              <option value="Zuha Island">Zuha Island</option>
+              <option value="Elegance Tower">Elegance Tower</option>
+              <option value="Safa One">Safa One</option>
+              <option value="Chic Tower">Chic Tower</option>
+              <option value="The Cove">The Cove</option>
+              <option value="Seascape">Seascape</option>
+              <option value="Orla Dorchester">Orla Dorchester</option>
+              <option value="Bluewaters Bay">Bluewaters Bay</option>
+              <option value="Six Senses">Six Senses</option>
+              <option value="Sobha SeaHaven">Sobha SeaHaven</option>
+            </select>
             <p class="form__policy">Отправляя данные вы соглашаетесь с <a class="form__link" href="/policy">политикой конфиденциальности</a></p>
-            <button class="form__submit" type="submit">Бесплатная консультация</button>
+            <button class="form__submit" type="submit" disabled>Бесплатная консультация</button>
           </form>
         </div>
       </section>
@@ -841,7 +794,7 @@ gtag('config', 'G-EBX8MEHXB0');
             <div class="faq__item">
               <div class="faq__item-bg"></div>
               <div class="faq__q"> <a>Из чего состоит процесс покупки недвижимости в Дубае?</a></div>
-              <div class="faq__a"> 
+              <div class="faq__a">
                 <p>Покупка недвижимости осуществляется в несколько этапов:</p>
                 <ul class="faq__list">
                   <li class="faq__list-item">
@@ -868,7 +821,7 @@ gtag('config', 'G-EBX8MEHXB0');
             <div class="faq__item">
               <div class="faq__item-bg"></div>
               <div class="faq__q"> <a>Является ли покупка помещения в Дубае основанием для получения гражданства ОАЭ?</a></div>
-              <div class="faq__a"> 
+              <div class="faq__a">
                 <p>Нет, но если сумма сделки превысила USD 240,000, покупатель недвижимости может получить резидентскую визу. Она дает покупателю жилого, коммерческого или иного объекта определенные привилегии:</p>
                 <ul>
                   <li>
@@ -887,14 +840,14 @@ gtag('config', 'G-EBX8MEHXB0');
             <div class="faq__item">
               <div class="faq__item-bg"></div>
               <div class="faq__q"> <a>Как покупателю обезопасить свои средства в сделке купли-продажи?</a></div>
-              <div class="faq__a"> 
+              <div class="faq__a">
                 <p>Приобретая недвижимость в Дубае, инвесторы, как правило, используют самый безопасный метод расчета — банковский перевод на эскроу-счет, что означает получение застройщиком денег после сдачи объекта в эксплуатацию. Компетентный посредник сильно упрощает задачу для обеих сторон, выполняя ряд значимых функций, — в том числе юридическое сопровождение сделки.</p>
               </div>
             </div>
             <div class="faq__item">
               <div class="faq__item-bg"></div>
               <div class="faq__q"> <a>Может ли иностранный покупатель оформить приобретение недвижимости в рассрочку?</a></div>
-              <div class="faq__a"> 
+              <div class="faq__a">
                 <p>Да, многие девелоперы предоставляют такую возможность. Обычно первый взнос равен 10% стоимости и примерно половина общей суммы выплачивается до завершения строительства.</p>
               </div>
             </div>
@@ -925,10 +878,28 @@ gtag('config', 'G-EBX8MEHXB0');
           </div>
           <div class="popup-promo__content">
             <p class="popup-promo__title">Получите доступ<br>к закрытой продаже</p>
-            <form class="form__form popup-promo__form">
-              <input class="form__input popup-promo__input" type="email" id="email" name="email" placeholder="Email">
+            <form class="popup-promo__form" action="php/bitrix-subscribe.php" method="post">
+              <input class="form__input popup-promo__input" type="text" id="name-popup" name="name" placeholder="Имя">
+              <input class="form__input popup-promo__input iti__phone" type="tel" name="phone" id="phone-popup" placeholder="(000) 000-00-00">
+              <input class="form__input popup-promo__input iti__hide hide" type="tel" name="hiden" id="hiden-popup">
+              <input class="form__input popup-promo__input" type="email" id="email-popup" name="email" placeholder="Email">
+              <select class="form__input" name="propName">
+                <option value="default">Выберите Комплекс</option>
+                <option value="Cavalli Couture">Cavalli Couture</option>
+                <option value="Burj Binghatti">Burj Binghatti</option>
+                <option value="Zuha Island">Zuha Island</option>
+                <option value="Elegance Tower">Elegance Tower</option>
+                <option value="Safa One">Safa One</option>
+                <option value="Chic Tower">Chic Tower</option>
+                <option value="The Cove">The Cove</option>
+                <option value="Seascape">Seascape</option>
+                <option value="Orla Dorchester">Orla Dorchester</option>
+                <option value="Bluewaters Bay">Bluewaters Bay</option>
+                <option value="Six Senses">Six Senses</option>
+                <option value="Sobha SeaHaven">Sobha SeaHaven</option>
+              </select>
               <p class="form__policy popup-promo__policy">Отправляя данные вы соглашаетесь с <a class="form__link popup-promo__link" href="/policy">политикой конфиденциальности</a></p>
-              <button class="form__submit popup-promo__submit" type="submit">Подписаться</button>
+              <button class="form__submit popup-promo__submit" type="submit" disabled>Подписаться</button>
             </form>
           </div>
         </div>

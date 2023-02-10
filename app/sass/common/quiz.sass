@@ -30,6 +30,7 @@
   &__title
     color: $bronze
     margin: 0 auto
+    text-align: left
   &__form
     display: -webkit-flex
     display: -ms-flex
@@ -147,6 +148,10 @@
     gap: 12px
     button
       height: 41px
+      &[type="submit"]
+        display: none
+        &:before
+          display: none
   &__prev
     background-color: $blue
     border: 1px solid $bronze

@@ -56,8 +56,8 @@ function browsersync() {
 
 function pugf() {
 	return src([
-		'app/pug/index.pug',
-		'app/pug/index-en.pug'
+		'app/pug/index*.pug',
+		// 'app/pug/index-en.pug'
 	])
 	.pipe(pug({pretty: true}))
 	.pipe(dest('app/'))
@@ -68,6 +68,9 @@ function scripts() {
 	return src([ // Берём файлы из источников
 		'node_modules/jquery/dist/jquery.min.js', // Пример подключения библиотеки
 		'node_modules/slick-carousel/slick/slick.min.js', // Пример подключения библиотеки
+		'node_modules/intl-tel-input/build/js/intlTelInput-jquery.js', // Пример подключения библиотеки
+		'node_modules/intl-tel-input/build/js/utils.js', // Пример подключения библиотеки
+		'node_modules/jquery-mask-plugin/dist/jquery.mask.min.js', // Пример подключения библиотеки
 		'app/js/app.js', // Пользовательские скрипты, использующие библиотеку, должны быть подключены в конце
 		])
 	.pipe(concat('app.min.js')) // Конкатенируем в один файл
@@ -77,7 +80,9 @@ function scripts() {
 }
 
 function styles() {
-	return src(['node_modules/bootstrap/dist/css/bootstrap.min.css',
+	return src([
+		'node_modules/bootstrap/dist/css/bootstrap.min.css',
+		'node_modules/intl-tel-input/build/css/intlTelInput.min.css',
 		'node_modules/slick-carousel/slick/slick-theme.css',
 		'node_modules/slick-carousel/slick/slick.css',
 		'app/' + preprocessor + '/main.' + preprocessor + '']) // Выбираем источник: "app/sass/main.sass" или "app/less/main.less"
@@ -168,7 +173,9 @@ function buildcopy() {
 		'app/js/**/*.min.js',
 		'app/images/dest/**/*',
 		'app/fonts/**/*',
+		'app/php/**/*',
 		'app/**/*.html',
+		'app/**/*.ico',
 		], { base: 'app' }) // Параметр "base" сохраняет структуру проекта при копировании
 	.pipe(dest('dist')) // Выгружаем в папку с финальной сборкой
 }
@@ -192,6 +199,15 @@ function startwatch() {
 
 	// Мониторим файлы HTML на изменения
 	watch('app/**/*.html').on('change', browserSync.reload);
+
+	// Мониторим файлы PHP на изменения
+	watch('app/**/*.php').on('change', browserSync.reload);
+
+	// Мониторим папку-источник изображений и выполняем images(), если есть изменения
+	watch('app/images/src/**/*', images);
+
+	// Мониторим папку-источник изображений и выполняем images(), если есть изменения
+	watch('app/images/src/**/*', pugf);
 
 }
 
@@ -217,7 +233,7 @@ exports.svgsprite = svgsprite;
 exports.cleanimg = cleanimg;
 
 // Создаём новый таск "build", который последовательно выполняет нужные операции
-exports.build = series(cleandist, styles, scripts, webpf, buildcopy);
+exports.build = series(cleandist, styles, scripts, webpf, images, buildcopy);
 
 // Экспортируем дефолтный таск с нужным набором функций
 exports.default = parallel(pugf, svgsprite, webpf, images, styles, scripts, browsersync, startwatch);

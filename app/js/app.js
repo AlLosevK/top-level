@@ -1,76 +1,171 @@
 $(document).ready(function() {
 
+  setTimeout(function(){
+     $("#popup-promo").addClass('active');
+     document.body.style.overflow = 'hidden';
+  },50000)
+
+  $("#phone-form").keyup(function() {
+    let phInp = $(this);
+    let code = phInp.intlTelInput("getSelectedCountryData").dialCode;
+    let phoneNumber = phInp.val();
+    let fullPhone = '+' + code + ' ' + phoneNumber;
+    let phInpHide = phInp.closest('form').find("#hiden-form");
+    phInpHide.val(fullPhone);
+    console.log(phInpHide);
+  });
+
+  $("#phone-quiz").keyup(function() {
+    let phInp = $(this);
+    let code = phInp.intlTelInput("getSelectedCountryData").dialCode;
+    let phoneNumber = phInp.val();
+    let fullPhone = '+' + code + ' ' + phoneNumber;
+    phInp.closest('form').find("#hiden-quiz").val(fullPhone);
+  });
+
+  $("#phone-popup").keyup(function() {
+    let phInp = $(this);
+    let code = phInp.intlTelInput("getSelectedCountryData").dialCode;
+    let phoneNumber = phInp.val();
+    let fullPhone = '+' + code + ' ' + phoneNumber;
+    phInp.closest('form').find("#hiden-popup").val(fullPhone);
+  });
+
+  /* INITIALIZE BOTH INPUTS WITH THE intlTelInput FEATURE*/
+
+  $("#phone-form").intlTelInput({
+    initialCountry: "auto",
+    separateDialCode: true,
+    autoPlaceholder: "aggressive",
+    geoIpLookup: function (callback) {
+        $.get('https://ipinfo.io', function () {}, "jsonp")
+        .fail(function() {
+          let countryCode = "US";
+          callback(countryCode);
+        })
+        .always(function (resp) {
+          var countryCode = (resp && resp.country) ? resp.country : "";
+          callback(countryCode);
+        });
+    },
+    utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/11.0.14/js/utils.js"
+  });
+
+  $("#phone-quiz").intlTelInput({
+    initialCountry: "auto",
+    separateDialCode: true,
+    autoPlaceholder: "aggressive",
+    geoIpLookup: function (callback) {
+        $.get('https://ipinfo.io', function () {
+        }, "jsonp").always(function (resp) {
+            var countryCode = (resp && resp.country) ? resp.country : "";
+            callback(countryCode);
+        });
+    },
+    utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/11.0.14/js/utils.js"
+  });
+
+  $("#phone-popup").intlTelInput({
+    initialCountry: "auto",
+    separateDialCode: true,
+    autoPlaceholder: "aggressive",
+    geoIpLookup: function (callback) {
+        $.get('https://ipinfo.io', function () {
+        }, "jsonp").always(function (resp) {
+            var countryCode = (resp && resp.country) ? resp.country : "";
+            callback(countryCode);
+        });
+    },
+    utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/11.0.14/js/utils.js"
+  });
+
+
+  $("#hiden-form").intlTelInput({
+    initialCountry: "auto",
+    dropdownContainer: 'body',
+    geoIpLookup: function (callback) {
+        $.get('https://ipinfo.io', function () {}, "jsonp")
+        .fail(function() {
+          var countryCode = "US";
+          callback(countryCode);
+        })
+        .always(function (resp) {
+          var countryCode = (resp && resp.country) ? resp.country : "";
+          callback(countryCode);
+        });
+    },
+    utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/11.0.14/js/utils.js"
+  });
+
+  $("#hiden-quiz").intlTelInput({
+    initialCountry: "auto",
+    dropdownContainer: 'body',
+    geoIpLookup: function (callback) {
+        $.get('https://ipinfo.io', function () {
+        }, "jsonp").always(function (resp) {
+            var countryCode = (resp && resp.country) ? resp.country : "";
+            callback(countryCode);
+        });
+    },
+    utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/11.0.14/js/utils.js"
+  });
+
+  $("#hiden-popup").intlTelInput({
+    initialCountry: "auto",
+    dropdownContainer: 'body',
+    geoIpLookup: function (callback) {
+        $.get('https://ipinfo.io', function () {
+        }, "jsonp").always(function (resp) {
+            var countryCode = (resp && resp.country) ? resp.country : "";
+            callback(countryCode);
+        });
+    },
+    utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/11.0.14/js/utils.js"
+  });
+
+  $('input.hide').parent().hide();
+
+
+
+  /* ADD A MASK IN PHONE1 INPUT (when document ready and when changing flag) FOR A BETTER USER EXPERIENCE */
+
+  let mask1 = $("#phone-form").attr('placeholder').replace(/[0-9]/g, 0);
+
+  $(document).ready(function () {
+    $('#phone-form').mask(mask1);
+  });
+
+  $("#phone-form").on("countrychange", function (e, countryData) {
+    $("#phone-form").val('');
+    let mask1 = $("#phone-form").attr('placeholder').replace(/[0-9]/g, 0);
+    $('#phone-form').mask(mask1);
+  });
+
+  let mask2 = $("#phone-popup").attr('placeholder').replace(/[0-9]/g, 0);
+
+  $(document).ready(function () {
+    $('#phone-popup').mask(mask2);
+  });
+
+  $("#phone-popup").on("countrychange", function (e, countryData) {
+    $("#phone-popup").val('');
+    let mask2 = $("#phone-popup").attr('placeholder').replace(/[0-9]/g, 0);
+    $('#phone-popup').mask(mask2);
+  });
+
+  let mask3 = $("#phone-quiz").attr('placeholder').replace(/[0-9]/g, 0);
+
+  $(document).ready(function () {
+    $('#phone-quiz').mask(mask3);
+  });
+
+  $("#phone-quiz").on("countrychange", function (e, countryData) {
+    $("#phone-quiz").val('');
+    let mask3 = $("#phone-quiz").attr('placeholder').replace(/[0-9]/g, 0);
+    $('#phone-quiz').mask(mask3);
+  });
+
   $('.quiz__next').prop('disabled', true);
-
-
-  $(".form__form .form__submit").on("click", function () {
-    var form_data = $(".form__form").serialize(); // Собираем все данные из формы
-    $.ajax({
-        type: "POST", // Метод отправки
-        url: "php/promo-form.php", // Путь до php файла отправителя
-        data: form_data,
-        success: function () {
-            // Код в этом блоке выполняется при успешной отправке сообщения
-            alert("Ваше сообщение отправлено!");
-            console.log(form_data);
-        }
-    });
-  });
-
-  $(".popup-promo__submit").on("click", function () {
-    var form_data = $(".popup-promo__form").serialize(); // Собираем все данные из формы
-    $.ajax({
-        type: "POST", // Метод отправки
-        url: "php/bitrix-test.php", // Путь до php файла отправителя
-        data: form_data,
-        success: function () {
-            // Код в этом блоке выполняется при успешной отправке сообщения
-            alert("Ваше сообщение отправлено!");
-            console.log(form_data);
-        }
-    });
-  });
-
-
-  const sendQuiz = () => {
-    // var form = $(".quiz__form");
-    // form.submit();
-    // var formData = {
-    //   quiz_a1: $("#quiz-a1").val(),
-    //   quiz_a2: $("#quiz-a2").val(),
-    //   quiz_b1: $("#quiz-b1").val(),
-    //   quiz_b2: $("#quiz-b2").val(),
-    //   quiz_b3: $("#quiz-b3").val(),
-    //   quiz_c1: $("#quiz-c1").val(),
-    //   quiz_c2: $("#quiz-c2").val(),
-    //   quiz_c3: $("#quiz-c3").val(),
-    //   service: $("#service").val(),
-    //   quiz_d1: $("#quiz-d1").val(),
-    // };
-    //
-    // $.ajax({
-    //   type: "POST",
-    //   url: "php/res.php",
-    //   data: formData,
-    //   dataType: "json",
-    //   encode: true,
-    // }).done(function (data) {
-    //   console.log(data);
-    // });
-    //
-    // event.preventDefault();
-    var form_data = $(".quiz__form").serialize(); // Собираем все данные из формы
-    $.ajax({
-        type: "POST", // Метод отправки
-        url: "php/res.php", // Путь до php файла отправителя
-        data: form_data,
-        success: function () {
-            // Код в этом блоке выполняется при успешной отправке сообщения
-            alert("Ваше сообщение отправлено!");
-            console.log(form_data);
-        }
-    });
-  };
 
   $('.banner__slider').slick({
 		dots: false,
@@ -92,52 +187,15 @@ $(document).ready(function() {
     cssEase: 'linear'
 	});
 
-  // // form
-  // $(function() {
-  //   // Получаем данные формы.
-  //   var form = $('#form');
-  //
-  //       // Получаем сообщения из div
-  //   var formMessages = $('#form-messages');
-  //
-  //   // Устанавливаем прослушиватель для контактной формы.
-  //   $(form).submit(function(event) {
-  //       // Блокируем отправку данных формы в браузере.
-  //       event.preventDefault();
-  //
-  //       // Сериализуем данные формы.
-  //       var formData = $(form).serialize();
-  //
-  //       // Отправка данных формы с помощью AJAX.
-  //       $.ajax({
-  //           type: 'POST',
-  //           url: $(form).attr('action'),
-  //           data: formData
-  //       }).done(function(response) {
-  //           // Задаем текст сообщения.
-  //           $(formMessages).text(response);
-  //
-  //           // Очищаем форму.
-  //           $('#name').val('');
-  //           $('#email').val('');
-  //           $('#message').val('');
-  //       }).fail(function(data) {
-  //           // Устанавливаем текст сообщения.
-  //           if (data.responseText !== '') {
-  //             $(formMessages).text(data.responseText);
-  //           } else {
-  //             $(formMessages).text('Oops! An error occured and your message could not besent.');
-  //           }
-  //       });
-  //   });
-  // });
+
+  //////////////////////////*********//////////////////////////
 
   //scroll to href
   $("a[href^='#']").on("click", function () {
     let href = $(this).attr("href");
 
     $("html, body").animate({
-        scrollTop: $(href).offset().top - $('.header').outerHeight()
+        scrollTop: $(href).offset().top
     }, {
         duration: 670,   // по умолчанию «400»
         easing: "linear" // по умолчанию «swing»
@@ -147,71 +205,25 @@ $(document).ready(function() {
   });
 
 
-    //benefits acordeon
-    $(function() {
-    	$(".benefits__item-bg").on("mouseenter", function(e) {
-
-    		e.preventDefault();
-    		var $this = $(this).parent();
-        $this.find('.benefits__content').fadeIn(400);
-
-        // $('.benefits__item.active').removeClass('active');
-        // $this.addClass('active');
-    	});
-
-    	$(".benefits__item-bg").on("mouseleave", function(e) {
-    		e.preventDefault();
-    		var $this = $(this).parent();
-        $('.benefits__content').fadeOut(200);
-
-    	});
-    });
+  //////////////////////////*********//////////////////////////
 
 
+  //benefits acordeon
+  $(function() {
+  	$(".benefits__item-bg").on("mouseenter", function(e) {
 
+  		e.preventDefault();
+  		let $this = $(this).parent();
+      $this.find('.benefits__content').fadeIn(400);
+  	});
 
+  	$(".benefits__item-bg").on("mouseleave", function(e) {
+  		e.preventDefault();
+  		let $this = $(this).parent();
+      $('.benefits__content').fadeOut(200);
 
-
-
-
-
-
-
-  // $(function() {
-  //   var isChecked = $(".quiz__form-item-active input:checked").length;
-  //   var inpRadio = $(".quiz__form-item-active input[type='radio']").length;
-  //
-  //   if (isChecked == 0 && inpRadio !== 0) {
-  //     $('.quiz__next').prop('disabled', true)
-  //     console.log('1');
-  //   } else {
-  //     $('.quiz__next').prop('disabled', false)
-  //     console.log('0');
-  //   }
-  // });
-
-  $(".quiz").on("click", function () {
-    var isChecked = $(".quiz__form-item-active:last input:checked").length;
-    var inpRadio = $(".quiz__form-item-active:last input[type='radio']").length;
-
-    if (isChecked == 0 && inpRadio !== 0 || currActive === circles.length) {
-      $('.quiz__next').prop('disabled', true)
-      console.log('1');
-    } else {
-      $('.quiz__next').prop('disabled', false)
-      console.log('0');
-    };
+  	});
   });
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -220,37 +232,93 @@ $(document).ready(function() {
     $(".faq__item-bg").on("mouseenter", function(e) {
 
       e.preventDefault();
-      var $this = $(this).parent();
+      let $this = $(this).parent();
       $this.find('.faq__a').fadeIn(400);
-
-      // $('.benefits__item.active').removeClass('active');
-      // $this.addClass('active');
     });
 
     $(".faq__item-bg").on("mouseleave", function(e) {
       e.preventDefault();
-      var $this = $(this).parent();
+      let $this = $(this).parent();
       $('.faq__a').fadeOut(200);
 
     });
   });
 
-  // $(function() {
-  //   var benItems = document.querySelector(".faq__item");
-  // 	$(".faq__item-bg").on("mouseenter", function(e) {
-  //
-  // 		e.preventDefault();
-  // 		var $this = $(this).parent();
-  //     $('.faq__item.active').removeClass('active');
-  //     $this.addClass('active');
-  //
-  // 	});
-  //
-  // 	$(".faq__item-bg").on("mouseleave", function(e) {
-  // 		e.preventDefault();
-  //
-  // 	});
-  // });
+
+
+  $(".quiz").on("change", function () {
+    var isChecked = $(".quiz__form-item-active:last input:checked").length;
+    var inpRadio = $(".quiz__form-item-active:last input[type='radio']").length;
+
+
+    if (isChecked == 0 && inpRadio !== 0) {
+      $('.quiz__next').prop('disabled', true)
+    } else {
+      $('.quiz__next').prop('disabled', false)
+    };
+  });
+
+  $(".quiz").on("click", function () {
+    var isChecked = $(".quiz__form-item-active:last input:checked").length;
+    var inpRadio = $(".quiz__form-item-active:last input[type='radio']").length;
+    var inpTel = $(".quiz__form-item-active:last input[type='tel']");
+    var inpText = $(".quiz__form-item-active:last input[type='text']");
+    var inpEmail = $(".quiz__form-item-active:last input[type='email']");
+
+
+    if (isChecked == 0 && inpRadio !== 0 || inpTel.val() == '' && inpTel.length !== 0 || inpText.val() == '' && inpText.length !== 0 || inpEmail.val() == '' && inpEmail.length !== 0 || currActive === circles.length) {
+      $('.quiz__next').prop('disabled', true)
+    } else {
+      $('.quiz__next').prop('disabled', false)
+    };
+
+  });
+
+  $(".quiz input").on("keyup", function () {
+    var inpTel = $(".quiz__form-item-active:last input[type='tel']");
+    var inpText = $(".quiz__form-item-active:last input[type='text']");
+    var inpEmail = $(".quiz__form-item-active:last input[type='email']");
+
+
+    if (inpTel.val() == '' && inpTel.length !== 0 || inpText.val() == '' && inpText.length !== 0 || inpEmail.val() == '' && inpEmail.length !== 0 || currActive === circles.length) {
+      $('.quiz__next').prop('disabled', true)
+    } else {
+      $('.quiz__next').prop('disabled', false)
+    };
+
+  });
+
+  $(".quiz").on("submit", function () {
+    gtag("event", "quiz_send", {});
+  });
+
+
+  //////////////////////////*********//////////////////////////
+
+
+
+  $('input').on('input', function () {
+
+    var form = $(this).closest('form');
+    var name = form.find('input[type="text"]').val();
+    var email = form.find('input[type="email"]').val();
+
+
+    var phone = form.find('input[type="tel"]').val().length >= 5;
+
+
+    var regEx = /^([a-z0-9_\.-])+@[a-z0-9-]+\.([a-z]{2,4}\.)?[a-z]{2,4}$/i;
+    var validEmail = regEx.test(email);
+
+
+    if(name && validEmail && phone)
+        form.find('button').removeAttr('disabled');
+     else
+        form.find('button').attr('disabled', 'disabled');
+  });
+
+
+  //////////////////////////*********//////////////////////////
 
 
   // project popup
@@ -295,7 +363,7 @@ $(document).ready(function() {
   $(function() {
   	$(".popup__promo-btn").on("click", function(e) {
   		e.preventDefault();
-  		var $this = $(this).parent().parent().parent().parent();
+  		var $this = $(this).parent().parent().parent();
   		if (!$this.hasClass("active")) {
   			$(this).removeClass("active");
   		}
@@ -343,22 +411,6 @@ $(document).ready(function() {
   	});
   });
 
-  //scroll popup show
-  $(window).scroll(function() {
-     if($(document).scrollTop() > 2000 && !$("#popup-promo").hasClass("active")) {
-        $("#popup-promo").addClass('active');
-        document.body.style.overflow = 'hidden';
-     }
-  });
-
-  $(window).scroll(function() {
-     // if( $(document).scrollTop() > 850) {
-     if( $(document).scrollTop() > $(".banner").outerHeight()) {
-        $(".header").addClass('active');
-     } else {
-       $(".header").removeClass('active');
-     }
-  });
 
   // promo popup close
   $(function() {
@@ -379,6 +431,19 @@ $(document).ready(function() {
   	});
   });
 
+//////////////////////////*********//////////////////////////
+
+
+  $(window).scroll(function() {
+     if( $(document).scrollTop() > $(".banner").outerHeight()) {
+        $(".header").addClass('active');
+     } else {
+       $(".header").removeClass('active');
+     }
+  });
+
+
+//////////////////////////*********//////////////////////////
 
   const progress = document.querySelector("#progress");
   const prev = document.querySelector("#prev");
@@ -386,8 +451,8 @@ $(document).ready(function() {
   const circles = document.querySelectorAll(".circle");
   const qItems = document.querySelectorAll(".quiz__form-item");
   const qItemActive = document.querySelectorAll(".quiz__form-item-active");
-  const quizBtn = $(".quiz__nav button[data-quizNav='nav']");
-  const quizSbmt = $(".quiz__nav button[data-quizNav='sbmt']");
+  const quizBtn = $(".quiz__nav button#next");
+  const quizSbmt = $(".quiz__nav button#submit-quiz");
   const isChecked = $(".quiz__form-item-active:last input:checked").length;
   const inpRadio = $(".quiz__form-item-active:last input[type='radio']").length;
 
@@ -402,21 +467,16 @@ $(document).ready(function() {
           prev.disabled = true;
       } else if (currActive === 6) {
         quizBtn.hide();
+        quizSbmt.show();
+      } else if (currActive < 6) {
+        quizBtn.show();
+        quizSbmt.hide();
       } else if (currActive === circles.length) {
         next.disabled = true;
-          sendQuiz();
       } else {
           prev.disabled = false;
           next.disabled = false;
       }
-
-      // if (isChecked == 0 && inpRadio !== 0) {
-      //   $('.quiz__next').prop('disabled', true)
-      //   console.log('1');
-      // } else {
-      //   $('.quiz__next').prop('disabled', false)
-      //   console.log('0');
-      // };
   };
 
   const updateSlide = () => {
@@ -424,16 +484,7 @@ $(document).ready(function() {
           i < currActive
               ? qItem.classList.add("quiz__form-item-active")
               : qItem.classList.remove("quiz__form-item-active");
-
-          console.log(currActive);
-
-          // i < 3
-          //     ? next.disabled = true
-          //     : next.disabled = false;
       });
-
-      // next.disabled = true;
-      // console.log(currActive);
 
       $(".quiz__form-item").css({display: 'none'});
       $(".quiz__form-item-active:last").css({display: 'block'});
@@ -462,8 +513,10 @@ $(document).ready(function() {
   });
 
 
-  var countDownDate = new Date().getTime() + 444800000;
+//////////////////////////*********//////////////////////////
 
+
+  var countDownDate = new Date().getTime() + 244800000;
 
   // Update the count down every 1 second
   var x = setInterval(function() {
@@ -495,6 +548,17 @@ $(document).ready(function() {
     }
   }, 1000);
 });
+
+
+
+
+
+//////////////////////////*********//////////////////////////
+
+
+
+
+
 
 
 $(window).scroll(function() {
