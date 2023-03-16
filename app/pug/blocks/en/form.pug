@@ -2,7 +2,7 @@ section.form#form
   .wrapper
     h2.form__title order a call back
     .result#result
-    form.form__form#form(action="php/bitrix-main.php" method="post")
+    form.form__form#form(method="post" action="php/bitrix-main.php")
       input.form__input(type="text" id="name-form" name="name" placeholder="Name")
       input.form__input(type="tel" name="phone" id="phone-form" placeholder="(000) 000-00-00")
       input.form__input(type="tel" class="hide" name="hiden" id="hiden-form")
@@ -21,6 +21,10 @@ section.form#form
         option(value="Bluewaters Bay") Bluewaters Bay
         option(value="Six Senses") Six Senses
         option(value="Sobha SeaHaven") Sobha SeaHaven
+      input(name='utm-source' type='hidden' value="")
+      input(name='utm-medium' type='hidden' value="")
+      input(name='utm-content' type='hidden' value="")
+      input(name='utm-term' type='hidden' value="")
       p.form__policy By sending data, you agree with the 
         a.form__link(href="/policy") Privacy Policy
       button.form__submit(type="submit" disabled) Free consultation

@@ -1,0 +1,60 @@
+.project-popup
+  .project-popup__bg
+  .popup
+    .popup__content
+      h2.popup__title The Cove
+      a.popup__pdf(href="pdf/THE_COVE_DCH_BROCHURE.pdf") Download PDF
+      p.popup__descr The Cove Apartments by Emaar Properties — это выдающийся жилой комплекс на набережной, расположенный в гавани Дубай-Крик. Комплекс предлагает апартаменты с 1, 2 и 3 спальнями, из которых открывается исключительный вид на Бурдж-Халифа, пляж Крик, остров Крик и мост, пересекающий Бизнес-Бэй.
+      p.popup__descr Все жилые блоки спроектированы с использованием натуральных материалов и современных идей и оснащены большими окнами от пола до потолка, которые наполнят жилое пространство светом.
+      p.popup__descr Учитывая самые высокие стандарты проектов Emaar, апартаменты The Cove были спроектированы и продуманы до мельчайших деталей, чтобы обеспечить своим жильцам комфортные условия проживания и позволить каждому чувствовать себя в безопасности и расслабленно, как дома. Жильцы могли пользоваться различными первоклассными удобствами внутри и снаружи комплекса.
+      p.popup__descr Все жители получат доступ к большому выбору мест отдыха и развлечений, магазинов и ресторанов, различных открытых детских игровых площадок и мероприятий.
+      .popup__benefits
+        .popup__benefits-item
+          +icon("benefits-icon", "popup__benefits-icon")
+          p.popup__benefits-descr Яхт-клуб
+        .popup__benefits-item
+          +icon("benefits-icon", "popup__benefits-icon")
+          p.popup__benefits-descr Смотровая площадка
+        .popup__benefits-item
+          +icon("benefits-icon", "popup__benefits-icon")
+          p.popup__benefits-descr Художественная инсталляция
+        .popup__benefits-item
+          +icon("benefits-icon", "popup__benefits-icon")
+          p.popup__benefits-descr Всплеск
+        .popup__benefits-item
+          +icon("benefits-icon", "popup__benefits-icon")
+          p.popup__benefits-descr Амфитеатр
+        .popup__benefits-item
+          +icon("benefits-icon", "popup__benefits-icon")
+          p.popup__benefits-descr Скейт-парк
+        .popup__benefits-item
+          +icon("benefits-icon", "popup__benefits-icon")
+          p.popup__benefits-descr Игровая площадка
+        .popup__benefits-item
+          +icon("benefits-icon", "popup__benefits-icon")
+          p.popup__benefits-descr ФудТраки
+      .popup__map
+        script#ymap_lazy(type='text/javascript' charset='utf-8' async='' data-src='https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A4c396d03a24383f57f0c5afac49639d28d4ce260c867f432502f50e4d64bcf1f&amp;width=100%25&amp;height=240&amp;lang=ru_RU&amp;scroll=true')
+    .popup__promo
+      .popup__promo-slider
+        picture.popup__promo-slide
+          img(src="images/dest/project-popup/the-cove/slide-1.webp" alt="The Cove слайд-1")
+        picture.popup__promo-slide
+          img(src="images/dest/project-popup/the-cove/slide-2.webp" alt="The Cove слайд-2")
+        picture.popup__promo-slide
+          img(src="images/dest/project-popup/the-cove/slide-3.webp" alt="The Cove слайд-3")
+        picture.popup__promo-slide
+          img(src="images/dest/project-popup/the-cove/slide-4.webp" alt="The Cove слайд-4")
+        picture.popup__promo-slide
+          img(src="images/dest/project-popup/the-cove/slide-5.webp" alt="The Cove слайд-5")
+        picture.popup__promo-slide
+          img(src="images/dest/project-popup/the-cove/slide-6.webp" alt="The Cove слайд-6")
+        picture.popup__promo-slide
+          img(src="images/dest/project-popup/the-cove/slide-7.webp" alt="The Cove слайд-7")
+        picture.popup__promo-slide
+          img(src="images/dest/project-popup/the-cove/slide-8.webp" alt="The Cove слайд-8")
+      p.popup__promo-title УСПЕЙТЕ КУПИТЬ
+      .popup__promo-timer#timer 10:00:00
+      a.popup__promo-btn(href="#form") бесплатная консультация
+    .popup__nav
+      +icon("project-popup-close", "popup__nav-close")

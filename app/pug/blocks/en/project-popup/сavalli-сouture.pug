@@ -1,0 +1,53 @@
+.project-popup
+  .project-popup__bg
+  .popup
+    .popup__content
+      h2.popup__title Cavalli Couture
+      a.popup__pdf(href="pdf/Cavalli Couture Presentation v3.pdf") download the brochure
+      p.popup__descr DAMAC Cavalli Couture, which is designed by the legendary fashion house of Roberto Cavalli, is a new uber-elite project, combining the elements of the jungle and water, and is located on the banks of the Dubai Water Canal.
+      p.popup__descr Among the units on offer for sale in this 12-storey building are 3-4 bedroom apartments showcasing high-end design at every turn, with floor plan areas from 4,300 sqft, as well as more spacious 5-bedroom duplexes with a living area from 8,750 sqft. The number of super-luxury residences is limited to just 70, and each one will face the Dubai Water Canal.
+      p.popup__descr Residents will also be offered a range of top-notch amenities, located on the territory of the building or just around the corner, which will allow residents to soak up the vibrant and tranquil lifestyle. On the top of the building a swimming pool and a lounge zone, where residents can enjoy exclusive dishes from a chef can be found. In addition, Cavalli Couture by DAMAC Properties is one of the latest projects, which will offer waterfront views of the canal.
+      .popup__benefits
+        .popup__benefits-item
+          +icon("benefits-icon", "popup__benefits-icon")
+          p.popup__benefits-descr Security 24/7
+        .popup__benefits-item
+          +icon("benefits-icon", "popup__benefits-icon")
+          p.popup__benefits-descr Large swimming pool
+        .popup__benefits-item
+          +icon("benefits-icon", "popup__benefits-icon")
+          p.popup__benefits-descr Sports grounds
+        .popup__benefits-item
+          +icon("benefits-icon", "popup__benefits-icon")
+          p.popup__benefits-descr Gym
+        .popup__benefits-item
+          +icon("benefits-icon", "popup__benefits-icon")
+          p.popup__benefits-descr Furnished apartment
+        .popup__benefits-item
+          +icon("benefits-icon", "popup__benefits-icon")
+          p.popup__benefits-descr Grocery store
+      .popup__map
+        script#ymap_lazy(type='text/javascript' charset='utf-8' async='' data-src='https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A4c396d03a24383f57f0c5afac49639d28d4ce260c867f432502f50e4d64bcf1f&amp;width=100%25&amp;height=240&amp;lang=ru_RU&amp;scroll=true')
+    .popup__promo
+      .popup__promo-slider
+        picture.popup__promo-slide
+          img(src="images/dest/project-popup/cavalli-countre/slide-1.webp" alt="Cavalli Couture слайд-1")
+        picture.popup__promo-slide
+          img(src="images/dest/project-popup/cavalli-countre/slide-2.webp" alt="Cavalli Couture слайд-2")
+        picture.popup__promo-slide
+          img(src="images/dest/project-popup/cavalli-countre/slide-3.webp" alt="Cavalli Couture слайд-3")
+        picture.popup__promo-slide
+          img(src="images/dest/project-popup/cavalli-countre/slide-4.webp" alt="Cavalli Couture слайд-4")
+        picture.popup__promo-slide
+          img(src="images/dest/project-popup/cavalli-countre/slide-5.webp" alt="Cavalli Couture слайд-5")
+        picture.popup__promo-slide
+          img(src="images/dest/project-popup/cavalli-countre/slide-6.webp" alt="Cavalli Couture слайд-6")
+        picture.popup__promo-slide
+          img(src="images/dest/project-popup/cavalli-countre/slide-7.webp" alt="Cavalli Couture слайд-7")
+        picture.popup__promo-slide
+          img(src="images/dest/project-popup/cavalli-countre/slide-8.webp" alt="Cavalli Couture слайд-8")
+      p.popup__promo-title УСПЕЙТЕ КУПИТЬ
+      .popup__promo-timer#timer 10:00:00
+      a.popup__promo-btn(href="#form") Free consultation
+    .popup__nav
+      +icon("project-popup-close", "popup__nav-close")

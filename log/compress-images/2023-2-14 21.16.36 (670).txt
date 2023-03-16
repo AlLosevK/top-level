@@ -1,0 +1,14 @@
+File from: [app/images/src/flags.png]
+
+File to: [app/images/dest/flags.png]
+
+Compression algorithm: [pngquant]
+
+Description: Error: Command failed: /Users/salamander/Documents/work/top-level/node_modules/pngquant-bin/vendor/pngquant --quality=75-100 -o app/images/dest/flags.png app/images/src/flags.png
+File from: [app/images/src/flags@2x.png]
+
+File to: [app/images/dest/flags@2x.png]
+
+Compression algorithm: [pngquant]
+
+Description: Error: Command failed: /Users/salamander/Documents/work/top-level/node_modules/pngquant-bin/vendor/pngquant --quality=75-100 -o app/images/dest/flags@2x.png app/images/src/flags@2x.png

@@ -11,7 +11,7 @@ section.quiz#quiz
         .circle
         .circle
       h3.quiz__title Подбор недвижимости в Дубае
-      form.quiz__form(action="php/bitrix-quiz.php" method="post")
+      form.quiz__form(method="post" action="php/bitrix-quiz.php")
         .quiz__form-item.quiz__form-item-active
           .quiz__q С какой целью вы приобретаете недвижимость в ОАЭ?
           p.quiz__a
@@ -21,7 +21,7 @@ section.quiz#quiz
             input(type="radio" id="quiz-a2" name='for' value='Для жилья')
             label(for="quiz-a2") Для проживания
         .quiz__form-item
-          .quiz__q Каким бюджетом вы располагаете, €?
+          .quiz__q Каким бюджетом вы располагаете?
           p.quiz__a
             input(type="radio" id="quiz-b1" name='price' value='1 000 000')
             label(for="quiz-b1") 1 000 000 AED
@@ -63,6 +63,10 @@ section.quiz#quiz
               option(value="Bluewaters Bay") Bluewaters Bay
               option(value="Six Senses") Six Senses
               option(value="Sobha SeaHaven") Sobha SeaHaven
+            input(name='utm-source' type='hidden' value="")
+            input(name='utm-medium' type='hidden' value="")
+            input(name='utm-content' type='hidden' value="")
+            input(name='utm-term' type='hidden' value="")
         .quiz__form-item
           .quiz__q Как с вами связаться?
           .quiz__a
@@ -77,7 +81,7 @@ section.quiz#quiz
           .quiz__logo
             img(src="images/dest/quiz-logo.webp" alt="Top Level логотип")
           .quiz__nav
-            button.quiz__prev#prev(type="button" data-quizNav="sbmt" disabled)
+            button.quiz__prev#prev(type="button" data-quizNav="sbmt")
             button.quiz__next#next(type="button" data-quizNav="nav") Далее
             button.quiz__next#submit-quiz(type="submit" data-quizNav="sbmt" disabled) Отправить
     .quiz__slider

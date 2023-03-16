@@ -1,0 +1,43 @@
+.project-popup
+  .project-popup__bg
+  .popup
+    .popup__content
+      h2.popup__title Sobha SeaHaven
+      a.popup__pdf(href="pdf/SeaHaven Opp Doc.pdf") download the brochure
+      p.popup__descr The development, which will be built in an ultra-contemporary style and feature nautical lines with attention to every detail, will consist of three towers overlooking Dubai Marina and the Arabian Gulf. The dynamic architecture will make you fall in love with the development from the moment you feast your eyes on the complex, as the design of Sobha Marina will be inspired by Luxury Yachts, the wind and the sea.
+      p.popup__descr Among the units for sale in the 67-storey Tower 1 are 1-3 bedroom apartments. Kitchens will come fully-fitted and will be equipped with Miele fittings and marble and solid surface countertops. Smart home system and state-of-the-art home appliances will also be offered to residents of Sobha Marina.
+      p.popup__descr Residents will be provided with endless world-class amenities including an infinity pool, sports facilities, including a zone for yoga, aerobics, a skate park, and a health club, sauna and steam rooms. Valet and concierge services, as well as a pet-friendly zone, will also be a nice addition to enjoy.
+      .popup__benefits
+        .popup__benefits-item
+          +icon("benefits-icon", "popup__benefits-icon")
+          p.popup__benefits-descr 24/7 Security
+        .popup__benefits-item
+          +icon("benefits-icon", "popup__benefits-icon")
+          p.popup__benefits-descr Parks
+        .popup__benefits-item
+          +icon("benefits-icon", "popup__benefits-icon")
+          p.popup__benefits-descr Infinity Pool
+        .popup__benefits-item
+          +icon("benefits-icon", "popup__benefits-icon")
+          p.popup__benefits-descr Fitness Gym
+        .popup__benefits-item
+          +icon("benefits-icon", "popup__benefits-icon")
+          p.popup__benefits-descr Retail Outlets
+        .popup__benefits-item
+          +icon("benefits-icon", "popup__benefits-icon")
+          p.popup__benefits-descr Play Area
+      .popup__map
+        script#ymap_lazy(type='text/javascript' charset='utf-8' async='' data-src='https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A4c396d03a24383f57f0c5afac49639d28d4ce260c867f432502f50e4d64bcf1f&amp;width=100%25&amp;height=240&amp;lang=ru_RU&amp;scroll=true')
+    .popup__promo
+      .popup__promo-slider
+        picture.popup__promo-slide
+          img(src="images/dest/project-popup/sobha-seaheaven/slide-1.webp" alt="Sobha SeaHeaven слайд-1")
+        picture.popup__promo-slide
+          img(src="images/dest/project-popup/sobha-seaheaven/slide-2.webp" alt="Sobha SeaHeaven слайд-2")
+        picture.popup__promo-slide
+          img(src="images/dest/project-popup/sobha-seaheaven/slide-3.webp" alt="Sobha SeaHeaven слайд-3")
+      p.popup__promo-title УСПЕЙТЕ КУПИТЬ
+      .popup__promo-timer#timer 10:00:00
+      a.popup__promo-btn(href="#form") Free consultation
+    .popup__nav
+      +icon("project-popup-close", "popup__nav-close")

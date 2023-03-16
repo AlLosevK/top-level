@@ -3,6 +3,7 @@
   .popup
     .popup__content
       h2.popup__title Opal Gardens
+      a.popup__pdf(href="#") Download PDF
       p.popup__descr Opal Gardens в Мохаммед Бин Рашид Сити (MBR City), район 11 — это новый жилой комплекс от Meydan, который предлагает стильные дизайнерские апартаменты к услугам гостей.
       p.popup__descr Жители смогут воспользоваться легкостью и удобством, предлагаемыми местоположением,которое находится в очень привлекательной части города и расположено в непосредственной близости от всех наиболее известных достопримечательностей города.
       .popup__benefits
@@ -25,6 +26,7 @@
           +icon("benefits-icon", "popup__benefits-icon")
           p.popup__benefits-descr Выбор роскошных апартаментов к вашим услугам
       .popup__map
+        script#ymap_lazy(type='text/javascript' charset='utf-8' async='' data-src='')
     .popup__promo
       .popup__promo-slider
         picture.popup__promo-slide

@@ -1,0 +1,56 @@
+.project-popup
+  .project-popup__bg
+  .popup
+    .popup__content
+      h2.popup__title Bluewaters Bay
+      a.popup__pdf(href="pdf/BW-brochure.pdf") Download the brochure
+      p.popup__descr Bluewaters Bay is an upcoming residential complex located on the famous Bluewaters Island. The developer of the project is Meraas, who is known for projects such as Pearl Jumeirah, City Walk and La Mer. Bluewaters Bay is the best choice for those wishing to experience resort-inspired lifestyle on the shores of the Arabian Gulf.
+      p.popup__descr The complex consists of two thoughtfully designed towers inspired by the glamorous vibes of Dubai. Future residents can choose from 1-4 bedroom apartments and exclusive penthouses. The total number of residential units in the complex is 672, and investors might also be interested in purchasing a retail unit within the development as well.
+      .popup__benefits
+        .popup__benefits-item
+          +icon("benefits-icon", "popup__benefits-icon")
+          p.popup__benefits-descr Sandy Beach
+        .popup__benefits-item
+          +icon("benefits-icon", "popup__benefits-icon")
+          p.popup__benefits-descr Private Pools
+        .popup__benefits-item
+          +icon("benefits-icon", "popup__benefits-icon")
+          p.popup__benefits-descr Play Area
+        .popup__benefits-item
+          +icon("benefits-icon", "popup__benefits-icon")
+          p.popup__benefits-descr Retail Store
+        .popup__benefits-item
+          +icon("benefits-icon", "popup__benefits-icon")
+          p.popup__benefits-descr Sandy Beach
+        .popup__benefits-item
+          +icon("benefits-icon", "popup__benefits-icon")
+          p.popup__benefits-descr Amusement Park
+      .popup__map
+        script#ymap_lazy(type='text/javascript' charset='utf-8' async='' data-src='https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A4c396d03a24383f57f0c5afac49639d28d4ce260c867f432502f50e4d64bcf1f&amp;width=100%25&amp;height=240&amp;lang=ru_RU&amp;scroll=true')
+    .popup__promo
+      .popup__promo-slider
+        picture.popup__promo-slide
+          img(src="images/dest/project-popup/bluewaters-bay/slide-1.webp" alt="Bluewaters slide-1")
+        picture.popup__promo-slide
+          img(src="images/dest/project-popup/bluewaters-bay/slide-2.webp" alt="Bluewaters slide-2")
+        picture.popup__promo-slide
+          img(src="images/dest/project-popup/bluewaters-bay/slide-3.webp" alt="Bluewaters slide-3")
+        picture.popup__promo-slide
+          img(src="images/dest/project-popup/bluewaters-bay/slide-4.webp" alt="Bluewaters slide-4")
+        picture.popup__promo-slide
+          img(src="images/dest/project-popup/bluewaters-bay/slide-5.webp" alt="Bluewaters slide-5")
+        picture.popup__promo-slide
+          img(src="images/dest/project-popup/bluewaters-bay/slide-6.webp" alt="Bluewaters slide-6")
+        picture.popup__promo-slide
+          img(src="images/dest/project-popup/bluewaters-bay/slide-7.webp" alt="Bluewaters slide-7")
+        picture.popup__promo-slide
+          img(src="images/dest/project-popup/bluewaters-bay/slide-8.webp" alt="Bluewaters slide-8")
+        picture.popup__promo-slide
+          img(src="images/dest/project-popup/bluewaters-bay/slide-9.webp" alt="Bluewaters slide-9")
+        picture.popup__promo-slide
+          img(src="images/dest/project-popup/bluewaters-bay/slide-10.webp" alt="Bluewaters slide-10")
+      p.popup__promo-title УСПЕЙТЕ КУПИТЬ
+      .popup__promo-timer#timer 10:00:00
+      a.popup__promo-btn(href="#form") Free consultation
+    .popup__nav
+      +icon("project-popup-close", "popup__nav-close")

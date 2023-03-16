@@ -1,0 +1,16 @@
+File from: [app/images/src/project-popup/seaescape/slide-2.jpg]
+
+File to: [app/images/dest/project-popup/seaescape/slide-2.jpg]
+
+Compression algorithm: [mozjpeg]
+
+Description: Error: Command failed: /Users/salamander/Documents/work/top-level/node_modules/mozjpeg/vendor/cjpeg -quality 75 -outfile app/images/dest/project-popup/seaescape/slide-2.jpg app/images/src/project-popup/seaescape/slide-2.jpg
+Unrecognized input file format --- perhaps you need -targa
+File from: [app/images/src/project-popup/seaescape/slide-9.jpeg]
+
+File to: [app/images/dest/project-popup/seaescape/slide-9.jpeg]
+
+Compression algorithm: [mozjpeg]
+
+Description: Error: Command failed: /Users/salamander/Documents/work/top-level/node_modules/mozjpeg/vendor/cjpeg -quality 75 -outfile app/images/dest/project-popup/seaescape/slide-9.jpeg app/images/src/project-popup/seaescape/slide-9.jpeg
+Unrecognized input file format --- perhaps you need -targa

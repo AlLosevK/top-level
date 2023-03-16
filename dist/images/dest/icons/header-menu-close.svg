@@ -1,4 +1,1 @@
-<svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect x="0.707031" width="23" height="1" transform="rotate(45 0.707031 0)" fill="inherit"/>
-<rect y="16.2637" width="23" height="1" transform="rotate(-45 0 16.2637)" fill="inherit"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="none"><path fill="inherit" d="M.707 0 16.97 16.263l-.707.708L0 .707z"/><path fill="inherit" d="M0 16.264 16.264 0l.707.708L.707 16.97z"/></svg>

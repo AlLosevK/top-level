@@ -5,6 +5,77 @@ $(document).ready(function() {
      document.body.style.overflow = 'hidden';
   },50000)
 
+  function getCookie(name) {
+    var matches = document.cookie.match(new RegExp(
+      "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
+    ));
+    return matches ? decodeURIComponent(matches[1]) : undefined;
+  }
+
+  $.urlParam = function(name){
+    var results = new RegExp('[\?&]' + name + '=([^]*)').exec(window.location.href);
+    if (results==null){
+       return null;
+    }
+    else{
+       return results[1] || 0;
+    }
+  }
+
+  if ($.urlParam('utm_source') != null && $.urlParam('utm_source') != "") {
+    var source = $.urlParam('utm_source').split('&')[0];
+  } else {
+    var source = 'empty';
+  }
+
+  if ($.urlParam('utm_medium') != null && $.urlParam('utm_medium') != "") {
+    var medium = $.urlParam('utm_medium').split('&')[0];
+  } else {
+    var medium = 'empty';
+  }
+
+  if ($.urlParam('utm_content') != null && $.urlParam('utm_content') != "") {
+    var content = $.urlParam('utm_content').split('&')[0];
+  } else {
+    var content = 'empty';
+  }
+
+  if ($.urlParam('utm_term') != null && $.urlParam('utm_term') != "") {
+    var term = $.urlParam('utm_term').split('&')[0];
+  } else {
+    var term = 'empty';
+  }
+
+  // Set the cookies
+  if(Cookies.get('utm_source') == null || Cookies.get('utm_source') == "") {
+  	Cookies.set('utm_source', source);
+  }
+  if(Cookies.get('utm_medium') == null || Cookies.get('utm_medium') == "") {
+  	Cookies.set('utm_medium', medium);
+  }
+  if(Cookies.get('utm_content') == null || Cookies.get('utm_content') == "") {
+  	Cookies.set('utm_content', content);
+  }
+  if(Cookies.get('utm_term') == null || Cookies.get('utm_term') == "") {
+  	Cookies.set('utm_term', term);
+  }
+
+  $('input[name="utm-source"]').each(function () {
+    $(this).val(Cookies.get('utm_source'));
+  })
+
+  $('input[name="utm-medium"]').each(function () {
+    $(this).val(Cookies.get('utm_medium'));
+  })
+
+  $('input[name="utm-content"]').each(function () {
+    $(this).val(Cookies.get('utm_content'));
+  })
+
+  $('input[name="utm-term"]').each(function () {
+    $(this).val(Cookies.get('utm_term'));
+  })
+
   $("#phone-form").keyup(function() {
     let phInp = $(this);
     let code = phInp.intlTelInput("getSelectedCountryData").dialCode;
@@ -12,7 +83,6 @@ $(document).ready(function() {
     let fullPhone = '+' + code + ' ' + phoneNumber;
     let phInpHide = phInp.closest('form').find("#hiden-form");
     phInpHide.val(fullPhone);
-    console.log(phInpHide);
   });
 
   $("#phone-quiz").keyup(function() {
@@ -33,97 +103,102 @@ $(document).ready(function() {
 
   /* INITIALIZE BOTH INPUTS WITH THE intlTelInput FEATURE*/
 
-  $("#phone-form").intlTelInput({
-    initialCountry: "auto",
-    separateDialCode: true,
-    autoPlaceholder: "aggressive",
-    geoIpLookup: function (callback) {
-        $.get('https://ipinfo.io', function () {}, "jsonp")
-        .fail(function() {
-          let countryCode = "US";
-          callback(countryCode);
-        })
-        .always(function (resp) {
-          var countryCode = (resp && resp.country) ? resp.country : "";
-          callback(countryCode);
-        });
-    },
-    utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/11.0.14/js/utils.js"
+  $.get('https://ipapi.co/json/', function () {}, "json")
+  .always(function (resp) {
+    var countryCode = (resp && resp.country) ? resp.country : "RU";
+    if(Cookies.get('giag_country') == null || Cookies.get('giag_country') == "") {
+      Cookies.set('giag_country', countryCode);
+    };
+
+    $("input[type='tel']").each( function () {
+      $(this).intlTelInput({
+        initialCountry: "auto",
+        separateDialCode: true,
+        autoPlaceholder: "aggressive",
+        geoIpLookup: function(callback) { callback( Cookies.get('giag_country') );},
+        utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/11.0.14/js/utils.js"
+      })
+    });
+
+
+    $('input.hide').parent().hide();
+
   });
 
-  $("#phone-quiz").intlTelInput({
-    initialCountry: "auto",
-    separateDialCode: true,
-    autoPlaceholder: "aggressive",
-    geoIpLookup: function (callback) {
-        $.get('https://ipinfo.io', function () {
-        }, "jsonp").always(function (resp) {
-            var countryCode = (resp && resp.country) ? resp.country : "";
-            callback(countryCode);
-        });
-    },
-    utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/11.0.14/js/utils.js"
-  });
+  //
+  // $("#phone-quiz").intlTelInput({
+  //   initialCountry: "auto",
+  //   separateDialCode: true,
+  //   autoPlaceholder: "aggressive",
+  //   geoIpLookup: function (callback) {
+  //       $.get('https://ipinfo.io', function () {
+  //       }, "jsonp").always(function (resp) {
+  //           var countryCode = (resp && resp.country) ? resp.country : "RU";
+  //           callback(countryCode);
+  //       });
+  //   },
+  //   utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/11.0.14/js/utils.js"
+  // });
+  //
+  // $("#phone-popup").intlTelInput({
+  //   initialCountry: "auto",
+  //   separateDialCode: true,
+  //   autoPlaceholder: "aggressive",
+  //   geoIpLookup: function (callback) {
+  //       $.get('https://ipinfo.io', function () {
+  //       }, "jsonp").always(function (resp) {
+  //           var countryCode = (resp && resp.country) ? resp.country : "RU";
+  //           callback(countryCode);
+  //       });
+  //   },
+  //   utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/11.0.14/js/utils.js"
+  // });
+  //
+  //
+  // $("#hiden-form").intlTelInput({
+  //   initialCountry: "auto",
+  //   dropdownContainer: 'body',
+  //   geoIpLookup: function (callback) {
+  //       $.get('https://ipinfo.io', function () {}, "jsonp")
+  //       .fail(function() {
+  //         var countryCode = "US";
+  //         callback(countryCode);
+  //       })
+  //       .always(function (resp) {
+  //         var countryCode = (resp && resp.country) ? resp.country : "RU";
+  //         callback(countryCode);
+  //       });
+  //   },
+  //   utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/11.0.14/js/utils.js"
+  // });
+  //
+  // $("#hiden-quiz").intlTelInput({
+  //   initialCountry: "auto",
+  //   dropdownContainer: 'body',
+  //   geoIpLookup: function (callback) {
+  //       $.get('https://ipinfo.io', function () {
+  //       }, "jsonp").always(function (resp) {
+  //           var countryCode = (resp && resp.country) ? resp.country : "RU";
+  //           callback(countryCode);
+  //       });
+  //   },
+  //   utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/11.0.14/js/utils.js"
+  // });
+  //
+  // $("#hiden-popup").intlTelInput({
+  //   initialCountry: "auto",
+  //   dropdownContainer: 'body',
+  //   geoIpLookup: function (callback) {
+  //       $.get('https://ipinfo.io', function () {
+  //       }, "jsonp").always(function (resp) {
+  //           var countryCode = (resp && resp.country) ? resp.country : "RU";
+  //           callback(countryCode);
+  //       });
+  //   },
+  //   utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/11.0.14/js/utils.js"
+  // });
 
-  $("#phone-popup").intlTelInput({
-    initialCountry: "auto",
-    separateDialCode: true,
-    autoPlaceholder: "aggressive",
-    geoIpLookup: function (callback) {
-        $.get('https://ipinfo.io', function () {
-        }, "jsonp").always(function (resp) {
-            var countryCode = (resp && resp.country) ? resp.country : "";
-            callback(countryCode);
-        });
-    },
-    utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/11.0.14/js/utils.js"
-  });
-
-
-  $("#hiden-form").intlTelInput({
-    initialCountry: "auto",
-    dropdownContainer: 'body',
-    geoIpLookup: function (callback) {
-        $.get('https://ipinfo.io', function () {}, "jsonp")
-        .fail(function() {
-          var countryCode = "US";
-          callback(countryCode);
-        })
-        .always(function (resp) {
-          var countryCode = (resp && resp.country) ? resp.country : "";
-          callback(countryCode);
-        });
-    },
-    utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/11.0.14/js/utils.js"
-  });
-
-  $("#hiden-quiz").intlTelInput({
-    initialCountry: "auto",
-    dropdownContainer: 'body',
-    geoIpLookup: function (callback) {
-        $.get('https://ipinfo.io', function () {
-        }, "jsonp").always(function (resp) {
-            var countryCode = (resp && resp.country) ? resp.country : "";
-            callback(countryCode);
-        });
-    },
-    utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/11.0.14/js/utils.js"
-  });
-
-  $("#hiden-popup").intlTelInput({
-    initialCountry: "auto",
-    dropdownContainer: 'body',
-    geoIpLookup: function (callback) {
-        $.get('https://ipinfo.io', function () {
-        }, "jsonp").always(function (resp) {
-            var countryCode = (resp && resp.country) ? resp.country : "";
-            callback(countryCode);
-        });
-    },
-    utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/11.0.14/js/utils.js"
-  });
-
-  $('input.hide').parent().hide();
+  // $('input.hide').parent().hide();
 
 
 
@@ -312,9 +387,9 @@ $(document).ready(function() {
 
 
     if(name && validEmail && phone)
-        form.find('button').removeAttr('disabled');
+        form.find('button[type="submit"]').removeAttr('disabled');
      else
-        form.find('button').attr('disabled', 'disabled');
+        form.find('button[type="submit"]').attr('disabled', 'disabled');
   });
 
 
@@ -325,11 +400,17 @@ $(document).ready(function() {
   $(function() {
   	$(".project__btn").on("click", function(e) {
   		e.preventDefault();
-  		var $this = $(this).parent().parent();
+  		var $this = $(this).closest(".project");
   		if (!$this.hasClass("active")) {
   			$(this).removeClass("active");
   		}
   		$this.toggleClass("active");
+
+      let map_block = $this.find('#ymap_lazy');
+      let map_src = map_block.attr('data-src');
+      map_block.attr('src', map_src);
+      map_block.removeAttr('data_src');
+
       document.body.style.overflow = 'hidden';
   	});
   });
@@ -339,7 +420,7 @@ $(document).ready(function() {
   $(function() {
   	$(".popup__nav-close").on("click", function(e) {
   		e.preventDefault();
-  		var $this = $(this).parent().parent().parent().parent();
+  		var $this = $(this).closest(".project");
   		if (!$this.hasClass("active")) {
   			$(this).removeClass("active");
   		}
@@ -351,7 +432,7 @@ $(document).ready(function() {
   $(function() {
   	$(".project-popup__bg").on("click", function(e) {
   		e.preventDefault();
-  		var $this = $(this).parent().parent();
+  		var $this = $(this).closest(".project");
   		if (!$this.hasClass("active")) {
   			$(this).removeClass("active");
   		}
@@ -363,7 +444,7 @@ $(document).ready(function() {
   $(function() {
   	$(".popup__promo-btn").on("click", function(e) {
   		e.preventDefault();
-  		var $this = $(this).parent().parent().parent();
+  		var $this = $(this).closest(".project");
   		if (!$this.hasClass("active")) {
   			$(this).removeClass("active");
   		}
@@ -463,14 +544,14 @@ $(document).ready(function() {
               : circle.classList.remove("active");
       });
 
-      if (currActive === 1) {
-          prev.disabled = true;
-      } else if (currActive === 6) {
+      prev.disabled = false;
+
+      if (currActive === 6) {
         quizBtn.hide();
         quizSbmt.show();
-      } else if (currActive < 6) {
-        quizBtn.show();
+      } else if (currActive < 5) {
         quizSbmt.hide();
+        quizBtn.show();
       } else if (currActive === circles.length) {
         next.disabled = true;
       } else {

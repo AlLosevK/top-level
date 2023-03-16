@@ -57,7 +57,7 @@ function browsersync() {
 function pugf() {
 	return src([
 		'app/pug/index*.pug',
-		// 'app/pug/index-en.pug'
+		'app/pug/villas*.pug'
 	])
 	.pipe(pug({pretty: true}))
 	.pipe(dest('app/'))
@@ -71,6 +71,7 @@ function scripts() {
 		'node_modules/intl-tel-input/build/js/intlTelInput-jquery.js', // Пример подключения библиотеки
 		'node_modules/intl-tel-input/build/js/utils.js', // Пример подключения библиотеки
 		'node_modules/jquery-mask-plugin/dist/jquery.mask.min.js', // Пример подключения библиотеки
+		'node_modules/js-cookie/dist/js.cookie.min.js', // Пример подключения библиотеки
 		'app/js/app.js', // Пользовательские скрипты, использующие библиотеку, должны быть подключены в конце
 		])
 	.pipe(concat('app.min.js')) // Конкатенируем в один файл
@@ -96,7 +97,7 @@ function styles() {
 
 async function images() {
 	imagecomp(
-		"app/images/src/**/*.svg", // Берём все изображения из папки источника
+		"app/images/src/**/*", // Берём все изображения из папки источника
 		"app/images/dest/", // Выгружаем оптимизированные изображения в папку назначения
 		{ compress_force: false, statistic: true, autoupdate: true }, false, // Настраиваем основные параметры
 		{ jpg: { engine: "mozjpeg", command: ["-quality", "75"] } }, // Сжимаем и оптимизируем изображеня
@@ -112,18 +113,9 @@ async function images() {
 }
 
 async function webpf() {
-  return src(['app/images/src/**/*', '!app/images/src/**/*.svg'])
+  return src(['app/images/src/**/*.*', '!app/images/src/**/*.svg'])
     .pipe(webp())
-    .pipe(cache(imagemin([
-      imagemin.gifsicle({ interlaced: true }),
-      jpegrecompress({
-        progressive: true,
-        max: 90,
-        min: 80
-      }),
-      pngquant()
-    ])))
-		.pipe(dest('app/images/dest')) // Выгружаем готовый файл в папку назначения
+		.pipe(dest('app/images/dest/')) // Выгружаем готовый файл в папку назначения
 		.pipe(browserSync.stream()) // Триггерим Browsersync для обновления страницы
 }
 
@@ -174,6 +166,7 @@ function buildcopy() {
 		'app/images/dest/**/*',
 		'app/fonts/**/*',
 		'app/php/**/*',
+		'app/pdf/**/*',
 		'app/**/*.html',
 		'app/**/*.ico',
 		], { base: 'app' }) // Параметр "base" сохраняет структуру проекта при копировании
@@ -204,10 +197,10 @@ function startwatch() {
 	watch('app/**/*.php').on('change', browserSync.reload);
 
 	// Мониторим папку-источник изображений и выполняем images(), если есть изменения
-	watch('app/images/src/**/*', images);
+	watch('app/images/src/**/*.*', images);
 
 	// Мониторим папку-источник изображений и выполняем images(), если есть изменения
-	watch('app/images/src/**/*', pugf);
+	watch('app/images/src/**/*.*', webpf);
 
 }
 
@@ -223,7 +216,7 @@ exports.styles = styles;
 // Экспорт функции images() в таск images
 exports.images = images;
 
-// Экспорт функции webp() в таск images
+// Экспорт функции webp() в таск webp
 exports.webp = webpf;
 
 // Экспорт функции svgSprite() в таск images

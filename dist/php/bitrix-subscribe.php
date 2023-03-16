@@ -1,9 +1,9 @@
 <?php
-  $queryUrl = 'https://toplevel.bitrix24.com/rest/533/l6vu4qi5bg90sshm/crm.lead.add.json';
+  $queryUrl = 'https://toplevel.bitrix24.com/rest/533/7pplq2vppgsf7upj/crm.lead.add.json';
 
   $queryData = http_build_query(array(
     'fields' => array(
-      'TITLE' => 'Subscribe',
+      'TITLE' => 'SiteForm',
       'NAME' => $_POST["name"],
       'EMAIL' => array(
         array(
@@ -13,12 +13,17 @@
       ),
       'PHONE' => array(
         array(
-          "VALUE" => $_POST["phone"],
+          "VALUE" => $_POST["hiden"],
           "VALUE_TYPE" => "WORK"
         )
       ),
+      'UF_CRM_630DBC5E7AF83' => $_POST["propName"],
+      'UTM_SOURCE' => $_POST['utm-source'],
+      'UTM_MEDIUM' => $_POST['utm-medium'],
+      'UTM_CONTENT' => $_POST['utm-content'],
+      'UTM_TERM' => $_POST['utm-term']
+    ),
     'params' => array("REGISTER_SONET_EVENT" => "Y")
-    )
   ));
 
   $curl = curl_init();
@@ -34,6 +39,6 @@
   $result = curl_exec($curl);
   curl_close($curl);
 
-  header('location: ' . $_SERVER['HTTP_REFERER']); // либо явно указать путь к форме
+  header('location: https://offplan-toplevel.com/thanks/');
   exit();
 ?>

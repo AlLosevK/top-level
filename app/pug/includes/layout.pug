@@ -17,14 +17,22 @@ html(lang="ru")
 
 
       body
-          //- script(src="https://www.googletagmanager.com/gtag/js?id=G-EBX8MEHXB0" async)
-          //- script(src="js/ga.js")
-          //- script(src="js/metrika.js")
-          //- noscript
-          //-   div
-          //-     img(src="https://mc.yandex.ru/watch/92170622" style="position:absolute; left:-9999px;" alt="")
-
-
+      
+          script(src="https://www.googletagmanager.com/gtag/js?id=G-EBX8MEHXB0" async)
+          
+          script
+            include ga.js
+          // Yandex.Metrika counter
+          
+          script
+            include metrika.js
+          
+          noscript
+            div
+              img(src="https://mc.yandex.ru/watch/92170622" style="position:absolute; left:-9999px;" alt="")
+          
+          script
+            include b242ga.js
       
           include svg.pug
           block header

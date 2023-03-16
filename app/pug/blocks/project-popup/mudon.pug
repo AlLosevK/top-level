@@ -3,6 +3,7 @@
   .popup
     .popup__content
       h2.popup__title Мудон Аль-Раним
+      a.popup__pdf(href="pdf/Al-Ranim_Brochure.pdf") Download PDF
       p.popup__descr Мудон Аль-Раним расположен на расстоянии от всего, но в то же время в пределах пешей досягаемости от многих ключевых пунктов назначения.
       p.popup__descr Ваша растущая семья нуждается в безопасном и комфортном убежище, где вы могли бы расслабиться в конце каждого дня.
       p.popup__descr Выбирайте из прекрасно оборудованных таунхаусов с 3 и 4 спальнями, а также таунхаусов предназначенных для семейной жизни.
@@ -26,14 +27,17 @@
           +icon("benefits-icon", "popup__benefits-icon")
           p.popup__benefits-descr Пышные зеленые парки
       .popup__map
-        script(type='text/javascript' charset='utf-8' async='' src='https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A496aa5b6f2652561db13a0c6beb09bb524a002d96e2623eb238e088aef94b052&width=100%25&height=240&lang=ru_RU&scroll=true')
+        script#ymap_lazy(type='text/javascript' charset='utf-8' async='' data-src='https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A4c396d03a24383f57f0c5afac49639d28d4ce260c867f432502f50e4d64bcf1f&amp;width=100%25&amp;height=240&amp;lang=ru_RU&amp;scroll=true')
     .popup__promo
       .popup__promo-slider
         picture.popup__promo-slide
-          picture.popup__promo-slide
-            img(src="images/dest/popup-promo-slide.webp" alt="-слайд-1")
-          picture.popup__promo-slide
-            img(src="images/dest/banner-slide-3.webp" alt="-слайд-2")
+          img(src="images/dest/project-popup/cavalli-countre/slide-1.webp" alt="Mudon Al Ranim слайд-1")
+        picture.popup__promo-slide
+          img(src="images/dest/project-popup/cavalli-countre/slide-2.webp" alt="Mudon Al Ranim слайд-2")
+        picture.popup__promo-slide
+          img(src="images/dest/project-popup/cavalli-countre/slide-3.webp" alt="Mudon Al Ranim слайд-3")
+        picture.popup__promo-slide
+          img(src="images/dest/project-popup/cavalli-countre/slide-4.webp" alt="Mudon Al Ranim слайд-4")
       p.popup__promo-title УСПЕЙТЕ КУПИТЬ
       p.popup__promo-timer#timer
       a.popup__promo-btn(href="#form") бесплатная консультация

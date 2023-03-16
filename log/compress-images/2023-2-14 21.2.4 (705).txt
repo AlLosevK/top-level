@@ -1,0 +1,14 @@
+File from: [app/images/src/project-2.png]
+
+File to: [app/images/dest/project-2.png]
+
+Compression algorithm: [pngquant]
+
+Description: Error: Command failed: /Users/salamander/Documents/work/top-level/node_modules/pngquant-bin/vendor/pngquant --quality=75-100 -o app/images/dest/project-2.png app/images/src/project-2.png
+File from: [app/images/src/project-7.png]
+
+File to: [app/images/dest/project-7.png]
+
+Compression algorithm: [pngquant]
+
+Description: Error: Command failed: /Users/salamander/Documents/work/top-level/node_modules/pngquant-bin/vendor/pngquant --quality=75-100 -o app/images/dest/project-7.png app/images/src/project-7.png

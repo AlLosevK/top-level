@@ -14,33 +14,49 @@
     <link rel="manifest" href="images/dest/site.webmanifest">
   </head>
   <body>
-    <script src="https://www.googletagmanager.com/gtag/js?id=G-EBX8MEHXB0" async></script>
-    <script>window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script src="https://www.googletagmanager.com/gtag/js?id=G-EBX8MEHXB0" async>
+    </script>
+    <script type="text/javascript">
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-  gtag('config', 'G-EBX8MEHXB0');
+      gtag('config', 'G-EBX8MEHXB0');
 
     </script>
-    <script>  (function(m,e,t,r,i,k,a){m[i]=m[i]function(){(m[i].a=m[i].a[]).push(arguments)};
-  m[i].l=1*new Date();
-  for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-  k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-  (window, document, "script", "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/tag.js", "ym");
+    <!-- Yandex.Metrika counter-->
+    <script type="text/javascript">
+      (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+      m[i].l=1*new Date();
+      for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+      k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+      (window, document, "script", "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/tag.js", "ym");
 
-  ym(92170622, "init", {
-      clickmap:true,
-      trackLinks:true,
-      accurateTrackBounce:true,
-      webvisor:true
-  });
-
+      ym(92170622, "init", {
+           clickmap:true,
+           trackLinks:true,
+           accurateTrackBounce:true,
+           webvisor:true
+      });
     </script>
     <noscript>
       <div><img src="https://mc.yandex.ru/watch/92170622" style="position:absolute; left:-9999px;" alt=""></div>
     </noscript>
-
-<header class="header">
+    <script>
+    (function(w,d,u){
+      var s=d.createElement('script');s.defer=false;s.async=false;s.id='b242ga-script';s.src=u+'?'+(Date.now()/60000|0);
+      var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);
+    })(window,document,'https://67p.b242ga.ru/static/js/b242ga.js');
+    var b242gaScript = document.querySelector('#b242ga-script');
+    b242gaScript.addEventListener('load', function() {
+      B242GAInit({
+        portal:'https://toplevel.bitrix24.com/',
+        pid:'0de1d4bf35920738288205c3ca7cf011',
+        presets:{}
+      });
+    });
+    </script>
+    <header class="header">
       <div class="header-desk">
         <div class="wrapper">
           <nav class="header__nav">
@@ -134,7 +150,7 @@
               <div class="circle"></div>
             </div>
             <h3 class="quiz__title">Подбор недвижимости в Дубае</h3>
-            <form class="quiz__form" action="php/bitrix-quiz.php" method="post">
+            <form class="quiz__form" method="post" action="php/bitrix-quiz.php">
               <div class="quiz__form-item quiz__form-item-active">
                 <div class="quiz__q">С какой целью вы приобретаете недвижимость в ОАЭ?</div>
                 <p class="quiz__a">
@@ -147,7 +163,7 @@
                 </p>
               </div>
               <div class="quiz__form-item">
-                <div class="quiz__q">Каким бюджетом вы располагаете, €?</div>
+                <div class="quiz__q">Каким бюджетом вы располагаете?</div>
                 <p class="quiz__a">
                   <input type="radio" id="quiz-b1" name="price" value="1 000 000">
                   <label for="quiz-b1">1 000 000 AED</label>
@@ -200,6 +216,10 @@
                     <option value="Six Senses">Six Senses</option>
                     <option value="Sobha SeaHaven">Sobha SeaHaven</option>
                   </select>
+                  <input name="utm-source" type="hidden" value="">
+                  <input name="utm-medium" type="hidden" value="">
+                  <input name="utm-content" type="hidden" value="">
+                  <input name="utm-term" type="hidden" value="">
                 </div>
               </div>
               <div class="quiz__form-item">
@@ -218,7 +238,7 @@
               <div class="quiz__footer">
                 <div class="quiz__logo"><img src="images/dest/quiz-logo.webp" alt="Top Level логотип"></div>
                 <div class="quiz__nav">
-                  <button class="quiz__prev" id="prev" type="button" data-quizNav="sbmt" disabled></button>
+                  <button class="quiz__prev" id="prev" type="button" data-quizNav="sbmt"></button>
                   <button class="quiz__next" id="next" type="button" data-quizNav="nav">Далее</button>
                   <button class="quiz__next" id="submit-quiz" type="submit" data-quizNav="sbmt" disabled>Отправить</button>
                 </div>
@@ -301,10 +321,10 @@
           <div class="projects__items">
             <h2 class="projects__items-title">горячие предложения</h2>
             <div class="projects__item project">
-              <picture class="project__img"><img src="images/dest/project-1.webp" alt="Palm Beach Tower apparts"></picture>
+              <picture class="project__img"><img src="images/dest/project-palmbeach.webp" alt="Palm Beach Tower apparts"></picture>
               <div class="project__promo">
                 <p class="project__promo-descr" data-type="appart">апартаменты</p>
-                <p class="project__promo-price">от 2 000 000 AED</p>
+                <p class="project__promo-price">от 40 864 664 ₽</p>
               </div>
               <div class="project__content">
                 <p class="project__title">Palm Beach Tower </p>
@@ -324,7 +344,7 @@
                 <div class="project-popup__bg"></div>
                 <div class="popup">
                   <div class="popup__content">
-                    <h2 class="popup__title">Palm Beach Tower</h2>
+                    <h2 class="popup__title">Palm Beach Tower</h2><a class="popup__pdf" href="pdf/Palm Beach Tower 3 - NAKHEEL.pdf">Download PDF</a>
                     <p class="popup__descr">Все апартаменты в Palm Beach Towers, будь то с одной, двумя, тремя, четырьмя спальнями или пентхаус, предлагает залитые солнцем пространства, исключительные кухни и потрясающую сантехнику и отделку. Это означает, что каждое мгновение, которое вы проводите дома, просто идеально, будь то развлечения в просторной гостиной и столовой или отдых, погруженный в легкую и воздушную эстетику.</p>
                     <p class="popup__descr">Palm Beach Towers расположен на въезде в Пальму Джумейра, прямо в центре одного из самых захватывающих и оживленных районов города. Насладитесь свободой солнечной прогулки по некоторым из самых известных ресторанов или проведите день за покупками в магазинах роскошных торговых марок, которые вы любите.</p>
                     <div class="popup__benefits">
@@ -378,7 +398,7 @@
                       </div>
                     </div>
                     <div class="popup__map">
-                      <script type="text/javascript" charset="utf-8" async="" src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aee645fdc801e68e9f8a9095ce1bd59b02ec2f4351a03553e363507d514e8bed6&amp;width=100%25&amp;height=240&amp;lang=ru_RU&amp;scroll=true"></script>
+                      <script id="ymap_lazy" type="text/javascript" charset="utf-8" async="" data-src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A4c396d03a24383f57f0c5afac49639d28d4ce260c867f432502f50e4d64bcf1f&amp;amp;width=100%25&amp;amp;height=240&amp;amp;lang=ru_RU&amp;amp;scroll=true"></script>
                     </div>
                   </div>
                   <div class="popup__promo">
@@ -398,31 +418,10 @@
               </div>
             </div>
             <div class="projects__item project">
-              <picture class="project__img"><img src="images/dest/project-2.webp" alt="HILLCREST villa look"></picture>
-              <div class="project__promo">
-                <p class="project__promo-descr" data-type="villa">вилла</p>
-                <p class="project__promo-price">от 21 680 000 AED</p>
-              </div>
-              <div class="project__content">
-                <p class="project__title">ADDRESS VILLAS – HILLCREST</p>
-                <p class="project__subtitle">Hadaeq Sheikh Mohammed Bin Rashid</p>
-                <p class="project__descr">ADDRESS VILLAS – HILLCREST - это новый жилой комплекс вилл, расположенный в Dubai Hills Estate.</p>
-                <div class="project__benefits">
-                  <div class="project__benefits-item project__benefits-bath"><img src="images/dest/bathroom.webp" alt="Bathrooms">
-                    <p>4</p>
-                  </div>
-                  <div class="project__benefits-item project__benefits-bad"><img src="images/dest/bedroom.webp" alt="Bedrooms">
-                    <p>5</p>
-                  </div>
-                </div>
-                <button class="project__btn" type="button">Смотреть</button>
-              </div>
-            </div>
-            <div class="projects__item project">
-              <picture class="project__img"><img src="images/dest/project-3.webp" alt="Burj Binghatti Jacob &amp; Co Residences Best"></picture>
+              <picture class="project__img"><img src="images/dest/project-burjbinghatti.webp" alt="Burj Binghatti Jacob &amp; Co Residences Best"></picture>
               <div class="project__promo">
                 <p class="project__promo-descr" data-type="appart">аппартамены</p>
-                <p class="project__promo-price">от 10 000 000 AED</p>
+                <p class="project__promo-price">от 204 323 324 ₽</p>
               </div>
               <div class="project__content">
                 <p class="project__title">Burj Binghatti Jacob & Co Residences</p>
@@ -442,7 +441,7 @@
                 <div class="project-popup__bg"></div>
                 <div class="popup">
                   <div class="popup__content">
-                    <h2 class="popup__title">Burj Binghatti Jacob & Co Residences</h2>
+                    <h2 class="popup__title">Burj Binghatti Jacob & Co Residences</h2><a class="popup__pdf" href="pdf/Burj Binghatti Jacob &amp; Co_Digital.pdf">Download PDF</a>
                     <p class="popup__descr">Представьте, что вы живете среди облаков на вершине одной из самых высоких гипербашен в мире. Нарушайте границы и бросайте вызов немыслимому, Резиденции Burj Binghatti Jacob & Co полностью переосмысливают понятие роскошного современного образа жизни в мегаполисе, предлагая безупречную, высококлассную индивидуальную жизнь, созданную исключительно для элиты.</p>
                     <div class="popup__benefits">
                       <div class="popup__benefits-item">
@@ -495,7 +494,7 @@
                       </div>
                     </div>
                     <div class="popup__map">
-                      <script type="text/javascript" charset="utf-8" async="" src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aee645fdc801e68e9f8a9095ce1bd59b02ec2f4351a03553e363507d514e8bed6&amp;width=100%25&amp;height=240&amp;lang=ru_RU&amp;scroll=true"></script>
+                      <script id="ymap_lazy" type="text/javascript" charset="utf-8" async="" data-src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A4c396d03a24383f57f0c5afac49639d28d4ce260c867f432502f50e4d64bcf1f&amp;amp;width=100%25&amp;amp;height=240&amp;amp;lang=ru_RU&amp;amp;scroll=true"></script>
                     </div>
                   </div>
                   <div class="popup__promo">
@@ -503,6 +502,7 @@
                       <picture class="popup__promo-slide"><img src="images/dest/project-popup/burj-binghatti/slide-1.webp" alt="Burj Binghatti слайд-1"></picture>
                       <picture class="popup__promo-slide"><img src="images/dest/project-popup/burj-binghatti/slide-3.webp" alt="Burj Binghatti слайд-3"></picture>
                       <picture class="popup__promo-slide"><img src="images/dest/project-popup/burj-binghatti/slide-4.webp" alt="Burj Binghatti слайд-4"></picture>
+                      <picture class="popup__promo-slide"><img src="images/dest/project-popup/burj-binghatti/slide-5.jpg" alt="Burj Binghatti слайд-5"></picture>
                     </div>
                     <p class="popup__promo-title">УСПЕЙТЕ КУПИТЬ</p>
                     <div class="popup__promo-timer" id="timer">10:00:00</div><a class="popup__promo-btn" href="#form">бесплатная консультация</a>
@@ -516,21 +516,21 @@
               </div>
             </div>
             <div class="projects__item project">
-              <picture class="project__img"><img src="images/dest/project-1.webp" alt="ONE CANAL PENTHOUSE AND SKY VILLAS"></picture>
+              <picture class="project__img"><img src="images/dest/project-cavallicouture.webp" alt="Cavalli Couture"></picture>
               <div class="project__promo">
-                <p class="project__promo-descr" data-type="flat">пентхаус</p>
-                <p class="project__promo-price">от 18 000 000 AED</p>
+                <p class="project__promo-descr" data-type="appart">апартаменты</p>
+                <p class="project__promo-price">от 336 600 000 ₽</p>
               </div>
               <div class="project__content">
-                <p class="project__title">ONE CANAL PENTHOUSE AND SKY VILLAS</p>
-                <p class="project__subtitle">Al Safa 1</p>
-                <p class="project__descr">Выбор роскошных апартаментов к вашим услугам</p>
+                <p class="project__title">Cavalli Couture</p>
+                <p class="project__subtitle">Канал Дубай</p>
+                <p class="project__descr">DAMAC представляет новый Cavalli Couture с апартаментами с 3, 4 и 5 спальнями, расположенными на Дубайском водном канале. Резиденции теперь могут наслаждаться роскошным образом жизни, выходящим за рамки роскоши и класса, которые являются стандартными и премиальными, благодаря привлекательному образу жизни рядом с каналом.</p>
                 <div class="project__benefits">
                   <div class="project__benefits-item project__benefits-bath"><img src="images/dest/bathroom.webp" alt="Bathrooms">
-                    <p>4</p>
+                    <p>2</p>
                   </div>
                   <div class="project__benefits-item project__benefits-bad"><img src="images/dest/bedroom.webp" alt="Bedrooms">
-                    <p>4</p>
+                    <p>2</p>
                   </div>
                 </div>
                 <button class="project__btn" type="button">Смотреть</button>
@@ -539,17 +539,62 @@
                 <div class="project-popup__bg"></div>
                 <div class="popup">
                   <div class="popup__content">
-                    <h2 class="popup__title">ONE CANAL PENTHOUSE AND SKY VILLAS</h2>
-                    <p class="popup__descr">Новая престижная недвижимость в Дубае, предназначенная для избранных. Состоит из 24 эксклюзивных пентхаусов, Sky Villas и Sky Mansion, переосмысливающих удобства, мастерство и несравнимый стиль жизни.</p>
-                    <p class="popup__descr">Являясь идеальным сочетанием уединения и спокойствия, резиденция предлагает захватывающий вид на Дубайский канал, Бурдж-Халифу, парк Сафа и Бурдж-АЛЬ-Араб. Канал, примыкающий к парку Сафа в самом центре города.</p>
+                    <h2 class="popup__title">Cavalli Couture</h2><a class="popup__pdf" href="pdf/Cavalli Couture Presentation v3.pdf">Download PDF</a>
+                    <p class="popup__descr">DAMAC Cavalli Couture, разработанный легендарным модным домом Roberto Cavalli, представляет собой новый сверхэлитный проект, сочетающий в себе элементы джунглей и воды, и расположен на берегу Дубайского водного канала.</p>
+                    <p class="popup__descr">Среди предлагаемых к продаже квартир в этом 12-этажном здании есть 3-4-комнатные квартиры с первоклассным дизайном на каждом шагу, с планировкой от 4300 кв.м, а также более просторные 5-комнатные дуплексы с жилой площадью от 8750 кв. футов. Количество супер-роскошных резиденций ограничено всего 70, и каждая из них будет обращена к Дубайскому водному каналу.</p>
+                    <p class="popup__descr">Жителям также будет предложен ряд первоклассных удобств, расположенных на территории дома или сразу за углом, что позволит жильцам погрузиться в яркий и спокойный образ жизни. На крыше здания находится бассейн и лаунж-зона, где жители могут насладиться эксклюзивными блюдами от шеф-повара. Кроме того, Cavalli Couture от DAMAC Properties — один из последних проектов, из которого открывается вид на набережную канала.</p>
+                    <div class="popup__benefits">
+                      <div class="popup__benefits-item">
+                            <svg class="icon icon-benefits-icon popup__benefits-icon">
+                              <use xlink:href="images/dest/sprite.svg#benefits-icon"></use>
+                            </svg>
+                        <p class="popup__benefits-descr">Охрана 24/7</p>
+                      </div>
+                      <div class="popup__benefits-item">
+                            <svg class="icon icon-benefits-icon popup__benefits-icon">
+                              <use xlink:href="images/dest/sprite.svg#benefits-icon"></use>
+                            </svg>
+                        <p class="popup__benefits-descr">Большой бассейн</p>
+                      </div>
+                      <div class="popup__benefits-item">
+                            <svg class="icon icon-benefits-icon popup__benefits-icon">
+                              <use xlink:href="images/dest/sprite.svg#benefits-icon"></use>
+                            </svg>
+                        <p class="popup__benefits-descr">Спортивные площадки</p>
+                      </div>
+                      <div class="popup__benefits-item">
+                            <svg class="icon icon-benefits-icon popup__benefits-icon">
+                              <use xlink:href="images/dest/sprite.svg#benefits-icon"></use>
+                            </svg>
+                        <p class="popup__benefits-descr">Тренажерный зал</p>
+                      </div>
+                      <div class="popup__benefits-item">
+                            <svg class="icon icon-benefits-icon popup__benefits-icon">
+                              <use xlink:href="images/dest/sprite.svg#benefits-icon"></use>
+                            </svg>
+                        <p class="popup__benefits-descr">Меблированная квартира</p>
+                      </div>
+                      <div class="popup__benefits-item">
+                            <svg class="icon icon-benefits-icon popup__benefits-icon">
+                              <use xlink:href="images/dest/sprite.svg#benefits-icon"></use>
+                            </svg>
+                        <p class="popup__benefits-descr">Продуктовый магазин</p>
+                      </div>
+                    </div>
                     <div class="popup__map">
-                      <script type="text/javascript" charset="utf-8" async="" src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A496aa5b6f2652561db13a0c6beb09bb524a002d96e2623eb238e088aef94b052&amp;width=100%25&amp;height=240&amp;lang=ru_RU&amp;scroll=true"></script>
+                      <script id="ymap_lazy" type="text/javascript" charset="utf-8" async="" data-src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A4c396d03a24383f57f0c5afac49639d28d4ce260c867f432502f50e4d64bcf1f&amp;amp;width=100%25&amp;amp;height=240&amp;amp;lang=ru_RU&amp;amp;scroll=true"></script>
                     </div>
                   </div>
                   <div class="popup__promo">
                     <div class="popup__promo-slider">
-                      <picture class="popup__promo-slide"><img src="images/dest/project-popup/one-canal/slide-1.webp" alt="One Canal слайд-1"></picture>
-                      <picture class="popup__promo-slide"><img src="images/dest/project-popup/one-canal/slide-2.webp" alt="One Canal слайд-1"></picture>
+                      <picture class="popup__promo-slide"><img src="images/dest/project-popup/cavalli-countre/slide-1.webp" alt="Cavalli Couture слайд-1"></picture>
+                      <picture class="popup__promo-slide"><img src="images/dest/project-popup/cavalli-countre/slide-2.webp" alt="Cavalli Couture слайд-1"></picture>
+                      <picture class="popup__promo-slide"><img src="images/dest/project-popup/cavalli-countre/slide-3.webp" alt="Cavalli Couture слайд-1"></picture>
+                      <picture class="popup__promo-slide"><img src="images/dest/project-popup/cavalli-countre/slide-4.webp" alt="Cavalli Couture слайд-1"></picture>
+                      <picture class="popup__promo-slide"><img src="images/dest/project-popup/cavalli-countre/slide-5.webp" alt="Cavalli Couture слайд-1"></picture>
+                      <picture class="popup__promo-slide"><img src="images/dest/project-popup/cavalli-countre/slide-6.webp" alt="Cavalli Couture слайд-1"></picture>
+                      <picture class="popup__promo-slide"><img src="images/dest/project-popup/cavalli-countre/slide-7.webp" alt="Cavalli Couture слайд-1"></picture>
+                      <picture class="popup__promo-slide"><img src="images/dest/project-popup/cavalli-countre/slide-8.webp" alt="Cavalli Couture слайд-1"></picture>
                     </div>
                     <p class="popup__promo-title">УСПЕЙТЕ КУПИТЬ</p>
                     <div class="popup__promo-timer" id="timer">10:00:00</div><a class="popup__promo-btn" href="#form">бесплатная консультация</a>
@@ -563,21 +608,21 @@
               </div>
             </div>
             <div class="projects__item project">
-              <picture class="project__img"><img src="images/dest/project-3.webp" alt="Mudon Al Ranim"></picture>
+              <picture class="project__img"><img src="images/dest/project-elegancetower.webp" alt="Elegance Tower"></picture>
               <div class="project__promo">
-                <p class="project__promo-descr" data-type="townhouse">таунхаус</p>
-                <p class="project__promo-price">от 5 160 000 </p>
+                <p class="project__promo-descr" data-type="appart">апартаменты</p>
+                <p class="project__promo-price">от 36 516 000 ₽</p>
               </div>
               <div class="project__content">
-                <p class="project__title">Mudon Al Ranim</p>
-                <p class="project__subtitle">Dubailand</p>
-                <p class="project__descr">Mudon Al Ranim - это коллекция элегантных таунхаусов в Дубай.</p>
+                <p class="project__title">Elegance Tower</p>
+                <p class="project__subtitle">Даунтаун дубай</p>
+                <p class="project__descr">Elegance Tower — это новый жилой проект премиум-класса, разработанный совместно со знаменитой иконой стиля Зухайром Мурадом, который будет расположен в центре Дубая. Девелопером этого потрясающего небоскреба является компания DAMAC, известная такими проектами, как DAMAC Lagoons и фешенебельная Cavalli Tower.</p>
                 <div class="project__benefits">
                   <div class="project__benefits-item project__benefits-bath"><img src="images/dest/bathroom.webp" alt="Bathrooms">
-                    <p>4</p>
+                    <p>3</p>
                   </div>
                   <div class="project__benefits-item project__benefits-bad"><img src="images/dest/bedroom.webp" alt="Bedrooms">
-                    <p>4</p>
+                    <p>3</p>
                   </div>
                 </div>
                 <button class="project__btn" type="button">Смотреть</button>
@@ -586,61 +631,64 @@
                 <div class="project-popup__bg"></div>
                 <div class="popup">
                   <div class="popup__content">
-                    <h2 class="popup__title">Мудон Аль-Раним</h2>
-                    <p class="popup__descr">Мудон Аль-Раним расположен на расстоянии от всего, но в то же время в пределах пешей досягаемости от многих ключевых пунктов назначения.</p>
-                    <p class="popup__descr">Ваша растущая семья нуждается в безопасном и комфортном убежище, где вы могли бы расслабиться в конце каждого дня.</p>
-                    <p class="popup__descr">Выбирайте из прекрасно оборудованных таунхаусов с 3 и 4 спальнями, а также таунхаусов предназначенных для семейной жизни.</p>
+                    <h2 class="popup__title">DAMAC Elegance Tower в центре Дубая</h2><a class="popup__pdf" href="pdf/ELEGANCE TOWER PRESENTATION.pdf">Download PDF</a>
+                    <p class="popup__descr">Elegance Tower — это новый жилой проект премиум-класса, который будет расположен в центре Дубая, в нескольких шагах от The Dubai Mall. Девелопером этого потрясающего небоскреба является компания DAMAC, которая известна такими проектами, как DAMAC Lagoons, DAMAC Hills и фешенебельной Cavalli Tower. Будущие жильцы DAMAC Elegance Tower могут выбирать из стильных апартаментов с 1-2 спальнями и захватывающим видом на центр Дубая и окрестности. Также есть возможность приобрести полноценный этаж. Среди основных удобств, которые будут доступны для проживающих в Elegance Tower, — бассейн с террасой и сад, расположенный на подиуме здания.</p>
+                    <p class="popup__descr">Покупка квартиры в Elegance Tower — это выгодная инвестиция в ваше будущее, поскольку вы получите возможность окунуться в премиальный образ жизни в центре Дубая с доступом к бесконечным удобствам, ресторанам и магазинам, а также к развлекательным мероприятиям. Кроме того, вы всегда сможете перепродать недвижимость после завершения строительства или сдать ее в аренду, так как средний показатель рентабельности 1-комнатной квартиры в этом районе составляет 6,7%.</p>
                     <div class="popup__benefits">
                       <div class="popup__benefits-item">
                             <svg class="icon icon-benefits-icon popup__benefits-icon">
                               <use xlink:href="images/dest/sprite.svg#benefits-icon"></use>
                             </svg>
-                        <p class="popup__benefits-descr">2 навеса для автомобилей</p>
+                        <p class="popup__benefits-descr">Круглосуточная охрана</p>
                       </div>
                       <div class="popup__benefits-item">
                             <svg class="icon icon-benefits-icon popup__benefits-icon">
                               <use xlink:href="images/dest/sprite.svg#benefits-icon"></use>
                             </svg>
-                        <p class="popup__benefits-descr">Закрытое, охраняемое пространоство</p>
+                        <p class="popup__benefits-descr">Фитнес-центр</p>
                       </div>
                       <div class="popup__benefits-item">
                             <svg class="icon icon-benefits-icon popup__benefits-icon">
                               <use xlink:href="images/dest/sprite.svg#benefits-icon"></use>
                             </svg>
-                        <p class="popup__benefits-descr">Беговые и велосипедные дорожки</p>
+                        <p class="popup__benefits-descr">Пейзажные бассейны</p>
                       </div>
                       <div class="popup__benefits-item">
                             <svg class="icon icon-benefits-icon popup__benefits-icon">
                               <use xlink:href="images/dest/sprite.svg#benefits-icon"></use>
                             </svg>
-                        <p class="popup__benefits-descr">уличные тренажерные станции</p>
+                        <p class="popup__benefits-descr">Игровая площадка</p>
                       </div>
                       <div class="popup__benefits-item">
                             <svg class="icon icon-benefits-icon popup__benefits-icon">
                               <use xlink:href="images/dest/sprite.svg#benefits-icon"></use>
                             </svg>
-                        <p class="popup__benefits-descr">Водные игровые площадки</p>
+                        <p class="popup__benefits-descr">Розничный магазин</p>
                       </div>
                       <div class="popup__benefits-item">
                             <svg class="icon icon-benefits-icon popup__benefits-icon">
                               <use xlink:href="images/dest/sprite.svg#benefits-icon"></use>
                             </svg>
-                        <p class="popup__benefits-descr">Пышные зеленые парки</p>
+                        <p class="popup__benefits-descr">С мебелью</p>
                       </div>
                     </div>
                     <div class="popup__map">
-                      <script type="text/javascript" charset="utf-8" async="" src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A496aa5b6f2652561db13a0c6beb09bb524a002d96e2623eb238e088aef94b052&amp;width=100%25&amp;height=240&amp;lang=ru_RU&amp;scroll=true"></script>
+                      <script id="ymap_lazy" type="text/javascript" charset="utf-8" async="" data-src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A4c396d03a24383f57f0c5afac49639d28d4ce260c867f432502f50e4d64bcf1f&amp;amp;width=100%25&amp;amp;height=240&amp;amp;lang=ru_RU&amp;amp;scroll=true"></script>
                     </div>
                   </div>
                   <div class="popup__promo">
                     <div class="popup__promo-slider">
-                      <picture class="popup__promo-slide">
-                        <picture class="popup__promo-slide"><img src="images/dest/popup-promo-slide.webp" alt="-слайд-1"></picture>
-                        <picture class="popup__promo-slide"><img src="images/dest/banner-slide-3.webp" alt="-слайд-2"></picture>
-                      </picture>
+                      <picture class="popup__promo-slide"><img src="images/dest/project-popup/elegance-tower/slide-1.webp" alt="Elegance Tower слайд-1"></picture>
+                      <picture class="popup__promo-slide"><img src="images/dest/project-popup/elegance-tower/slide-2.webp" alt="Elegance Tower слайд-2"></picture>
+                      <picture class="popup__promo-slide"><img src="images/dest/project-popup/elegance-tower/slide-3.webp" alt="Elegance Tower слайд-3"></picture>
+                      <picture class="popup__promo-slide"><img src="images/dest/project-popup/elegance-tower/slide-4.webp" alt="Elegance Tower слайд-4"></picture>
+                      <picture class="popup__promo-slide"><img src="images/dest/project-popup/elegance-tower/slide-5.webp" alt="Elegance Tower слайд-5"></picture>
+                      <picture class="popup__promo-slide"><img src="images/dest/project-popup/elegance-tower/slide-6.webp" alt="Elegance Tower слайд-6"></picture>
+                      <picture class="popup__promo-slide"><img src="images/dest/project-popup/elegance-tower/slide-7.webp" alt="Elegance Tower слайд-7"></picture>
+                      <picture class="popup__promo-slide"><img src="images/dest/project-popup/elegance-tower/slide-8.webp" alt="Elegance Tower слайд-8"></picture>
                     </div>
                     <p class="popup__promo-title">УСПЕЙТЕ КУПИТЬ</p>
-                    <p class="popup__promo-timer" id="timer"></p><a class="popup__promo-btn" href="#form">бесплатная консультация</a>
+                    <div class="popup__promo-timer" id="timer">10:00:00</div><a class="popup__promo-btn" href="#form">бесплатная консультация</a>
                   </div>
                   <div class="popup__nav">
                         <svg class="icon icon-project-popup-close popup__nav-close">
@@ -651,21 +699,21 @@
               </div>
             </div>
             <div class="projects__item project">
-              <picture class="project__img"><img src="images/dest/project-2.webp" alt="La Violeta 2"></picture>
+              <picture class="project__img"><img src="images/dest/project-sobhaseahaven.webp" alt="Sobha SeaHaven"></picture>
               <div class="project__promo">
-                <p class="project__promo-descr" data-type="townhouse">таунхаус</p>
-                <p class="project__promo-price">от 1 700 000 AED</p>
+                <p class="project__promo-descr" data-type="appart">апартаменты</p>
+                <p class="project__promo-price">64 872 000 ₽</p>
               </div>
               <div class="project__content">
-                <p class="project__title">La Violeta 2</p>
-                <p class="project__subtitle">Dubailand</p>
-                <p class="project__descr">La Violeta 2 – кластер жилых резиденций в одном из самых зеленых оазисов Дубая</p>
+                <p class="project__title">Sobha SeaHaven</p>
+                <p class="project__subtitle">Дубай Марина</p>
+                <p class="project__descr">Sobha SeaHaven — один из последних проектов в Дубае от Sobha Realty, застройщика премиум-класса, известного своими роскошными застройками, такими как Crest Grande, The Waves, Hartland Greens и One Park Avenue.</p>
                 <div class="project__benefits">
                   <div class="project__benefits-item project__benefits-bath"><img src="images/dest/bathroom.webp" alt="Bathrooms">
-                    <p>4</p>
+                    <p>3</p>
                   </div>
                   <div class="project__benefits-item project__benefits-bad"><img src="images/dest/bedroom.webp" alt="Bedrooms">
-                    <p>4</p>
+                    <p>3</p>
                   </div>
                 </div>
                 <button class="project__btn" type="button">Смотреть</button>
@@ -674,58 +722,431 @@
                 <div class="project-popup__bg"></div>
                 <div class="popup">
                   <div class="popup__content">
-                    <h2 class="popup__title">La Violeta 2</h2>
-                    <p class="popup__descr">La Violeta 2 – кластер жилых резиденций в одном из самых зеленых оазисов Дубая, поселке Villanova, который находится к юго-востоку от Dubailand. Сеть комьюнити, входящих в состав района Villanova, отличает единый средиземноморский стиль как в архитектуре, так и в ландшафтном дизайне. Виллы, таунхаусы и апартаменты в поселке Villanova относятся к сегменту доступного жилья. Виллы в La Violeta 2 представляют собой завершающий аккорд симфонии жилых комплексов La Violeta at Villanova.</p>
+                    <h2 class="popup__title">Sobha SeaHaven</h2><a class="popup__pdf" href="pdf/SeaHaven Opp Doc.pdf">Download PDF</a>
+                    <p class="popup__descr">Комплекс, который будет построен в ультрасовременном стиле с акцентом на морские линии с вниманием к каждой детали, будет состоять из трех башен с видом на Дубай Марину и Персидский залив. Динамичная архитектура заставит вас влюбиться в развитие с того момента, как вы взглянете на комплекс, так как дизайн Sobha Marina будет вдохновлен роскошными яхтами, ветром и морем.</p>
+                    <p class="popup__descr">Среди объектов, выставленных на продажу в 67-этажной башне 1, есть квартиры с 1-3 спальнями. Кухни будут полностью оборудованы и будут оснащены фурнитурой Miele, а также столешницами из мрамора и твердой поверхности. Жителям Sobha Marina также предложат систему «умный дом» и современную бытовую технику.</p>
+                    <p class="popup__descr">Жителям будут предоставлены бесконечные удобства мирового класса, включая пейзажный бассейн, спортивные сооружения, включая зону для йоги, аэробики, скейт-парк, а также оздоровительный клуб, сауну и парные. Услуги парковщика и консьержа, а также зона для домашних животных также станут приятным дополнением к отдыху.2</p>
                     <div class="popup__benefits">
                       <div class="popup__benefits-item">
                             <svg class="icon icon-benefits-icon popup__benefits-icon">
                               <use xlink:href="images/dest/sprite.svg#benefits-icon"></use>
                             </svg>
-                        <p class="popup__benefits-descr">престижный район</p>
+                        <p class="popup__benefits-descr">Круглосуточная охрана</p>
                       </div>
                       <div class="popup__benefits-item">
                             <svg class="icon icon-benefits-icon popup__benefits-icon">
                               <use xlink:href="images/dest/sprite.svg#benefits-icon"></use>
                             </svg>
-                        <p class="popup__benefits-descr">близко к школе и садику</p>
+                        <p class="popup__benefits-descr">Парки</p>
                       </div>
                       <div class="popup__benefits-item">
                             <svg class="icon icon-benefits-icon popup__benefits-icon">
                               <use xlink:href="images/dest/sprite.svg#benefits-icon"></use>
                             </svg>
-                        <p class="popup__benefits-descr">близко к пляжу</p>
+                        <p class="popup__benefits-descr">Бесконечный бассейн</p>
                       </div>
                       <div class="popup__benefits-item">
                             <svg class="icon icon-benefits-icon popup__benefits-icon">
                               <use xlink:href="images/dest/sprite.svg#benefits-icon"></use>
                             </svg>
-                        <p class="popup__benefits-descr">фитнес зал</p>
+                        <p class="popup__benefits-descr">Фитнес-центр</p>
                       </div>
                       <div class="popup__benefits-item">
                             <svg class="icon icon-benefits-icon popup__benefits-icon">
                               <use xlink:href="images/dest/sprite.svg#benefits-icon"></use>
                             </svg>
-                        <p class="popup__benefits-descr">спа центр</p>
+                        <p class="popup__benefits-descr">Розничные магазины</p>
                       </div>
                       <div class="popup__benefits-item">
                             <svg class="icon icon-benefits-icon popup__benefits-icon">
                               <use xlink:href="images/dest/sprite.svg#benefits-icon"></use>
                             </svg>
-                        <p class="popup__benefits-descr">парки и развитая инфраструктура</p>
+                        <p class="popup__benefits-descr">Игровая площадка</p>
                       </div>
                     </div>
                     <div class="popup__map">
-                      <script type="text/javascript" charset="utf-8" async="" src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A496aa5b6f2652561db13a0c6beb09bb524a002d96e2623eb238e088aef94b052&amp;width=100%25&amp;height=240&amp;lang=ru_RU&amp;scroll=true"></script>
+                      <script id="ymap_lazy" type="text/javascript" charset="utf-8" async="" data-src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A4c396d03a24383f57f0c5afac49639d28d4ce260c867f432502f50e4d64bcf1f&amp;amp;width=100%25&amp;amp;height=240&amp;amp;lang=ru_RU&amp;amp;scroll=true"></script>
                     </div>
                   </div>
                   <div class="popup__promo">
                     <div class="popup__promo-slider">
-                      <picture class="popup__promo-slide"><img src="images/dest/project-popup/la-violeta/slide-10.webp" alt="La Violeta 2 слайд-10"></picture>
-                      <picture class="popup__promo-slide"><img src="images/dest/project-popup/la-violeta/slide-11.webp" alt="La Violeta 2 слайд-11"></picture>
-                      <picture class="popup__promo-slide"><img src="images/dest/project-popup/la-violeta/slide-12.webp" alt="La Violeta 2 слайд-12"></picture>
-                      <picture class="popup__promo-slide"><img src="images/dest/project-popup/la-violeta/slide-13.webp" alt="La Violeta 2 слайд-13"></picture>
-                      <picture class="popup__promo-slide"><img src="images/dest/project-popup/la-violeta/slide-14.webp" alt="La Violeta 2 слайд-14"></picture>
-                      <picture class="popup__promo-slide"><img src="images/dest/project-popup/la-violeta/slide-15.webp" alt="La Violeta 2 слайд-15"></picture>
+                      <picture class="popup__promo-slide"><img src="images/dest/project-popup/sobha-seaheaven/slide-1.webp" alt="Sobha SeaHeaven слайд-1"></picture>
+                      <picture class="popup__promo-slide"><img src="images/dest/project-popup/sobha-seaheaven/slide-2.webp" alt="Sobha SeaHeaven слайд-2"></picture>
+                      <picture class="popup__promo-slide"><img src="images/dest/project-popup/sobha-seaheaven/slide-3.webp" alt="Sobha SeaHeaven слайд-3"></picture>
+                    </div>
+                    <p class="popup__promo-title">УСПЕЙТЕ КУПИТЬ</p>
+                    <div class="popup__promo-timer" id="timer">10:00:00</div><a class="popup__promo-btn" href="#form">бесплатная консультация</a>
+                  </div>
+                  <div class="popup__nav">
+                        <svg class="icon icon-project-popup-close popup__nav-close">
+                          <use xlink:href="images/dest/sprite.svg#project-popup-close"></use>
+                        </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="projects__item project">
+              <picture class="project__img"><img src="images/dest/project-сhictower.webp" alt="Chic Tower"></picture>
+              <div class="project__promo">
+                <p class="project__promo-descr" data-type="appart">апартаменты</p>
+                <p class="project__promo-price">от 16 789 200 ₽</p>
+              </div>
+              <div class="project__content">
+                <p class="project__title">Chic Tower</p>
+                <p class="project__subtitle">Фирменные резиденции в Business Bay</p>
+                <p class="project__descr">DAMAC Chic Tower предлагает эксклюзивные студии и апартаменты с 1-2 спальнями на продажу в Business Bay с целостным стилем жизни, который объединяет восстановительные ванны, косметические процедуры, современные тренажерные залы, жилую роскошь и уникальную интерпретацию ювелиром de GRISOGONO одного из самых любимые драгоценные камни</p>
+                <div class="project__benefits">
+                  <div class="project__benefits-item project__benefits-bath"><img src="images/dest/bathroom.webp" alt="Bathrooms">
+                    <p>2</p>
+                  </div>
+                  <div class="project__benefits-item project__benefits-bad"><img src="images/dest/bedroom.webp" alt="Bedrooms">
+                    <p>2</p>
+                  </div>
+                </div>
+                <button class="project__btn" type="button">Смотреть</button>
+              </div>
+              <div class="project-popup">
+                <div class="project-popup__bg"></div>
+                <div class="popup">
+                  <div class="popup__content">
+                    <h2 class="popup__title">Chic Tower</h2><a class="popup__pdf" href="pdf/03.10.22 CHIC TOWER DB-compressed.pdf">Download PDF</a>
+                    <p class="popup__descr">DAMAC Chic Tower предлагает целостный образ жизни, который объединяет восстановительные ванны, косметические процедуры, современные тренажерные залы, жилую роскошь и уникальную интерпретацию одного из самых любимых драгоценных камней в мире от мастера-ювелира de GRISOGONO. Элитный комплекс предлагает студии и апартаменты. с 1 и 2 спальнями, а также супер роскошные апартаменты с 3 и 4 спальнями.Супер роскошные резиденции могут похвастаться террасами, полными цветов и растений, пейзажным бассейном и личным тренажерным залом.</p>
+                    <p class="popup__descr">Основными особенностями DAMAC Chic Tower являются 7 восстанавливающих ванн, которые были разработаны для удаления токсинов из организма и придания коже сияния. На уровне подиума здания есть главный спа-центр, который переходит в открытый тренажерный зал, предназначенный для укрепления всех групп мышц с помощью оборудования и тренировок, ориентированных на гимнастику».</p>
+                    <div class="popup__benefits">
+                      <div class="popup__benefits-item">
+                            <svg class="icon icon-benefits-icon popup__benefits-icon">
+                              <use xlink:href="images/dest/sprite.svg#benefits-icon"></use>
+                            </svg>
+                        <p class="popup__benefits-descr">Пейзажные бассейны</p>
+                      </div>
+                      <div class="popup__benefits-item">
+                            <svg class="icon icon-benefits-icon popup__benefits-icon">
+                              <use xlink:href="images/dest/sprite.svg#benefits-icon"></use>
+                            </svg>
+                        <p class="popup__benefits-descr">Игровая площадка</p>
+                      </div>
+                      <div class="popup__benefits-item">
+                            <svg class="icon icon-benefits-icon popup__benefits-icon">
+                              <use xlink:href="images/dest/sprite.svg#benefits-icon"></use>
+                            </svg>
+                        <p class="popup__benefits-descr">Розничный магазин</p>
+                      </div>
+                      <div class="popup__benefits-item">
+                            <svg class="icon icon-benefits-icon popup__benefits-icon">
+                              <use xlink:href="images/dest/sprite.svg#benefits-icon"></use>
+                            </svg>
+                        <p class="popup__benefits-descr">Круглосуточная охрана</p>
+                      </div>
+                      <div class="popup__benefits-item">
+                            <svg class="icon icon-benefits-icon popup__benefits-icon">
+                              <use xlink:href="images/dest/sprite.svg#benefits-icon"></use>
+                            </svg>
+                        <p class="popup__benefits-descr">С мебелью</p>
+                      </div>
+                      <div class="popup__benefits-item">
+                            <svg class="icon icon-benefits-icon popup__benefits-icon">
+                              <use xlink:href="images/dest/sprite.svg#benefits-icon"></use>
+                            </svg>
+                        <p class="popup__benefits-descr">Фитнес-центр</p>
+                      </div>
+                    </div>
+                    <div class="popup__map">
+                      <script id="ymap_lazy" type="text/javascript" charset="utf-8" async="" data-src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A4c396d03a24383f57f0c5afac49639d28d4ce260c867f432502f50e4d64bcf1f&amp;amp;width=100%25&amp;amp;height=240&amp;amp;lang=ru_RU&amp;amp;scroll=true"></script>
+                    </div>
+                  </div>
+                  <div class="popup__promo">
+                    <div class="popup__promo-slider">
+                      <picture class="popup__promo-slide"><img src="images/dest/project-popup/chic-tower/slide-1.webp" alt="Chic Tower слайд-1"></picture>
+                      <picture class="popup__promo-slide"><img src="images/dest/project-popup/chic-tower/slide-2.webp" alt="Chic Tower слайд-2"></picture>
+                      <picture class="popup__promo-slide"><img src="images/dest/project-popup/chic-tower/slide-3.webp" alt="Chic Tower слайд-3"></picture>
+                      <picture class="popup__promo-slide"><img src="images/dest/project-popup/chic-tower/slide-4.webp" alt="Chic Tower слайд-4"></picture>
+                      <picture class="popup__promo-slide"><img src="images/dest/project-popup/chic-tower/slide-5.webp" alt="Chic Tower слайд-5"></picture>
+                      <picture class="popup__promo-slide"><img src="images/dest/project-popup/chic-tower/slide-6.webp" alt="Chic Tower слайд-6"></picture>
+                      <picture class="popup__promo-slide"><img src="images/dest/project-popup/chic-tower/slide-7.webp" alt="Chic Tower слайд-7"></picture>
+                      <picture class="popup__promo-slide"><img src="images/dest/project-popup/chic-tower/slide-8.webp" alt="Chic Tower слайд-8"></picture>
+                      <picture class="popup__promo-slide"><img src="images/dest/project-popup/chic-tower/slide-9.webp" alt="Chic Tower слайд-9"></picture>
+                      <picture class="popup__promo-slide"><img src="images/dest/project-popup/chic-tower/slide-10.webp" alt="Chic Tower слайд-10"></picture>
+                    </div>
+                    <p class="popup__promo-title">УСПЕЙТЕ КУПИТЬ</p>
+                    <div class="popup__promo-timer" id="timer">10:00:00</div><a class="popup__promo-btn" href="#form">бесплатная консультация</a>
+                  </div>
+                  <div class="popup__nav">
+                        <svg class="icon icon-project-popup-close popup__nav-close">
+                          <use xlink:href="images/dest/sprite.svg#project-popup-close"></use>
+                        </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="projects__item project">
+              <picture class="project__img"><img src="images/dest/project-thecove.webp" alt="The Cove"></picture>
+              <div class="project__promo">
+                <p class="project__promo-descr" data-type="appart">апартаменты</p>
+                <p class="project__promo-price">от 26 520 000 ₽</p>
+              </div>
+              <div class="project__content">
+                <p class="project__title">The Cove</p>
+                <p class="project__subtitle">Дубай Крик Харбор</p>
+                <p class="project__descr">The Cove — это роскошный комплекс апартаментов на набережной от Emaar Properties, который строится в новом прибрежном районе Дубая Дубай-Крик-Харбор. Проект расположен в южной части острова Крик на набережной канала, в 200 м от воды.</p>
+                <div class="project__benefits">
+                  <div class="project__benefits-item project__benefits-bath"><img src="images/dest/bathroom.webp" alt="Bathrooms">
+                    <p>2</p>
+                  </div>
+                  <div class="project__benefits-item project__benefits-bad"><img src="images/dest/bedroom.webp" alt="Bedrooms">
+                    <p>3</p>
+                  </div>
+                </div>
+                <button class="project__btn" type="button">Смотреть</button>
+              </div>
+              <div class="project-popup">
+                <div class="project-popup__bg"></div>
+                <div class="popup">
+                  <div class="popup__content">
+                    <h2 class="popup__title">The Cove</h2><a class="popup__pdf" href="pdf/THE_COVE_DCH_BROCHURE.pdf">Download PDF</a>
+                    <p class="popup__descr">The Cove Apartments by Emaar Properties — это выдающийся жилой комплекс на набережной, расположенный в гавани Дубай-Крик. Комплекс предлагает апартаменты с 1, 2 и 3 спальнями, из которых открывается исключительный вид на Бурдж-Халифа, пляж Крик, остров Крик и мост, пересекающий Бизнес-Бэй.</p>
+                    <p class="popup__descr">Все жилые блоки спроектированы с использованием натуральных материалов и современных идей и оснащены большими окнами от пола до потолка, которые наполнят жилое пространство светом.</p>
+                    <p class="popup__descr">Учитывая самые высокие стандарты проектов Emaar, апартаменты The Cove были спроектированы и продуманы до мельчайших деталей, чтобы обеспечить своим жильцам комфортные условия проживания и позволить каждому чувствовать себя в безопасности и расслабленно, как дома. Жильцы могли пользоваться различными первоклассными удобствами внутри и снаружи комплекса.</p>
+                    <p class="popup__descr">Все жители получат доступ к большому выбору мест отдыха и развлечений, магазинов и ресторанов, различных открытых детских игровых площадок и мероприятий.</p>
+                    <div class="popup__benefits">
+                      <div class="popup__benefits-item">
+                            <svg class="icon icon-benefits-icon popup__benefits-icon">
+                              <use xlink:href="images/dest/sprite.svg#benefits-icon"></use>
+                            </svg>
+                        <p class="popup__benefits-descr">Яхт-клуб</p>
+                      </div>
+                      <div class="popup__benefits-item">
+                            <svg class="icon icon-benefits-icon popup__benefits-icon">
+                              <use xlink:href="images/dest/sprite.svg#benefits-icon"></use>
+                            </svg>
+                        <p class="popup__benefits-descr">Смотровая площадка</p>
+                      </div>
+                      <div class="popup__benefits-item">
+                            <svg class="icon icon-benefits-icon popup__benefits-icon">
+                              <use xlink:href="images/dest/sprite.svg#benefits-icon"></use>
+                            </svg>
+                        <p class="popup__benefits-descr">Художественная инсталляция</p>
+                      </div>
+                      <div class="popup__benefits-item">
+                            <svg class="icon icon-benefits-icon popup__benefits-icon">
+                              <use xlink:href="images/dest/sprite.svg#benefits-icon"></use>
+                            </svg>
+                        <p class="popup__benefits-descr">Всплеск</p>
+                      </div>
+                      <div class="popup__benefits-item">
+                            <svg class="icon icon-benefits-icon popup__benefits-icon">
+                              <use xlink:href="images/dest/sprite.svg#benefits-icon"></use>
+                            </svg>
+                        <p class="popup__benefits-descr">Амфитеатр</p>
+                      </div>
+                      <div class="popup__benefits-item">
+                            <svg class="icon icon-benefits-icon popup__benefits-icon">
+                              <use xlink:href="images/dest/sprite.svg#benefits-icon"></use>
+                            </svg>
+                        <p class="popup__benefits-descr">Скейт-парк</p>
+                      </div>
+                      <div class="popup__benefits-item">
+                            <svg class="icon icon-benefits-icon popup__benefits-icon">
+                              <use xlink:href="images/dest/sprite.svg#benefits-icon"></use>
+                            </svg>
+                        <p class="popup__benefits-descr">Игровая площадка</p>
+                      </div>
+                      <div class="popup__benefits-item">
+                            <svg class="icon icon-benefits-icon popup__benefits-icon">
+                              <use xlink:href="images/dest/sprite.svg#benefits-icon"></use>
+                            </svg>
+                        <p class="popup__benefits-descr">ФудТраки</p>
+                      </div>
+                    </div>
+                    <div class="popup__map">
+                      <script id="ymap_lazy" type="text/javascript" charset="utf-8" async="" data-src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A4c396d03a24383f57f0c5afac49639d28d4ce260c867f432502f50e4d64bcf1f&amp;amp;width=100%25&amp;amp;height=240&amp;amp;lang=ru_RU&amp;amp;scroll=true"></script>
+                    </div>
+                  </div>
+                  <div class="popup__promo">
+                    <div class="popup__promo-slider">
+                      <picture class="popup__promo-slide"><img src="images/dest/project-popup/the-cove/slide-1.webp" alt="The Cove слайд-1"></picture>
+                      <picture class="popup__promo-slide"><img src="images/dest/project-popup/the-cove/slide-2.webp" alt="The Cove слайд-2"></picture>
+                      <picture class="popup__promo-slide"><img src="images/dest/project-popup/the-cove/slide-3.webp" alt="The Cove слайд-3"></picture>
+                      <picture class="popup__promo-slide"><img src="images/dest/project-popup/the-cove/slide-4.webp" alt="The Cove слайд-4"></picture>
+                      <picture class="popup__promo-slide"><img src="images/dest/project-popup/the-cove/slide-5.webp" alt="The Cove слайд-5"></picture>
+                      <picture class="popup__promo-slide"><img src="images/dest/project-popup/the-cove/slide-6.webp" alt="The Cove слайд-6"></picture>
+                      <picture class="popup__promo-slide"><img src="images/dest/project-popup/the-cove/slide-7.webp" alt="The Cove слайд-7"></picture>
+                      <picture class="popup__promo-slide"><img src="images/dest/project-popup/the-cove/slide-8.webp" alt="The Cove слайд-8"></picture>
+                    </div>
+                    <p class="popup__promo-title">УСПЕЙТЕ КУПИТЬ</p>
+                    <div class="popup__promo-timer" id="timer">10:00:00</div><a class="popup__promo-btn" href="#form">бесплатная консультация</a>
+                  </div>
+                  <div class="popup__nav">
+                        <svg class="icon icon-project-popup-close popup__nav-close">
+                          <use xlink:href="images/dest/sprite.svg#project-popup-close"></use>
+                        </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="projects__item project">
+              <picture class="project__img"><img src="images/dest/project-orladorchester.webp" alt="Orla Dorchester"></picture>
+              <div class="project__promo">
+                <p class="project__promo-descr" data-type="appart">апартаменты</p>
+                <p class="project__promo-price">от 448 800 000 ₽</p>
+              </div>
+              <div class="project__content">
+                <p class="project__title">Orla Dorchester</p>
+                <p class="project__subtitle">Пальма Джумейра</p>
+                <p class="project__descr">Orla — это 13-этажное здание, состоящее из 93 квартир различной планировки, которое будет расположено в одном из самых привлекательных мест Дубая — на Пальме Джумейра. Владельцы могут выбирать из 2-комнатных квартир и 3-4-комнатных одноуровневых и двухуровневых квартир на продажу.</p>
+                <div class="project__benefits">
+                  <div class="project__benefits-item project__benefits-bath"><img src="images/dest/bathroom.webp" alt="Bathrooms">
+                    <p>3</p>
+                  </div>
+                  <div class="project__benefits-item project__benefits-bad"><img src="images/dest/bedroom.webp" alt="Bedrooms">
+                    <p>3</p>
+                  </div>
+                </div>
+                <button class="project__btn" type="button">Смотреть</button>
+              </div>
+              <div class="project-popup">
+                <div class="project-popup__bg"></div>
+                <div class="popup">
+                  <div class="popup__content">
+                    <h2 class="popup__title">Orla Dorchester</h2><a class="popup__pdf" href="pdf/Orla_Dorchester_Collection.pdf">Download PDF</a>
+                    <p class="popup__descr">Orla — это новый жилой проект Omniyat, который будет расположен в одном из самых привлекательных мест Дубая — на Пальме Джумейра. Комплекс является идеальным вариантом для тех, кто хочет вести ультра-роскошный образ жизни на берегу моря с прямым доступом к бесконечным удобствам. Будущие владельцы могут выбирать из 2-комнатных квартир и 3-4-комнатных одноуровневых и двухуровневых квартир на продажу. Небесные дворцы и особняки площадью от 17 000 кв. футов оценят те, кто ищет максимальный комфорт. Проект разработан Foster & Partners. Уникальные интерьеры будут оформлены с использованием сочетания мягкого коричневого дерева и розового золота, а функции «умного дома» облегчат жизнь жильцам, проживающим в здании. Потолки двойной высоты сделают вашу резиденцию еще более просторной, а кухни будут полностью оборудованы. Среди удобств, которые будут доступны для жителей Орлы, — открытый пейзажный бассейн, 150-метровый белый песчаный пляж, детская игровая площадка, спа-салон, сигарная комната, кружковая студия, парковка на 330 автомобилей и многое другое.</p>
+                    <div class="popup__benefits">
+                      <div class="popup__benefits-item">
+                            <svg class="icon icon-benefits-icon popup__benefits-icon">
+                              <use xlink:href="images/dest/sprite.svg#benefits-icon"></use>
+                            </svg>
+                        <p class="popup__benefits-descr">Панорамные виды</p>
+                      </div>
+                      <div class="popup__benefits-item">
+                            <svg class="icon icon-benefits-icon popup__benefits-icon">
+                              <use xlink:href="images/dest/sprite.svg#benefits-icon"></use>
+                            </svg>
+                        <p class="popup__benefits-descr">собственный бассейн</p>
+                      </div>
+                      <div class="popup__benefits-item">
+                            <svg class="icon icon-benefits-icon popup__benefits-icon">
+                              <use xlink:href="images/dest/sprite.svg#benefits-icon"></use>
+                            </svg>
+                        <p class="popup__benefits-descr">Яхт-клуб</p>
+                      </div>
+                      <div class="popup__benefits-item">
+                            <svg class="icon icon-benefits-icon popup__benefits-icon">
+                              <use xlink:href="images/dest/sprite.svg#benefits-icon"></use>
+                            </svg>
+                        <p class="popup__benefits-descr">Песочный пляж</p>
+                      </div>
+                      <div class="popup__benefits-item">
+                            <svg class="icon icon-benefits-icon popup__benefits-icon">
+                              <use xlink:href="images/dest/sprite.svg#benefits-icon"></use>
+                            </svg>
+                        <p class="popup__benefits-descr">Игровая площадка</p>
+                      </div>
+                      <div class="popup__benefits-item">
+                            <svg class="icon icon-benefits-icon popup__benefits-icon">
+                              <use xlink:href="images/dest/sprite.svg#benefits-icon"></use>
+                            </svg>
+                        <p class="popup__benefits-descr">Розничные магазины</p>
+                      </div>
+                    </div>
+                    <div class="popup__map">
+                      <script id="ymap_lazy" type="text/javascript" charset="utf-8" async="" data-src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A4c396d03a24383f57f0c5afac49639d28d4ce260c867f432502f50e4d64bcf1f&amp;amp;width=100%25&amp;amp;height=240&amp;amp;lang=ru_RU&amp;amp;scroll=true"></script>
+                    </div>
+                  </div>
+                  <div class="popup__promo">
+                    <div class="popup__promo-slider">
+                      <picture class="popup__promo-slide"><img src="images/dest/project-popup/orla-dorchester/slide-1.webp" alt="Orla Dorchester слайд-1"></picture>
+                      <picture class="popup__promo-slide"><img src="images/dest/project-popup/orla-dorchester/slide-2.webp" alt="Orla Dorchester слайд-2"></picture>
+                      <picture class="popup__promo-slide"><img src="images/dest/project-popup/orla-dorchester/slide-3.webp" alt="Orla Dorchester слайд-3"></picture>
+                      <picture class="popup__promo-slide"><img src="images/dest/project-popup/orla-dorchester/slide-4.webp" alt="Orla Dorchester слайд-4"></picture>
+                    </div>
+                    <p class="popup__promo-title">УСПЕЙТЕ КУПИТЬ</p>
+                    <div class="popup__promo-timer" id="timer">10:00:00</div><a class="popup__promo-btn" href="#form">бесплатная консультация</a>
+                  </div>
+                  <div class="popup__nav">
+                        <svg class="icon icon-project-popup-close popup__nav-close">
+                          <use xlink:href="images/dest/sprite.svg#project-popup-close"></use>
+                        </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="projects__item project">
+              <picture class="project__img"><img src="images/dest/project-safaone.webp" alt="Safa One"></picture>
+              <div class="project__promo">
+                <p class="project__promo-descr" data-type="appart">апартаменты</p>
+                <p class="project__promo-price">от 32 640 000 ₽</p>
+              </div>
+              <div class="project__content">
+                <p class="project__title">Safa One</p>
+                <p class="project__subtitle">Парк Сафа на фоне центра Бурдж-Халифа и Бизнес-Бэй</p>
+                <p class="project__descr">DAMAC Safa One — это тропический рай на вершине роскоши, откуда открывается захватывающий дух вид. Будь то изысканный дом с 1 спальней в башне B или ультра-роскошный люкс с 2 или 3 спальнями и личным бассейном-лягушатником, Safa One устанавливает новый высокий стандарт изысканности.</p>
+                <div class="project__benefits">
+                  <div class="project__benefits-item project__benefits-bath"><img src="images/dest/bathroom.webp" alt="Bathrooms">
+                    <p>2</p>
+                  </div>
+                  <div class="project__benefits-item project__benefits-bad"><img src="images/dest/bedroom.webp" alt="Bedrooms">
+                    <p>3</p>
+                  </div>
+                </div>
+                <button class="project__btn" type="button">Смотреть</button>
+              </div>
+              <div class="project-popup">
+                <div class="project-popup__bg"></div>
+                <div class="popup">
+                  <div class="popup__content">
+                    <h2 class="popup__title">DAMAC Safa One de GRISOGONO Коллекция Skylofts</h2><a class="popup__pdf" href="pdf/SAFA ONE - The Prestige Collection - brochure English.pdf">Download PDF</a>
+                    <p class="popup__descr">DAMAC Properties представляет коллекцию Skylofts в своем флагманском комплексе Safa One. При этом потенциальным покупателям недвижимости предоставляется возможность выбрать дом своей мечты из красиво оформленных дуплексов с 2-5 спальнями. Изысканные резиденции будут построены на этажах фирменного небоскреба с 40-го по 61-й, а домовладельцам будет предоставлен неограниченный доступ к тропическому саду и тропическому лесу на верхнем уровне, а также к искусственному пляжному бассейну на подиуме.</p>
+                    <p class="popup__descr">Safa One был запущен еще в первом квартале 2022 года в сотрудничестве со швейцарским ювелирным брендом de GRISOGONO. Среди ключевых особенностей застройки, которая должна появиться в 2026 году, — садовые террасы на каждом уровне, каскадные водопады, многочисленные сады, экзотические птицы и многое другое. Стоит отметить, что в соответствии с последним пересмотром визы в ОАЭ при покупке внеплановой недвижимости по цене не менее 2 миллионов дирхамов ОАЭ вы получаете право на 10-летнюю золотую визу. Эта схема проживания позволяет ее владельцам жить, работать и учиться в ОАЭ без местного спонсорства вместе со своими семьями и домашним персоналом</p>
+                    <div class="popup__benefits">
+                      <div class="popup__benefits-item">
+                            <svg class="icon icon-benefits-icon popup__benefits-icon">
+                              <use xlink:href="images/dest/sprite.svg#benefits-icon"></use>
+                            </svg>
+                        <p class="popup__benefits-descr">Пейзажные бассейны</p>
+                      </div>
+                      <div class="popup__benefits-item">
+                            <svg class="icon icon-benefits-icon popup__benefits-icon">
+                              <use xlink:href="images/dest/sprite.svg#benefits-icon"></use>
+                            </svg>
+                        <p class="popup__benefits-descr">Игровая площадка</p>
+                      </div>
+                      <div class="popup__benefits-item">
+                            <svg class="icon icon-benefits-icon popup__benefits-icon">
+                              <use xlink:href="images/dest/sprite.svg#benefits-icon"></use>
+                            </svg>
+                        <p class="popup__benefits-descr">Розничный магазин</p>
+                      </div>
+                      <div class="popup__benefits-item">
+                            <svg class="icon icon-benefits-icon popup__benefits-icon">
+                              <use xlink:href="images/dest/sprite.svg#benefits-icon"></use>
+                            </svg>
+                        <p class="popup__benefits-descr">Круглосуточная охрана</p>
+                      </div>
+                      <div class="popup__benefits-item">
+                            <svg class="icon icon-benefits-icon popup__benefits-icon">
+                              <use xlink:href="images/dest/sprite.svg#benefits-icon"></use>
+                            </svg>
+                        <p class="popup__benefits-descr">С мебелью</p>
+                      </div>
+                      <div class="popup__benefits-item">
+                            <svg class="icon icon-benefits-icon popup__benefits-icon">
+                              <use xlink:href="images/dest/sprite.svg#benefits-icon"></use>
+                            </svg>
+                        <p class="popup__benefits-descr">Фитнес-центр</p>
+                      </div>
+                    </div>
+                    <div class="popup__map">
+                      <script id="ymap_lazy" type="text/javascript" charset="utf-8" async="" data-src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A4c396d03a24383f57f0c5afac49639d28d4ce260c867f432502f50e4d64bcf1f&amp;amp;width=100%25&amp;amp;height=240&amp;amp;lang=ru_RU&amp;amp;scroll=true"></script>
+                    </div>
+                  </div>
+                  <div class="popup__promo">
+                    <div class="popup__promo-slider">
+                      <picture class="popup__promo-slide"><img src="images/dest/project-popup/safa-one/slide-1.webp" alt="Safa One слайд-1"></picture>
+                      <picture class="popup__promo-slide"><img src="images/dest/project-popup/safa-one/slide-2.webp" alt="Safa One слайд-2"></picture>
+                      <picture class="popup__promo-slide"><img src="images/dest/project-popup/safa-one/slide-3.webp" alt="Safa One слайд-3"></picture>
+                      <picture class="popup__promo-slide"><img src="images/dest/project-popup/safa-one/slide-4.webp" alt="Safa One слайд-4"></picture>
+                      <picture class="popup__promo-slide"><img src="images/dest/project-popup/safa-one/slide-5.webp" alt="Safa One слайд-5"></picture>
+                      <picture class="popup__promo-slide"><img src="images/dest/project-popup/safa-one/slide-6.webp" alt="Safa One слайд-6"></picture>
+                      <picture class="popup__promo-slide"><img src="images/dest/project-popup/safa-one/slide-7.webp" alt="Safa One слайд-7"></picture>
                     </div>
                     <p class="popup__promo-title">УСПЕЙТЕ КУПИТЬ</p>
                     <div class="popup__promo-timer" id="timer">10:00:00</div><a class="popup__promo-btn" href="#form">бесплатная консультация</a>
@@ -762,7 +1183,7 @@
         <div class="wrapper">
           <h2 class="form__title">заказать обратный звонок</h2>
           <div class="result" id="result"></div>
-          <form class="form__form" id="form" action="php/bitrix-main.php" method="post">
+          <form class="form__form" id="form" method="post" action="php/bitrix-main.php">
             <input class="form__input" type="text" id="name-form" name="name" placeholder="Имя">
             <input class="form__input iti__phone" type="tel" name="phone" id="phone-form" placeholder="(000) 000-00-00">
             <input class="form__input iti__hide hide" type="tel" name="hiden" id="hiden-form">
@@ -782,6 +1203,10 @@
               <option value="Six Senses">Six Senses</option>
               <option value="Sobha SeaHaven">Sobha SeaHaven</option>
             </select>
+            <input name="utm-source" type="hidden" value="">
+            <input name="utm-medium" type="hidden" value="">
+            <input name="utm-content" type="hidden" value="">
+            <input name="utm-term" type="hidden" value="">
             <p class="form__policy">Отправляя данные вы соглашаетесь с <a class="form__link" href="/policy">политикой конфиденциальности</a></p>
             <button class="form__submit" type="submit" disabled>Бесплатная консультация</button>
           </form>
@@ -878,7 +1303,7 @@
           </div>
           <div class="popup-promo__content">
             <p class="popup-promo__title">Получите доступ<br>к закрытой продаже</p>
-            <form class="popup-promo__form" action="php/bitrix-subscribe.php" method="post">
+            <form class="popup-promo__form" method="post" action="php/bitrix-subscribe.php">
               <input class="form__input popup-promo__input" type="text" id="name-popup" name="name" placeholder="Имя">
               <input class="form__input popup-promo__input iti__phone" type="tel" name="phone" id="phone-popup" placeholder="(000) 000-00-00">
               <input class="form__input popup-promo__input iti__hide hide" type="tel" name="hiden" id="hiden-popup">
@@ -898,12 +1323,16 @@
                 <option value="Six Senses">Six Senses</option>
                 <option value="Sobha SeaHaven">Sobha SeaHaven</option>
               </select>
+              <input name="utm-source" type="hidden" value="">
+              <input name="utm-medium" type="hidden" value="">
+              <input name="utm-content" type="hidden" value="">
+              <input name="utm-term" type="hidden" value="">
               <p class="form__policy popup-promo__policy">Отправляя данные вы соглашаетесь с <a class="form__link popup-promo__link" href="/policy">политикой конфиденциальности</a></p>
               <button class="form__submit popup-promo__submit" type="submit" disabled>Подписаться</button>
             </form>
           </div>
         </div>
-      </div>
+      </div><a class="whatsapp-button" target="_blank" href="https://api.whatsapp.com/send?phone=971585835333&amp;text="><img src="images/dest/whatsapp-button.png" alt="whatsApp-button"></a>
       <script src="js/app.min.js"></script>
     </main>
   </body>

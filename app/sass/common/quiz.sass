@@ -29,7 +29,6 @@
     height: 19px
   &__title
     color: $bronze
-    margin: 0 auto
     text-align: left
   &__form
     display: -webkit-flex
@@ -238,6 +237,8 @@
       width: 80vw
 
   @include media-customMax(580px)
+    &__title
+      margin: 0 auto
     &__slider
       display: none
     &__content

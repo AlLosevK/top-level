@@ -1,0 +1,43 @@
+.project-popup
+  .project-popup__bg
+  .popup
+    .popup__content
+      h2.popup__title Orla Dorchester
+      a.popup__pdf(href="pdf/Orla_Dorchester_Collection.pdf") download the brochure
+      p.popup__descr Orla is a new residential project by Omniyat, which will be located on one of the most desirable locations in Dubai – Palm Jumeirah. The development is the perfect option for those wishing to experience an ultra-luxurious waterfront lifestyle with direct access to endless amenities. Future owners can choose from 2-bedroom apartments and 3-4 bedroom simplex & duplex units for sale. Sky palaces and mansions with floor plan areas from 17,000 sqft will be appreciated by those looking for maximum comfort. The project is designed by Foster & Partners. Unique interiors will be designed with a mix of soft brown wood and rose gold, and the smart home features will ease the lives of residents living in the building. The double height ceilings will make your residence look even more spacious, and kitchens will be fully-fitted. Among the amenities which will be available to those living in Orla, are an outdoor infinity pool, 150m white sandy beach, a children’s playground, a spa, a cigar room, a circling studio, parking for 330 cars and much more.
+      .popup__benefits
+        .popup__benefits-item
+          +icon("benefits-icon", "popup__benefits-icon")
+          p.popup__benefits-descr Panoramic Views
+        .popup__benefits-item
+          +icon("benefits-icon", "popup__benefits-icon")
+          p.popup__benefits-descr Private Pool
+        .popup__benefits-item
+          +icon("benefits-icon", "popup__benefits-icon")
+          p.popup__benefits-descr Yacht Club
+        .popup__benefits-item
+          +icon("benefits-icon", "popup__benefits-icon")
+          p.popup__benefits-descr Sandy Beach
+        .popup__benefits-item
+          +icon("benefits-icon", "popup__benefits-icon")
+          p.popup__benefits-descr Play Area
+        .popup__benefits-item
+          +icon("benefits-icon", "popup__benefits-icon")
+          p.popup__benefits-descr Retail Outlets
+      .popup__map
+        script#ymap_lazy(type='text/javascript' charset='utf-8' async='' data-src='https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A4c396d03a24383f57f0c5afac49639d28d4ce260c867f432502f50e4d64bcf1f&amp;width=100%25&amp;height=240&amp;lang=ru_RU&amp;scroll=true')
+    .popup__promo
+      .popup__promo-slider
+        picture.popup__promo-slide
+          img(src="images/dest/project-popup/orla-dorchester/slide-1.webp" alt="Orla Dorchester слайд-1")
+        picture.popup__promo-slide
+          img(src="images/dest/project-popup/orla-dorchester/slide-2.webp" alt="Orla Dorchester слайд-2")
+        picture.popup__promo-slide
+          img(src="images/dest/project-popup/orla-dorchester/slide-3.webp" alt="Orla Dorchester слайд-3")
+        picture.popup__promo-slide
+          img(src="images/dest/project-popup/orla-dorchester/slide-4.webp" alt="Orla Dorchester слайд-4")
+      p.popup__promo-title УСПЕЙТЕ КУПИТЬ
+      .popup__promo-timer#timer 10:00:00
+      a.popup__promo-btn(href="#form") Free consultation
+    .popup__nav
+      +icon("project-popup-close", "popup__nav-close")

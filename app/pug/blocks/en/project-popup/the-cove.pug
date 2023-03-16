@@ -1,0 +1,50 @@
+.project-popup
+  .project-popup__bg
+  .popup
+    .popup__content
+      h2.popup__title The Cove
+      a.popup__pdf(href="pdf/THE_COVE_DCH_BROCHURE.pdf") download the brochure
+      p.popup__descr The Cove Apartments by Emaar Properties is a prominent, waterfront, residential complex located within Dubai Creek Harbour. The complex offers 1, 2 and 3-bedroom apartments with exceptional views of Burj Khalifa, Creek Beach, Creek Island and Business Bay Crossing Bridge.
+      p.popup__descr All the residential units are designed with a mix of the natural materials and modern ideas and provided with large floor-to-ceiling windows, which will fill the living space with light.
+      p.popup__descr Considering the highest standards of Emaar’s projects, The Cove Apartments was designed and thought out to the smallest details to provide its residents with comfortable living conditions and let everyone feel safe and relaxed at home. Residents could use various top-class amenities inside and outside the complex.
+      p.popup__descr All the residents will get access to great choice of leisure and entertainment venues, shopping and dining outlets, various outdoor playgrounds for children and activities.
+      .popup__benefits
+        .popup__benefits-item
+          +icon("benefits-icon", "popup__benefits-icon")
+          p.popup__benefits-descr Yacht club
+        .popup__benefits-item
+          +icon("benefits-icon", "popup__benefits-icon")
+          p.popup__benefits-descr Viewing Deck
+        .popup__benefits-item
+          +icon("benefits-icon", "popup__benefits-icon")
+          p.popup__benefits-descr Art Installation
+        .popup__benefits-item
+          +icon("benefits-icon", "popup__benefits-icon")
+          p.popup__benefits-descr Splash Pad
+        .popup__benefits-item
+          +icon("benefits-icon", "popup__benefits-icon")
+          p.popup__benefits-descr Ampitheatre
+        .popup__benefits-item
+          +icon("benefits-icon", "popup__benefits-icon")
+          p.popup__benefits-descr Skate Park
+        .popup__benefits-item
+          +icon("benefits-icon", "popup__benefits-icon")
+          p.popup__benefits-descr Play Area
+        .popup__benefits-item
+          +icon("benefits-icon", "popup__benefits-icon")
+          p.popup__benefits-descr Food Trucks
+      .popup__map
+        script#ymap_lazy(type='text/javascript' charset='utf-8' async='' data-src='https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A4c396d03a24383f57f0c5afac49639d28d4ce260c867f432502f50e4d64bcf1f&amp;width=100%25&amp;height=240&amp;lang=ru_RU&amp;scroll=true')
+    .popup__promo
+      .popup__promo-slider
+        picture.popup__promo-slide
+          img(src="images/dest/project-popup/the-cove/slide-1.webp" alt="The Cove слайд-1")
+        picture.popup__promo-slide
+          img(src="images/dest/project-popup/the-cove/slide-2.webp" alt="The Cove слайд-2")
+        picture.popup__promo-slide
+          img(src="images/dest/project-popup/the-cove/slide-3.webp" alt="The Cove слайд-3")
+      p.popup__promo-title УСПЕЙТЕ КУПИТЬ
+      .popup__promo-timer#timer 10:00:00
+      a.popup__promo-btn(href="#form") Free consultation
+    .popup__nav
+      +icon("project-popup-close", "popup__nav-close")

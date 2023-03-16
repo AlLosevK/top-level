@@ -1,27 +1,44 @@
 
-  <script src="https://www.googletagmanager.com/gtag/js?id=G-EBX8MEHXB0" async></script>
-  <script>window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
+<script src="https://www.googletagmanager.com/gtag/js?id=G-EBX8MEHXB0" async>
+</script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-gtag('config', 'G-EBX8MEHXB0');
+  gtag('config', 'G-EBX8MEHXB0');
 
-  </script>
-  <script>  (function(m,e,t,r,i,k,a){m[i]=m[i]function(){(m[i].a=m[i].a[]).push(arguments)};
-m[i].l=1*new Date();
-for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-(window, document, "script", "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/tag.js", "ym");
+</script>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();
+   for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+   k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/tag.js", "ym");
 
-ym(92170622, "init", {
-    clickmap:true,
-    trackLinks:true,
-    accurateTrackBounce:true,
-    webvisor:true
-});
-
-  </script>
-  <noscript>
-    <div><img src="https://mc.yandex.ru/watch/92170622" style="position:absolute; left:-9999px;" alt=""></div>
-  </noscript>
-  
+   ym(92170622, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true,
+        webvisor:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/92170622" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+<!-- B242GA start -->
+<script>
+  (function(w,d,u){
+    var s=d.createElement('script');s.defer=false;s.async=false;s.id='b242ga-script';s.src=u+'?'+(Date.now()/60000|0);
+    var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);
+  })(window,document,'https://67p.b242ga.ru/static/js/b242ga.js');
+  var b242gaScript = document.querySelector('#b242ga-script');
+  b242gaScript.addEventListener('load', function() {
+    B242GAInit({
+      portal:'https://toplevel.bitrix24.com/',
+      pid:'0de1d4bf35920738288205c3ca7cf011',
+      presets:{}
+    });
+  });
+</script>
+<!-- B242GA end -->

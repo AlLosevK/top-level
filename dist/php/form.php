@@ -1,19 +1,39 @@
 <?php
-  $to = "al.losev.k@gmail.com";
+  $queryUrl = 'token';
 
-  $subject = 'Заявка с сайта'; //Заголовок сообщения
-  $message = '
-          <html>
-              <head>
-                  <title>'.$subject.'</title>
-              </head>
-              <body>
-                  <p>Имя: '.$_POST['name'].'</p>
-                  <p>Email: '.$_POST['email'].'</p>
-                  <p>Контактные данные: '.$_POST['phone'].'</p>
-              </body>
-          </html>'; //Текст сообщения
-  $headers  = "Content-type: text/html; charset=utf-8 \r\n"; //Кодировка письма
-  $headers .= "From: Отправитель <from@example.com>\r\n"; //Наименование и почта отправителя
-  mail($to, $subject, $message, $headers); //Отправка письма с помощью функции mail
+  $queryData = http_build_query(array(
+    'fields' => array(
+      'TITLE' => 'SiteForm',
+      'NAME' => $_POST["name"],
+      'EMAIL' => array(
+        array(
+          "VALUE" => $_POST["email"],
+          "VALUE_TYPE" => "WORK"
+        )
+      ),
+      'PHONE' => array(
+        array(
+          "VALUE" => $_POST["hiden"],
+          "VALUE_TYPE" => "WORK"
+        )
+      )
+    ),
+    'params' => array("REGISTER_SONET_EVENT" => "Y")
+  ));
+
+  $curl = curl_init();
+  curl_setopt_array($curl, array(
+    CURLOPT_SSL_VERIFYPEER => 0,
+    CURLOPT_SSL_VERIFYHOST => FALSE,
+    CURLOPT_POST => 1,
+    CURLOPT_HEADER => 0,
+    CURLOPT_RETURNTRANSFER => 1,
+    CURLOPT_URL => $queryUrl,
+    CURLOPT_POSTFIELDS => $queryData,
+  ));
+  $result = curl_exec($curl);
+  curl_close($curl);
+
+  header('location: ' . $_SERVER['HTTP_REFERER']); // либо явно указать путь к форме
+  exit();
 ?>

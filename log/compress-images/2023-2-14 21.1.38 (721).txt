@@ -1,0 +1,8 @@
+File from: [app/images/src/project-popup/bluewaters-bay/slide-10.jpeg]
+
+File to: [app/images/dest/project-popup/bluewaters-bay/slide-10.jpeg]
+
+Compression algorithm: [mozjpeg]
+
+Description: Error: Command failed: /Users/salamander/Documents/work/top-level/node_modules/mozjpeg/vendor/cjpeg -quality 75 -outfile app/images/dest/project-popup/bluewaters-bay/slide-10.jpeg app/images/src/project-popup/bluewaters-bay/slide-10.jpeg
+Unrecognized input file format --- perhaps you need -targa

@@ -1,0 +1,57 @@
+.project-popup
+  .project-popup__bg
+  .popup
+    .popup__content
+      h2.popup__title Chic Tower
+      a.popup__pdf(href="pdf/03.10.22 CHIC TOWER DB-compressed.pdf") download the brochure
+      p.popup__descr DAMAC Chic Tower offers a holistic lifestyle experience which brings together restorative baths, beauty treatments, state of the art gyms, residential luxury and master-jeweller de GRISOGONO's unique interpretation of one of the world’s most beloved gemstones. The elite development offers studios and apartments with 1 and 2 bedrooms as well as super luxury units with 3 and 4 bedrooms. Super luxurious residences boast terraces full of flowers and plants, infinity pool and personal gym.
+      p.popup__descr The main features of DAMAC Chic Tower are 7 revitalizing baths, which have been designed to extract toxins from the body and help skin glow. There is a main spa, which extends into an outdoor gym, designed to strengthen all muscle groups with calisthenic-focused equipment and training, on the building’s podium level.
+      .popup__benefits
+        .popup__benefits-item
+          +icon("benefits-icon", "popup__benefits-icon")
+          p.popup__benefits-descr Infinity pools
+        .popup__benefits-item
+          +icon("benefits-icon", "popup__benefits-icon")
+          p.popup__benefits-descr Play area
+        .popup__benefits-item
+          +icon("benefits-icon", "popup__benefits-icon")
+          p.popup__benefits-descr Retail store
+        .popup__benefits-item
+          +icon("benefits-icon", "popup__benefits-icon")
+          p.popup__benefits-descr 27/7 security
+        .popup__benefits-item
+          +icon("benefits-icon", "popup__benefits-icon")
+          p.popup__benefits-descr Furnished
+        .popup__benefits-item
+          +icon("benefits-icon", "popup__benefits-icon")
+          p.popup__benefits-descr Fitness Gym
+      .popup__map
+        script#ymap_lazy(type='text/javascript' charset='utf-8' async='' data-src='https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A4c396d03a24383f57f0c5afac49639d28d4ce260c867f432502f50e4d64bcf1f&amp;width=100%25&amp;height=240&amp;lang=ru_RU&amp;scroll=true')
+    .popup__promo
+      .popup__promo-slider
+        picture.popup__promo-slide
+          picture.popup__promo-slide
+            img(src="images/dest/project-popup/chic-tower/slide-1.webp" alt="Chic Tower слайд-1")
+          picture.popup__promo-slide
+            img(src="images/dest/project-popup/chic-tower/slide-2.webp" alt="Chic Tower слайд-2")
+          picture.popup__promo-slide
+            img(src="images/dest/project-popup/chic-tower/slide-3.webp" alt="Chic Tower слайд-3")
+          picture.popup__promo-slide
+            img(src="images/dest/project-popup/chic-tower/slide-4.webp" alt="Chic Tower слайд-4")
+          picture.popup__promo-slide
+            img(src="images/dest/project-popup/chic-tower/slide-5.webp" alt="Chic Tower слайд-5")
+          picture.popup__promo-slide
+            img(src="images/dest/project-popup/chic-tower/slide-6.webp" alt="Chic Tower слайд-6")
+          picture.popup__promo-slide
+            img(src="images/dest/project-popup/chic-tower/slide-7.webp" alt="Chic Tower слайд-7")
+          picture.popup__promo-slide
+            img(src="images/dest/project-popup/chic-tower/slide-8.webp" alt="Chic Tower слайд-8")
+          picture.popup__promo-slide
+            img(src="images/dest/project-popup/chic-tower/slide-9.webp" alt="Chic Tower слайд-9")
+          picture.popup__promo-slide
+            img(src="images/dest/project-popup/chic-tower/slide-10.webp" alt="Chic Tower слайд-10")
+      p.popup__promo-title УСПЕЙТЕ КУПИТЬ
+      .popup__promo-timer#timer 10:00:00
+      a.popup__promo-btn(href="#form") Free consultation
+    .popup__nav
+      +icon("project-popup-close", "popup__nav-close")

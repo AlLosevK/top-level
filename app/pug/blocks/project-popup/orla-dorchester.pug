@@ -1,0 +1,43 @@
+.project-popup
+  .project-popup__bg
+  .popup
+    .popup__content
+      h2.popup__title Orla Dorchester
+      a.popup__pdf(href="pdf/Orla_Dorchester_Collection.pdf") Download PDF
+      p.popup__descr Orla — это новый жилой проект Omniyat, который будет расположен в одном из самых привлекательных мест Дубая — на Пальме Джумейра. Комплекс является идеальным вариантом для тех, кто хочет вести ультра-роскошный образ жизни на берегу моря с прямым доступом к бесконечным удобствам. Будущие владельцы могут выбирать из 2-комнатных квартир и 3-4-комнатных одноуровневых и двухуровневых квартир на продажу. Небесные дворцы и особняки площадью от 17 000 кв. футов оценят те, кто ищет максимальный комфорт. Проект разработан Foster & Partners. Уникальные интерьеры будут оформлены с использованием сочетания мягкого коричневого дерева и розового золота, а функции «умного дома» облегчат жизнь жильцам, проживающим в здании. Потолки двойной высоты сделают вашу резиденцию еще более просторной, а кухни будут полностью оборудованы. Среди удобств, которые будут доступны для жителей Орлы, — открытый пейзажный бассейн, 150-метровый белый песчаный пляж, детская игровая площадка, спа-салон, сигарная комната, кружковая студия, парковка на 330 автомобилей и многое другое.
+      .popup__benefits
+        .popup__benefits-item
+          +icon("benefits-icon", "popup__benefits-icon")
+          p.popup__benefits-descr Панорамные виды
+        .popup__benefits-item
+          +icon("benefits-icon", "popup__benefits-icon")
+          p.popup__benefits-descr собственный бассейн
+        .popup__benefits-item
+          +icon("benefits-icon", "popup__benefits-icon")
+          p.popup__benefits-descr Яхт-клуб
+        .popup__benefits-item
+          +icon("benefits-icon", "popup__benefits-icon")
+          p.popup__benefits-descr Песочный пляж
+        .popup__benefits-item
+          +icon("benefits-icon", "popup__benefits-icon")
+          p.popup__benefits-descr Игровая площадка
+        .popup__benefits-item
+          +icon("benefits-icon", "popup__benefits-icon")
+          p.popup__benefits-descr Розничные магазины
+      .popup__map
+        script#ymap_lazy(type='text/javascript' charset='utf-8' async='' data-src='https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A4c396d03a24383f57f0c5afac49639d28d4ce260c867f432502f50e4d64bcf1f&amp;width=100%25&amp;height=240&amp;lang=ru_RU&amp;scroll=true')
+    .popup__promo
+      .popup__promo-slider
+        picture.popup__promo-slide
+          img(src="images/dest/project-popup/orla-dorchester/slide-1.webp" alt="Orla Dorchester слайд-1")
+        picture.popup__promo-slide
+          img(src="images/dest/project-popup/orla-dorchester/slide-2.webp" alt="Orla Dorchester слайд-2")
+        picture.popup__promo-slide
+          img(src="images/dest/project-popup/orla-dorchester/slide-3.webp" alt="Orla Dorchester слайд-3")
+        picture.popup__promo-slide
+          img(src="images/dest/project-popup/orla-dorchester/slide-4.webp" alt="Orla Dorchester слайд-4")
+      p.popup__promo-title УСПЕЙТЕ КУПИТЬ
+      .popup__promo-timer#timer 10:00:00
+      a.popup__promo-btn(href="#form") бесплатная консультация
+    .popup__nav
+      +icon("project-popup-close", "popup__nav-close")
