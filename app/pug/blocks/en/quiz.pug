@@ -51,18 +51,15 @@ section.quiz#quiz
           .quiz__a
             select.form__input(name="propName")
               option(value="default") Choose property
+              option(value="Palm Beach Tower") Palm Beach Tower
+              option(value="Burj Binghatti Jacob Co Residences") Burj Binghatti Jacob & Co Residences
               option(value="Cavalli Couture") Cavalli Couture
-              option(value="Burj Binghatti") Burj Binghatti
-              option(value="Zuha Island") Zuha Island
               option(value="Elegance Tower") Elegance Tower
-              option(value="Safa One") Safa One
+              option(value="Sobha SeaHaven") Sobha SeaHaven
               option(value="Chic Tower") Chic Tower
               option(value="The Cove") The Cove
-              option(value="Seascape") Seascape
               option(value="Orla Dorchester") Orla Dorchester
-              option(value="Bluewaters Bay") Bluewaters Bay
-              option(value="Six Senses") Six Senses
-              option(value="Sobha SeaHaven") Sobha SeaHaven
+              option(value="Safa One") Safa One
             input(name='utm-source' type='hidden' value="")
             input(name='utm-medium' type='hidden' value="")
             input(name='utm-content' type='hidden' value="")
@@ -83,6 +80,6 @@ section.quiz#quiz
           .quiz__nav
             button.quiz__prev#prev(type="button" data-quizNav="sbmt" disabled)
             button.quiz__next#next(type="button" data-quizNav="nav") Next
-            button.quiz__next#submit-quiz(type="submit" data-quizNav="sbmt" disabled) Submit
+            button.quiz__next#submit-quiz(type="submit" data-quizNav="sbmt" onclick='gtag_report_conversion2()' disabled) Submit
     .quiz__slider
       .quiz__slide

@@ -1,7 +1,0 @@
-File from: [app/images/src/project-thecove.png]
-
-File to: [app/images/dest/project-thecove.png]
-
-Compression algorithm: [pngquant]
-
-Description: Error: Command failed: /Users/salamander/Documents/work/top-level/node_modules/pngquant-bin/vendor/pngquant --quality=75-100 -o app/images/dest/project-thecove.png app/images/src/project-thecove.png

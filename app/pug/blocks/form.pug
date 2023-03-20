@@ -9,22 +9,19 @@ section.form#form
       input.form__input(type="email" id="email-form" name="email" placeholder="Email")
       select.form__input(name="propName")
         option(value="default") Выберите Комплекс
+        option(value="Palm Beach Tower") Palm Beach Tower
+        option(value="Burj Binghatti Jacob Co Residences") Burj Binghatti Jacob & Co Residences
         option(value="Cavalli Couture") Cavalli Couture
-        option(value="Burj Binghatti") Burj Binghatti
-        option(value="Zuha Island") Zuha Island
         option(value="Elegance Tower") Elegance Tower
-        option(value="Safa One") Safa One
+        option(value="Sobha SeaHaven") Sobha SeaHaven
         option(value="Chic Tower") Chic Tower
         option(value="The Cove") The Cove
-        option(value="Seascape") Seascape
         option(value="Orla Dorchester") Orla Dorchester
-        option(value="Bluewaters Bay") Bluewaters Bay
-        option(value="Six Senses") Six Senses
-        option(value="Sobha SeaHaven") Sobha SeaHaven
+        option(value="Safa One") Safa One
       input(name='utm-source' type='hidden' value="")
       input(name='utm-medium' type='hidden' value="")
       input(name='utm-content' type='hidden' value="")
       input(name='utm-term' type='hidden' value="")
       p.form__policy Отправляя данные вы соглашаетесь с 
         a.form__link(href="/policy") политикой конфиденциальности
-      button.form__submit(type="submit" disabled) Бесплатная консультация
+      button.form__submit(type="submit" disabled onclick='gtag_report_conversion1()') Бесплатная консультация

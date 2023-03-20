@@ -14,47 +14,110 @@
     <link rel="manifest" href="images/dest/site.webmanifest">
   </head>
   <body>
-    <script src="https://www.googletagmanager.com/gtag/js?id=G-EBX8MEHXB0" async>
-    </script>
-    <script type="text/javascript">
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+    <script src="https://www.googletagmanager.com/gtag/js?id=G-EBX8MEHXB0" async></script>
+    <script>window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
 
-      gtag('config', 'G-EBX8MEHXB0');
+gtag('config', 'G-EBX8MEHXB0');
 
     </script>
     <!-- Yandex.Metrika counter-->
-    <script type="text/javascript">
-      (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-      m[i].l=1*new Date();
-      for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-      k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-      (window, document, "script", "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/tag.js", "ym");
+    <script>(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+m[i].l=1*new Date();
+for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+(window, document, "script", "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/tag.js", "ym");
 
-      ym(92170622, "init", {
-           clickmap:true,
-           trackLinks:true,
-           accurateTrackBounce:true,
-           webvisor:true
-      });
+ym(92170622, "init", {
+     clickmap:true,
+     trackLinks:true,
+     accurateTrackBounce:true,
+     webvisor:true
+});
+
     </script>
     <noscript>
       <div><img src="https://mc.yandex.ru/watch/92170622" style="position:absolute; left:-9999px;" alt=""></div>
     </noscript>
-    <script>
-    (function(w,d,u){
-      var s=d.createElement('script');s.defer=false;s.async=false;s.id='b242ga-script';s.src=u+'?'+(Date.now()/60000|0);
-      var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);
-    })(window,document,'https://67p.b242ga.ru/static/js/b242ga.js');
-    var b242gaScript = document.querySelector('#b242ga-script');
-    b242gaScript.addEventListener('load', function() {
-      B242GAInit({
-        portal:'https://toplevel.bitrix24.com/',
-        pid:'0de1d4bf35920738288205c3ca7cf011',
-        presets:{}
-      });
-    });
+    <script>(function(w,d,u){
+  var s=d.createElement('script');s.defer=false;s.async=false;s.id='b242ga-script';s.src=u+'?'+(Date.now()/60000|0);
+  var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);
+})(window,document,'https://67p.b242ga.ru/static/js/b242ga.js');
+var b242gaScript = document.querySelector('#b242ga-script');
+b242gaScript.addEventListener('load', function() {
+  B242GAInit({
+    portal:'https://toplevel.bitrix24.com/',
+    pid:'0de1d4bf35920738288205c3ca7cf011',
+    presets:{}
+  });
+});
+
+    </script>
+    <script>/*
+Event snippet for Отправка квиза conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+*/
+function gtag_report_conversion1(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      //window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-11066823186/j-jHCKWLi5IYEJKkiZ0p',
+      'event_callback': callback
+  });
+  return false;
+}
+
+
+//////////////////////////////////////////////////////////////////////////////////
+
+/*
+Event snippet for Отправка заявки conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+*/
+
+function gtag_report_conversion2(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      //window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-11066823186/w2uBCKiLi5IYEJKkiZ0p',
+      'event_callback': callback
+  });
+  return false;
+}
+
+
+
+//////////////////////////////////////////////////////////////////////////////////
+
+
+/*
+Event snippet for Перешёл в WhatsApp conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+*/
+
+function gtag_report_conversion3(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      //window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-11066823186/LHnCCKuLi5IYEJKkiZ0p',
+      'event_callback': callback
+  });
+  return false;
+}
+
+
+//////////////////////////////////////////////////////////////////////////////////
+
     </script>
     <header class="header">
       <div class="header-desk">
@@ -203,18 +266,15 @@
                 <div class="quiz__a">
                   <select class="form__input" name="propName">
                     <option value="default">Выберите Комплекс </option>
+                    <option value="Palm Beach Tower">Palm Beach Tower</option>
+                    <option value="Burj Binghatti Jacob Co Residences">Burj Binghatti Jacob & Co Residences</option>
                     <option value="Cavalli Couture">Cavalli Couture</option>
-                    <option value="Burj Binghatti">Burj Binghatti</option>
-                    <option value="Zuha Island">Zuha Island</option>
                     <option value="Elegance Tower">Elegance Tower</option>
-                    <option value="Safa One">Safa One</option>
+                    <option value="Sobha SeaHaven">Sobha SeaHaven</option>
                     <option value="Chic Tower">Chic Tower</option>
                     <option value="The Cove">The Cove</option>
-                    <option value="Seascape">Seascape</option>
                     <option value="Orla Dorchester">Orla Dorchester</option>
-                    <option value="Bluewaters Bay">Bluewaters Bay</option>
-                    <option value="Six Senses">Six Senses</option>
-                    <option value="Sobha SeaHaven">Sobha SeaHaven</option>
+                    <option value="Safa One">Safa One</option>
                   </select>
                   <input name="utm-source" type="hidden" value="">
                   <input name="utm-medium" type="hidden" value="">
@@ -240,7 +300,7 @@
                 <div class="quiz__nav">
                   <button class="quiz__prev" id="prev" type="button" data-quizNav="sbmt"></button>
                   <button class="quiz__next" id="next" type="button" data-quizNav="nav">Далее</button>
-                  <button class="quiz__next" id="submit-quiz" type="submit" data-quizNav="sbmt" disabled>Отправить</button>
+                  <button class="quiz__next" id="submit-quiz" type="submit" onclick="gtag_report_conversion2()" data-quizNav="sbmt" disabled>Отправить</button>
                 </div>
               </div>
             </form>
@@ -267,7 +327,7 @@
                 <picture class="benefits__img"><img src="images/dest/benefits-1.webp" alt="Консультирование"></picture>
               </div>
             </div>
-            <div class="benefits__item">
+            <div class="benefits__item"> 
               <div class="benefits__item-bg"></div><span class="benefits__nmbr">02</span>
               <p class="benefits__item-title">Поиск, выбор, покупка</p>
               <div class="benefits__content">
@@ -283,7 +343,7 @@
                 <picture class="benefits__img"><img src="images/dest/benefits-2.webp" alt="Ключи"></picture>
               </div>
             </div>
-            <div class="benefits__item">
+            <div class="benefits__item"> 
               <div class="benefits__item-bg"></div><span class="benefits__nmbr">03</span>
               <p class="benefits__item-title">Обслуживание после покупки</p>
               <div class="benefits__content">
@@ -865,7 +925,6 @@
                       <picture class="popup__promo-slide"><img src="images/dest/project-popup/chic-tower/slide-7.webp" alt="Chic Tower слайд-7"></picture>
                       <picture class="popup__promo-slide"><img src="images/dest/project-popup/chic-tower/slide-8.webp" alt="Chic Tower слайд-8"></picture>
                       <picture class="popup__promo-slide"><img src="images/dest/project-popup/chic-tower/slide-9.webp" alt="Chic Tower слайд-9"></picture>
-                      <picture class="popup__promo-slide"><img src="images/dest/project-popup/chic-tower/slide-10.webp" alt="Chic Tower слайд-10"></picture>
                     </div>
                     <p class="popup__promo-title">УСПЕЙТЕ КУПИТЬ</p>
                     <div class="popup__promo-timer" id="timer">10:00:00</div><a class="popup__promo-btn" href="#form">бесплатная консультация</a>
@@ -1190,25 +1249,22 @@
             <input class="form__input" type="email" id="email-form" name="email" placeholder="Email">
             <select class="form__input" name="propName">
               <option value="default">Выберите Комплекс</option>
+              <option value="Palm Beach Tower">Palm Beach Tower</option>
+              <option value="Burj Binghatti Jacob Co Residences">Burj Binghatti Jacob & Co Residences</option>
               <option value="Cavalli Couture">Cavalli Couture</option>
-              <option value="Burj Binghatti">Burj Binghatti</option>
-              <option value="Zuha Island">Zuha Island</option>
               <option value="Elegance Tower">Elegance Tower</option>
-              <option value="Safa One">Safa One</option>
+              <option value="Sobha SeaHaven">Sobha SeaHaven</option>
               <option value="Chic Tower">Chic Tower</option>
               <option value="The Cove">The Cove</option>
-              <option value="Seascape">Seascape</option>
               <option value="Orla Dorchester">Orla Dorchester</option>
-              <option value="Bluewaters Bay">Bluewaters Bay</option>
-              <option value="Six Senses">Six Senses</option>
-              <option value="Sobha SeaHaven">Sobha SeaHaven</option>
+              <option value="Safa One">Safa One</option>
             </select>
             <input name="utm-source" type="hidden" value="">
             <input name="utm-medium" type="hidden" value="">
             <input name="utm-content" type="hidden" value="">
             <input name="utm-term" type="hidden" value="">
             <p class="form__policy">Отправляя данные вы соглашаетесь с <a class="form__link" href="/policy">политикой конфиденциальности</a></p>
-            <button class="form__submit" type="submit" disabled>Бесплатная консультация</button>
+            <button class="form__submit" type="submit" disabled onclick="gtag_report_conversion1()">Бесплатная консультация</button>
           </form>
         </div>
       </section>
@@ -1219,7 +1275,7 @@
             <div class="faq__item">
               <div class="faq__item-bg"></div>
               <div class="faq__q"> <a>Из чего состоит процесс покупки недвижимости в Дубае?</a></div>
-              <div class="faq__a">
+              <div class="faq__a"> 
                 <p>Покупка недвижимости осуществляется в несколько этапов:</p>
                 <ul class="faq__list">
                   <li class="faq__list-item">
@@ -1246,7 +1302,7 @@
             <div class="faq__item">
               <div class="faq__item-bg"></div>
               <div class="faq__q"> <a>Является ли покупка помещения в Дубае основанием для получения гражданства ОАЭ?</a></div>
-              <div class="faq__a">
+              <div class="faq__a"> 
                 <p>Нет, но если сумма сделки превысила USD 240,000, покупатель недвижимости может получить резидентскую визу. Она дает покупателю жилого, коммерческого или иного объекта определенные привилегии:</p>
                 <ul>
                   <li>
@@ -1265,14 +1321,14 @@
             <div class="faq__item">
               <div class="faq__item-bg"></div>
               <div class="faq__q"> <a>Как покупателю обезопасить свои средства в сделке купли-продажи?</a></div>
-              <div class="faq__a">
+              <div class="faq__a"> 
                 <p>Приобретая недвижимость в Дубае, инвесторы, как правило, используют самый безопасный метод расчета — банковский перевод на эскроу-счет, что означает получение застройщиком денег после сдачи объекта в эксплуатацию. Компетентный посредник сильно упрощает задачу для обеих сторон, выполняя ряд значимых функций, — в том числе юридическое сопровождение сделки.</p>
               </div>
             </div>
             <div class="faq__item">
               <div class="faq__item-bg"></div>
               <div class="faq__q"> <a>Может ли иностранный покупатель оформить приобретение недвижимости в рассрочку?</a></div>
-              <div class="faq__a">
+              <div class="faq__a"> 
                 <p>Да, многие девелоперы предоставляют такую возможность. Обычно первый взнос равен 10% стоимости и примерно половина общей суммы выплачивается до завершения строительства.</p>
               </div>
             </div>
@@ -1332,7 +1388,7 @@
             </form>
           </div>
         </div>
-      </div><a class="whatsapp-button" target="_blank" href="https://api.whatsapp.com/send?phone=971585835333&amp;text="><img src="images/dest/whatsapp-button.png" alt="whatsApp-button"></a>
+      </div><a class="whatsapp-button" target="_blank" onclick="gtag_report_conversion3()" href="https://api.whatsapp.com/send?phone=971585835333&amp;text="><img src="images/dest/whatsapp-button.png" alt="whatsApp-button"></a>
       <script src="js/app.min.js"></script>
     </main>
   </body>
