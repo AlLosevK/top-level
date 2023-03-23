@@ -2,7 +2,7 @@ section.form#form
   .wrapper
     h2.form__title order a call back
     .result#result
-    form.form__form#form(method="post" action="php/bitrix-main.php")
+    form.form__form#form(method="post" action="php/bitrix-main.php" onsubmit='gtag_report_conversion1()')
       input.form__input(type="text" id="name-form" name="name" placeholder="Name")
       input.form__input(type="tel" name="phone" id="phone-form" placeholder="(000) 000-00-00")
       input.form__input(type="tel" class="hide" name="hiden" id="hiden-form")
@@ -24,4 +24,4 @@ section.form#form
       input(name='utm-term' type='hidden' value="")
       p.form__policy By sending data, you agree with the 
         a.form__link(href="/policy") Privacy Policy
-      button.form__submit(type="submit" onclick='gtag_report_conversion1()' disabled) Free consultation
+      button.form__submit(type="submit" disabled) Free consultation

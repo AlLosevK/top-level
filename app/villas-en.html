@@ -213,7 +213,7 @@ function gtag_report_conversion3(url) {
               <div class="circle"></div>
             </div>
             <h3 class="quiz__title">SELECTION OF REAL ESTATE</h3>
-            <form class="quiz__form" method="post" action="php/bitrix-quiz.php">
+            <form class="quiz__form" method="post" action="php/bitrix-quiz.php" onsubmit="gtag_report_conversion2()">
               <div class="quiz__form-item quiz__form-item-active">
                 <div class="quiz__q">What is your purpose of purchasing the property in the UAE ?</div>
                 <p class="quiz__a">
@@ -299,7 +299,7 @@ function gtag_report_conversion3(url) {
                 <div class="quiz__nav">
                   <button class="quiz__prev" id="prev" type="button" data-quizNav="sbmt" disabled></button>
                   <button class="quiz__next" id="next" type="button" data-quizNav="nav">Next</button>
-                  <button class="quiz__next" id="submit-quiz" type="submit" data-quizNav="sbmt" onclick="gtag_report_conversion2()" disabled>Submit</button>
+                  <button class="quiz__next" id="submit-quiz" type="submit" data-quizNav="sbmt" disabled>Submit</button>
                 </div>
               </div>
             </form>
@@ -1108,7 +1108,7 @@ function gtag_report_conversion3(url) {
         <div class="wrapper">
           <h2 class="form__title">order a call back</h2>
           <div class="result" id="result"></div>
-          <form class="form__form" id="form" method="post" action="php/bitrix-main.php">
+          <form class="form__form" id="form" method="post" action="php/bitrix-main.php" onsubmit="gtag_report_conversion1()">
             <input class="form__input" type="text" id="name-form" name="name" placeholder="Name">
             <input class="form__input" type="tel" name="phone" id="phone-form" placeholder="(000) 000-00-00">
             <input class="form__input hide" type="tel" name="hiden" id="hiden-form">
@@ -1129,7 +1129,7 @@ function gtag_report_conversion3(url) {
             <input name="utm-content" type="hidden" value="">
             <input name="utm-term" type="hidden" value="">
             <p class="form__policy">By sending data, you agree with the <a class="form__link" href="/policy">Privacy Policy</a></p>
-            <button class="form__submit" type="submit" onclick="gtag_report_conversion1()" disabled>Free consultation</button>
+            <button class="form__submit" type="submit" disabled>Free consultation</button>
           </form>
         </div>
       </section>

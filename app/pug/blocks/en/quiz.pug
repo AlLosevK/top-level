@@ -11,7 +11,7 @@ section.quiz#quiz
         .circle
         .circle
       h3.quiz__title SELECTION OF REAL ESTATE
-      form.quiz__form(method="post" action="php/bitrix-quiz.php")
+      form.quiz__form(method="post" action="php/bitrix-quiz.php" onsubmit='gtag_report_conversion2()')
         .quiz__form-item.quiz__form-item-active
           .quiz__q What is your purpose of purchasing the property in the UAE ?
           p.quiz__a
@@ -80,6 +80,6 @@ section.quiz#quiz
           .quiz__nav
             button.quiz__prev#prev(type="button" data-quizNav="sbmt" disabled)
             button.quiz__next#next(type="button" data-quizNav="nav") Next
-            button.quiz__next#submit-quiz(type="submit" data-quizNav="sbmt" onclick='gtag_report_conversion2()' disabled) Submit
+            button.quiz__next#submit-quiz(type="submit" data-quizNav="sbmt" disabled) Submit
     .quiz__slider
       .quiz__slide
