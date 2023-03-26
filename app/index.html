@@ -1359,7 +1359,7 @@ function gtag_report_conversion3(url) {
           </div>
           <div class="popup-promo__content">
             <p class="popup-promo__title">Получите доступ<br>к закрытой продаже</p>
-            <form class="popup-promo__form" method="post" action="php/bitrix-subscribe.php">
+            <form class="popup-promo__form" method="post" action="php/bitrix-subscribe.php" onsubmit="gtag_report_conversion1()">
               <input class="form__input popup-promo__input" type="text" id="name-popup" name="name" placeholder="Имя">
               <input class="form__input popup-promo__input iti__phone" type="tel" name="phone" id="phone-popup" placeholder="(000) 000-00-00">
               <input class="form__input popup-promo__input iti__hide hide" type="tel" name="hiden" id="hiden-popup">

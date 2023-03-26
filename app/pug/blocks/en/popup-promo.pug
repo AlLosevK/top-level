@@ -9,7 +9,7 @@
       p.popup-promo__title GET ACCESS
         br
         |TO PRIVATE SALE
-      form.popup-promo__form(method="post" action="php/bitrix-subscribe.php")
+      form.popup-promo__form(method="post" action="php/bitrix-subscribe.php" onsubmit='gtag_report_conversion1()')
         input.form__input.popup-promo__input(type="text" id="name-popup" name="name" placeholder="Name")
         input.form__input.popup-promo__input(type="tel" name="phone" id="phone-popup" placeholder="(000) 000-00-00")
         input.form__input.popup-promo__input(type="tel" class="hide" name="hiden" id="hiden-popup")
